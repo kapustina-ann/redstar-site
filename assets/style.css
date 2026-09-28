@@ -613,6 +613,12 @@ p{margin:0}
 .post-card h4{color:var(--navy)}
 .post-card .post-meta{margin-top:auto;padding-top:4px}
 
+/* Лента журнала: на телефоне всегда одна карточка в ряд —
+   при двух колонках кадр 16:9 и подводка становятся нечитаемыми. */
+.feed{grid-template-columns:repeat(3,1fr)}
+@media (max-width:1080px){.feed{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:720px){.feed{grid-template-columns:1fr}}
+
 /* Картинка карточки — всегда 16:9, чтобы не подбирать кадры под вёрстку.
    Рекомендуемый размер файла 1200×675: с запасом на ретину при ширине колонки ~420. */
 .post-card__media{position:relative;aspect-ratio:16/9;overflow:hidden;background:var(--line);flex:none}
