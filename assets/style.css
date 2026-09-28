@@ -619,16 +619,11 @@ p{margin:0}
 .post-card__media img{width:100%;height:100%;object-fit:cover;display:block}
 .post-card .visual{position:absolute;inset:0;min-height:0;border-radius:0;margin:0}
 
-/* Второй вид: карточка без картинки. Тонированная подложка вместо кадра,
-   крупнее заголовок и короткая подводка — ряд не проваливается рядом с картиночными. */
-.post-card--text{background:#EDEEF1}
-.post-card--text .post-card__body{padding:26px 24px 24px;gap:12px}
-.post-card--text h4{font-size:clamp(19px,1.7vw,22px);line-height:1.2}
-.post-card--text .post-card__lead{font-size:14.5px;line-height:1.5;color:var(--gray-600)}
-.post-card--text:hover{background:#E7E9ED}
-.post-card--text .post-card__mark{
-  width:26px;height:4px;border-radius:2px;background:var(--cyan);display:block;
-}
+/* Карточка одна на все случаи: блок с кадром необязателен.
+   Без картинки добавляется подводка — она занимает освободившееся место,
+   и в общем ряду карточки остаются одного роста. */
+.post-card__lead{font-size:14.5px;line-height:1.5;color:var(--gray-600)}
+.post-card:not(:has(.post-card__media)) .post-card__body{padding:26px 24px 24px;gap:12px}
 .tag{font-size:11.5px;font-weight:700;color:var(--cyan);letter-spacing:.1em;text-transform:uppercase}
 .post-meta{font-size:13px;color:var(--gray-400);font-weight:500}
 
