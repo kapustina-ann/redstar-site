@@ -40,6 +40,11 @@
 
 *,*::before,*::after{box-sizing:border-box}
 
+/* Скрытие через атрибут hidden должно побеждать display у компонентов:
+   карточки в лентах объявлены как flex, иначе фильтр их не прячет. */
+[hidden]{display:none!important}
+
+
 body{
   margin:0;
   background:var(--bg);
