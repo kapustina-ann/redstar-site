@@ -264,6 +264,8 @@ p{margin:0}
    поэтому ни одно направление не проваливается на фоне соседей. */
 .svc-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:16px}
 .svc-grid > *{grid-column:span 2}
+/* пять плиток: первые две шире, тогда оба ряда заполняются целиком */
+.svc-grid--5 > :nth-child(-n+2){grid-column:span 3}
 
 .svc{
   position:relative;overflow:hidden;gap:14px;
@@ -329,9 +331,13 @@ p{margin:0}
 @media (max-width:1080px){
   .svc-grid{grid-template-columns:repeat(2,1fr)}
   .svc-grid > *{grid-column:span 1}
+  .svc-grid--5 > :nth-child(-n+2){grid-column:span 1}  /* широкие только на десктопе */
+  .svc-grid--5 > :last-child{grid-column:span 2}       /* нечётная — растягиваем последнюю */
 }
 @media (max-width:620px){
   .svc-grid{grid-template-columns:1fr}
+  .svc-grid--5 > :nth-child(-n+2),
+  .svc-grid--5 > :last-child{grid-column:span 1}   /* в одну колонку — все обычные */
   .svc{min-height:0}
 }
 

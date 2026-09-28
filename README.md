@@ -24,7 +24,7 @@ self-hosted, и он подхватится без правок разметки
 ```
 index.html              главная
 uslugi.html             хаб услуг
-uslugi-*.html           пять направлений
+uslugi-*.html           четыре направления
 keysy.html              кейсы с фильтром
 keys-*.html             развороты кейсов
 o-kompanii.html         о компании

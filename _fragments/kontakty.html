@@ -1,0 +1,89 @@
+<section class="wrap">
+  <div class="hero on-red">
+    <span class="hero__sphere hero__sphere--a"></span>
+    <div class="hero__inner hero__inner--left">
+      <nav class="crumbs" aria-label="Хлебные крошки"><a href="index.html">Главная</a><span>/</span>Контакты</nav>
+      <h1>Контакты</h1>
+      <p class="hero__sub">Располагаемся в Ярославле, работаем с проектами по всей России. Отвечаем в течение рабочего дня.</p>
+      <div class="hero__cta">
+        <a class="btn btn--white" href="tel:+79201038130">7 (920) 103-81-30<span class="btn__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7l10 10M17 9v8H9"/></svg></span></a>
+        <a class="btn btn--ghost-light btn--plain" href="mailto:rodin@redstaragency.ru">rodin@redstaragency.ru</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section wrap">
+  <div class="grid g4">
+    <div class="card card--line"><span class="eyebrow">Телефон</span><h4><a href="tel:+79201038130">7 (920) 103-81-30</a></h4><p>Пн–Пт, 9:00–18:00 по Москве</p></div>
+    <div class="card card--line"><span class="eyebrow">Почта</span><h4><a href="mailto:rodin@redstaragency.ru">rodin@redstaragency.ru</a></h4><p>Заявки, договоры, документы</p></div>
+    <div class="card card--line"><span class="eyebrow">Телеграм</span><h4><a href="https://t.me/">Написать в Телеграм</a></h4><p>Быстрые вопросы и консультация с основателями</p></div>
+    <div class="card card--line"><span class="eyebrow">Адрес</span><h4>Октябрьский переулок, 3</h4><p>г. Ярославль, офис 207</p></div>
+  </div>
+</section>
+
+<section class="section--tight wrap">
+  <div class="grid g2">
+    <div class="card card--dark">
+      <span class="eyebrow">Как добраться</span>
+      <h3>Центр Ярославля, офис 207</h3>
+      <p>Октябрьский переулок, дом 3. Вход со стороны переулка, второй этаж. Парковка — вдоль улицы. Если едете издалека, предупредите заранее: встретим.</p>
+      <a class="btn btn--white" href="https://yandex.ru/maps/" style="align-self:flex-start;margin-top:auto">Открыть в Яндекс Картах<span class="btn__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7l10 10M17 9v8H9"/></svg></span></a>
+    </div>
+    <!-- На боевом сайте здесь встраивается виджет Яндекс Карт -->
+    <div class="visual visual--light visual--tall visual--grid" style="border-radius:var(--r-card);margin:0">
+      <span class="visual__tag" style="background:rgba(0,0,0,.45)">Здесь — карта Яндекса с меткой офиса</span>
+    </div>
+  </div>
+</section>
+
+<section class="section wrap" id="zayavka">
+  <div class="form-card">
+    <div class="stack stack--s">
+      <span class="eyebrow">Заявка</span>
+      <h2>Оставьте контакты</h2>
+      <p class="lede">Познакомимся, вникнем в задачу и сделаем предложение. Если поймём, что задача не наша, — скажем сразу и подскажем, к кому обратиться.</p>
+      <div class="badges" style="grid-template-columns:1fr;margin-top:10px">
+        <div class="badge"><span class="badge__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>Отвечаем в течение рабочего дня</div>
+      </div>
+    </div>
+    <form class="form" data-demo>
+      <div class="form__row">
+        <div class="field"><label for="k-name">Ваше имя</label><input id="k-name" name="name" type="text" placeholder="Как к вам обращаться" required></div>
+        <div class="field"><label for="k-phone">Телефон</label><input id="k-phone" name="phone" type="tel" placeholder="+7 (000) 000-00-00" required></div>
+      </div>
+      <div class="form__row">
+        <div class="field"><label for="k-service">Что интересует</label>
+          <select id="k-service" name="service">
+            <option>Разработка сайта</option>
+            <option>Техническая поддержка</option>
+            <option>SEO-продвижение</option>
+            <option>Контекстная реклама</option>
+            <option>Пока не определились</option>
+          </select>
+        </div>
+        <div class="field"><label for="k-site">Сайт компании</label><input id="k-site" name="site" type="text" placeholder="example.ru"></div>
+      </div>
+      <div class="field"><label for="k-task">Задача</label><textarea id="k-task" name="task" placeholder="Коротко о том, что нужно сделать"></textarea></div>
+      <label class="consent"><input id="k-consent" type="checkbox" required> Нажимая кнопку, я подтверждаю, что принимаю политику обработки персональных данных</label>
+      <button class="btn btn--primary" type="submit" style="align-self:flex-start">Отправить заявку<span class="btn__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7l10 10M17 9v8H9"/></svg></span></button>
+      <p class="form__note" role="status"></p>
+    </form>
+  </div>
+</section>
+
+<section class="section wrap">
+  <div class="stack">
+    <div class="stack stack--s">
+      <span class="eyebrow">Реквизиты</span>
+      <h2>Юридическая информация</h2>
+    </div>
+    <div class="grid g4">
+      <div class="card card--line"><span class="eyebrow">Организация</span><p style="color:var(--ink);font-weight:600">ООО «ЦРВЕНА ЗВЕЗДА»</p></div>
+      <div class="card card--line"><span class="eyebrow">ОГРН</span><p style="color:var(--ink);font-weight:600">1227600001243</p></div>
+      <div class="card card--line"><span class="eyebrow">ИНН / КПП</span><p style="color:var(--ink);font-weight:600">7604382475 / 760401001</p></div>
+      <div class="card card--line"><span class="eyebrow">Юридический адрес</span><p style="color:var(--ink);font-weight:600">150000, г. Ярославль, пер. Октябрьский, д. 3, помещ. 6</p></div>
+    </div>
+    <p class="lede" style="font-size:14px">Документы: <a href="kontakty.html" style="color:var(--red);font-weight:600">политика конфиденциальности</a> · <a href="kontakty.html" style="color:var(--red);font-weight:600">согласие на обработку персональных данных</a></p>
+  </div>
+</section>
