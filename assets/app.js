@@ -47,19 +47,36 @@
     });
   });
 
-  /* Фильтр кейсов */
+  /* Рубрики: фильтр списка и адрес вида blog.html?rubrika=keysy */
   var filters = document.querySelectorAll('.filter');
   if (filters.length) {
-    filters.forEach(function (btn) {
-      btn.addEventListener('click', function () {
-        var key = btn.dataset.filter;
-        filters.forEach(function (b) { b.classList.toggle('is-on', b === btn); });
-        document.querySelectorAll('[data-tags]').forEach(function (card) {
-          var match = key === 'all' || card.dataset.tags.split(' ').indexOf(key) > -1;
-          card.hidden = !match;
-        });
+    var apply = function (key, pushUrl) {
+      filters.forEach(function (b) { b.classList.toggle('is-on', b.dataset.filter === key); });
+      document.querySelectorAll('[data-tags]').forEach(function (card) {
+        var match = key === 'all' || card.dataset.tags.split(' ').indexOf(key) > -1;
+        card.hidden = !match;
       });
+      if (pushUrl && window.history && history.replaceState) {
+        var url = location.pathname + (key === 'all' ? '' : '?rubrika=' + key);
+        history.replaceState(null, '', url);
+      }
+    };
+
+    filters.forEach(function (btn) {
+      btn.addEventListener('click', function () { apply(btn.dataset.filter, true); });
     });
+
+    // рубрика из адреса — по ней приходят из меню
+    var wanted = (location.search.match(/[?&]rubrika=([\w-]+)/) || [])[1];
+    if (wanted && document.querySelector('.filter[data-filter="' + wanted + '"]')) {
+      apply(wanted, false);
+      // пришли по пункту меню — его и подсвечиваем
+      var menuItem = document.querySelector('.nav__link[href*="rubrika=' + wanted + '"]');
+      if (menuItem) {
+        document.querySelectorAll('.nav__link.is-active').forEach(function (l) { l.classList.remove('is-active'); });
+        menuItem.classList.add('is-active');
+      }
+    }
   }
 
   /* Формы — демонстрационная отправка */
