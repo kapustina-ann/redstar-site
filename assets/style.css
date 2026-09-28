@@ -629,7 +629,34 @@ p{margin:0}
    Без картинки добавляется подводка — она занимает освободившееся место,
    и в общем ряду карточки остаются одного роста. */
 .post-card__lead{font-size:14.5px;line-height:1.5;color:var(--gray-600)}
-.post-card:not(:has(.post-card__media)) .post-card__body{padding:26px 24px 24px;gap:12px}
+
+/* Карточка без кадра: место картинки занимает полупрозрачная графика —
+   та же мягкая форма из логобука плюс точечная сетка. Держим её бледной,
+   текст лежит выше по z-index и не теряет контраст. */
+.post-card:not(:has(.post-card__media)){position:relative}
+.post-card:not(:has(.post-card__media)) .post-card__body{padding:26px 24px 24px;gap:12px;position:relative;z-index:1}
+.post-card:not(:has(.post-card__media))::after{
+  content:"";position:absolute;z-index:0;pointer-events:none;
+  width:62%;aspect-ratio:1.1;right:-16%;bottom:-32%;
+  border-radius:58% 42% 50% 50%/52% 46% 54% 48%;
+  background:var(--cyan);opacity:.1;transform:rotate(-14deg);
+}
+.post-card:not(:has(.post-card__media))::before{
+  content:"";position:absolute;z-index:0;pointer-events:none;
+  width:44%;aspect-ratio:1;right:-4%;top:-14%;
+  background:radial-gradient(rgba(8,53,117,.55) 1.1px,transparent 1.2px) 0 0/16px 16px;
+  opacity:.22;
+}
+/* у соседних карточек графика стоит по-разному — набор не выглядит штампованным */
+.post-card:not(:has(.post-card__media)):nth-child(even)::after{
+  right:auto;left:-18%;bottom:-36%;width:58%;transform:rotate(12deg);background:var(--navy);opacity:.07;
+}
+.post-card:not(:has(.post-card__media)):nth-child(even)::before{
+  right:auto;left:-6%;top:auto;bottom:-10%;width:40%;
+}
+.post-card:not(:has(.post-card__media)):nth-child(3n)::after{
+  right:-22%;bottom:auto;top:-26%;width:54%;transform:rotate(24deg);
+}
 .tag{font-size:11.5px;font-weight:700;color:var(--cyan);letter-spacing:.1em;text-transform:uppercase}
 .post-meta{font-size:13px;color:var(--gray-400);font-weight:500}
 
