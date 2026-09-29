@@ -32,6 +32,27 @@
     });
   });
 
+  /* Модальное окно с формой. Без JS кнопка просто ведёт к форме на странице. */
+  document.querySelectorAll('[data-modal]').forEach(function (trigger) {
+    var dlg = document.getElementById(trigger.dataset.modal);
+    if (!dlg || typeof dlg.showModal !== 'function') return;
+
+    trigger.addEventListener('click', function (e) {
+      e.preventDefault();
+      dlg.showModal();
+      var first = dlg.querySelector('input:not([type="checkbox"])');
+      if (first) setTimeout(function () { first.focus(); }, 60);
+    });
+
+    dlg.querySelectorAll('[data-modal-close]').forEach(function (b) {
+      b.addEventListener('click', function () { dlg.close(); });
+    });
+    // клик по подложке за пределами окна
+    dlg.addEventListener('click', function (e) {
+      if (e.target === dlg) dlg.close();
+    });
+  });
+
   /* Аккордеон вопросов */
   document.querySelectorAll('.faq__q').forEach(function (q) {
     var item = q.closest('.faq__item');

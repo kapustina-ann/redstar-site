@@ -106,7 +106,7 @@
           <li>Считаем не клики, а заявки и сделки</li>
           <li>Отчёт и разбор цифр каждый месяц</li>
         </ul>
-        <a class="btn btn--white" href="uslugi.html" style="margin-top:auto;align-self:flex-start">Как это устроено<span class="btn__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+        <a class="btn btn--white" href="#zayavka" data-modal="consult" style="margin-top:auto;align-self:flex-start">Получить консультацию<span class="btn__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
       </article>
 
       <a class="card card--link svc svc--navy" href="uslugi-razrabotka.html">
@@ -317,6 +317,27 @@
 </main>
 
 <!-- ФУТЕР -->
+<!-- ФОРМА В МОДАЛЬНОМ ОКНЕ -->
+<dialog class="modal" id="consult" aria-labelledby="consult-title">
+  <div class="modal__body">
+    <button class="modal__close" type="button" data-modal-close aria-label="Закрыть">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+    <h2 id="consult-title" style="font-size:clamp(24px,2.6vw,34px)">Получить консультацию</h2>
+    <p class="lede">Разберём вашу задачу и вернёмся с предложением. Обычно отвечаем в течение рабочего дня.</p>
+    <form class="form" data-demo>
+      <div class="form__row">
+        <div class="field"><label for="m-name">Ваше имя</label><input id="m-name" name="name" type="text" placeholder="Как к вам обращаться" required></div>
+        <div class="field"><label for="m-phone">Телефон</label><input id="m-phone" name="phone" type="tel" placeholder="+7 000 000 00 00" required></div>
+      </div>
+      <div class="field"><label for="m-task">Задача</label><textarea id="m-task" name="task" placeholder="Коротко о том, что нужно сделать"></textarea></div>
+      <label class="consent"><input id="m-consent" type="checkbox" required> Нажимая кнопку, я принимаю <a href="kontakty.html">политику обработки персональных данных</a></label>
+      <button class="btn btn--primary" type="submit" style="align-self:flex-start">Отправить заявку<span class="btn__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></button>
+      <p class="form__note" role="status"></p>
+    </form>
+  </div>
+</dialog>
+
 <footer class="footer">
   <div class="wrap">
     <div class="footer__grid">
