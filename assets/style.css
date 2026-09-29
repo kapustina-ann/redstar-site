@@ -490,6 +490,23 @@ p{margin:0}
 .logo:hover .logo__on{opacity:1}
 @media (prefers-reduced-motion:reduce){.logo img{transition:none}}
 
+/* ---------- Отзывы ---------- */
+.reviews{grid-template-columns:repeat(3,1fr)}
+.review{
+  display:flex;flex-direction:column;gap:14px;margin:0;
+  background:var(--paper);border:1px solid var(--line);border-radius:var(--r-lg);
+  padding:clamp(22px,2.2vw,30px);
+}
+.review__stars{display:flex;gap:3px;color:var(--cyan)}
+.review__stars svg{width:16px;height:16px;fill:currentColor}
+.review blockquote{margin:0;font-size:15.5px;line-height:1.55;color:#3A3A3A}
+.review figcaption{margin-top:auto;padding-top:6px;display:flex;flex-direction:column;gap:3px}
+.review figcaption b{font-family:var(--f-display);font-weight:700;font-size:15.5px;color:var(--navy)}
+.review figcaption span{font-size:13px;color:var(--gray-400)}
+.reviews__source{font-size:13.5px;color:var(--gray-400)}
+@media (max-width:1080px){.reviews{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:720px){.reviews{grid-template-columns:1fr}}
+
 /* ---------- CTA ---------- */
 .cta{
   position:relative;overflow:hidden;border-radius:var(--r-xl);background:var(--navy);color:#fff;
