@@ -503,6 +503,15 @@ p{margin:0}
 .review figcaption{margin-top:auto;padding-top:6px;display:flex;flex-direction:column;gap:3px}
 .review figcaption b{font-family:var(--f-display);font-weight:700;font-size:15.5px;color:var(--navy)}
 .review figcaption span{font-size:13px;color:var(--gray-400)}
+.rating{display:flex;align-items:center;gap:16px}
+.rating__value{
+  font-family:var(--f-display);font-weight:700;
+  font-size:clamp(38px,4vw,54px);line-height:1;letter-spacing:-.04em;
+  color:var(--navy);font-variant-numeric:tabular-nums;
+}
+.rating__meta{display:flex;flex-direction:column;gap:6px}
+.rating__meta span{font-size:14.5px;color:var(--gray-600)}
+.rating .review__stars svg{width:18px;height:18px}
 .reviews__source{font-size:13.5px;color:var(--gray-400)}
 @media (max-width:1080px){.reviews{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:720px){.reviews{grid-template-columns:1fr}}
