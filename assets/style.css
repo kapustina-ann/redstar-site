@@ -462,6 +462,8 @@ p{margin:0}
 }
 .on-dark .stat__num,.on-navy .stat__num{color:var(--cyan)}
 .on-red .stat__num,.card--red .stat__num{color:#fff}
+/* в баннере рядом с числами стоят и названия — им нужен кегль поменьше */
+.stat__num--word{font-size:clamp(21px,2.2vw,32px);letter-spacing:-.025em}
 .stat__label{display:block;font-size:14px;color:var(--gray-600);margin-top:8px;max-width:24ch;font-weight:500}
 .on-dark .stat__label,.on-navy .stat__label,.on-red .stat__label,.card--dark .stat__label,.card--red .stat__label{color:rgba(255,255,255,.7)}
 
