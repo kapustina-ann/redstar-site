@@ -787,3 +787,19 @@ body:has(dialog.modal[open]){overflow:hidden}
   :root{--pad:88px}
   h1{font-size:clamp(90px,5vw,140px)}
 }
+
+/* Featured case on the home page. */
+.home-case{display:grid;grid-template-columns:1.15fr 1fr;border:1px solid var(--line);border-radius:var(--r-xl);background:#fff;overflow:hidden;transition:border-color .2s}
+.home-case:hover{border-color:var(--cyan)}
+.home-case__media{min-width:0;background:#eeece6;display:flex;align-items:center}
+.home-case__media img{width:100%;height:auto}
+.home-case__body{padding:clamp(24px,3vw,44px);display:flex;flex-direction:column;gap:18px;min-width:0}
+.home-case__body h3{font-size:clamp(26px,2.8vw,38px);line-height:1.12;color:var(--navy);text-wrap:initial}
+.home-case__body p{font-size:14px;line-height:1.7;color:var(--gray-600)}
+.home-case__body .home-case__client{font-weight:700;color:var(--navy)}
+.home-case__stats{display:grid;grid-template-columns:1fr 1fr;gap:24px;border-top:1px solid var(--line);padding-top:20px}
+.home-case__stats strong{display:block;font-size:30px;line-height:1.2;color:var(--navy);letter-spacing:-.03em}
+.home-case__stats span{display:block;font-size:12px;line-height:1.5;color:var(--gray-600);margin-top:7px}
+.home-case__link{display:flex;justify-content:space-between;align-items:center;font-weight:700;color:var(--navy);font-size:14px;margin-top:auto;padding-top:8px}
+.home-case__link span{display:grid;place-items:center;width:36px;height:36px;border-radius:50%;background:var(--navy);color:#fff;font-size:20px}
+@media(max-width:760px){.home-case{grid-template-columns:1fr}.home-case__body{gap:16px}.home-case__stats strong{font-size:28px}}
