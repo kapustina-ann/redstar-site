@@ -807,3 +807,5 @@ body:has(dialog.modal[open]){overflow:hidden}
 
 :scope{display:contents}
 }
+
+@scope (.support-site-shell){.hero-creds.support-two-features{grid-template-columns:repeat(2,minmax(0,1fr))}@media(max-width:600px){.hero-creds.support-two-features{grid-template-columns:minmax(0,1fr)}}}
