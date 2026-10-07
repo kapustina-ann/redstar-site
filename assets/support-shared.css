@@ -818,3 +818,5 @@ body:has(dialog.modal[open]){overflow:hidden}
  .crumbs{margin-bottom:22px}.crumbs [aria-current="page"]{opacity:1}
  @media(max-width:600px){.service-highlights{flex-direction:column;align-items:flex-start;margin:20px 0 26px}.service-highlights li{max-width:100%;padding:12px 14px;font-size:14px}}
 }
+
+@scope (.support-site-shell){:scope{--maxw:100%}.wrap{max-width:none;width:100%}}
