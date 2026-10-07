@@ -809,3 +809,12 @@ body:has(dialog.modal[open]){overflow:hidden}
 }
 
 @scope (.support-site-shell){.hero-creds.support-two-features{grid-template-columns:repeat(2,minmax(0,1fr))}@media(max-width:600px){.hero-creds.support-two-features{grid-template-columns:minmax(0,1fr)}}}
+
+@scope (.support-site-shell){
+ .service-highlights{display:flex;flex-wrap:wrap;gap:12px;list-style:none;padding:0;margin:24px 0 30px}
+ .service-highlights li{display:flex;align-items:center;gap:10px;padding:13px 17px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:12px;color:rgba(255,255,255,.85);font-size:15px;line-height:1.5;font-weight:500}
+ .service-highlights strong{font-weight:700;color:#fff;white-space:nowrap}
+ .service-highlights-dot{flex:0 0 7px;width:7px;height:7px;background:var(--cyan);border-radius:2px}
+ .crumbs{margin-bottom:22px}.crumbs [aria-current="page"]{opacity:1}
+ @media(max-width:600px){.service-highlights{flex-direction:column;align-items:flex-start;margin:20px 0 26px}.service-highlights li{max-width:100%;padding:12px 14px;font-size:14px}}
+}
