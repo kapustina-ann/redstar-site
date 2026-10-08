@@ -47,3 +47,25 @@
 #allrecords .support-info a.support-price__button:hover{background:#b32403;color:#fff;text-decoration:none}
 @media(max-width:1200px){.support-prices__grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:690px){.support-prices__grid{grid-template-columns:1fr}.support-price .support-price__hours{min-height:0}.support-price{padding:20px}}
+
+/* Introductory support offer. */
+.support-promo__panel{padding:28px;background:#083575;border-radius:22px;color:#fff;display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.3fr);gap:24px 32px}
+.support-promo__badge{display:inline-block;background:#d92c04;color:#fff;border-radius:8px;padding:6px 12px;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;margin-bottom:16px}
+.support-info .support-promo__heading h2{color:#fff;font-size:30px;margin-bottom:14px}
+.support-promo__heading p{color:rgba(255,255,255,.82);max-width:40ch}
+.support-promo__offers{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.support-promo__offer{padding:22px;border:1px solid rgba(255,255,255,.3);border-radius:16px;min-width:0}
+.support-info .support-promo__offer h3{color:#fff;font-size:18px;margin-bottom:18px}
+.support-promo__offer--intro{background:#fff;color:#083575;border-color:#fff}
+.support-info .support-promo__offer--intro h3{color:#083575}
+.support-info .support-promo__formula{font-size:14px;margin-bottom:8px}
+.support-promo__total{display:block;font-size:32px;line-height:1.15;font-weight:700;white-space:nowrap;margin-bottom:18px}
+.support-info .support-promo__extra{font-size:13px;line-height:1.5;margin:0}
+.support-promo__extra b{display:block}
+.support-promo__footer{grid-column:1/-1;display:flex;align-items:center;justify-content:space-between;gap:20px;padding-top:20px;border-top:1px solid rgba(255,255,255,.2)}
+.support-info .support-promo__gifts{display:flex;flex-wrap:wrap;gap:12px 28px;list-style:none;margin:0;padding:0}
+.support-info .support-promo__gifts li{font-size:14px;margin:0}.support-promo__gifts li::before{content:'✓';color:#42c0ff;font-weight:700;margin-right:8px}
+.support-promo__footer .support-info__button{flex:none;text-align:center}
+@media(max-width:1500px){.support-promo__panel{grid-template-columns:1fr}.support-promo__heading p{max-width:65ch}}
+@media(max-width:900px){.support-promo__footer{align-items:flex-start;flex-direction:column}}
+@media(max-width:690px){.support-promo__panel{padding:20px}.support-promo__offers{grid-template-columns:1fr}.support-info .support-promo__heading h2{font-size:26px}.support-promo__footer .support-info__button{width:100%;justify-content:center}}
