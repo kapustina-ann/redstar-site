@@ -810,3 +810,10 @@ body:has(dialog.modal[open]){overflow:hidden}
 .review__author-info{display:flex;flex-direction:column;gap:3px;min-width:0;overflow-wrap:anywhere}
 .review__author:hover b{text-decoration:underline}
 .review__author:focus-visible{outline:2px solid var(--cyan);outline-offset:5px;border-radius:4px}
+
+/* Founder Telegram profiles in the consultation block. */
+.founders{display:flex;flex-wrap:wrap;align-items:center;gap:16px 24px;margin-top:22px}
+.founders__person{display:inline-flex;align-items:center;gap:10px;color:#fff;font-size:15px;font-weight:700;line-height:1.35;text-decoration:none;max-width:100%}
+.founders__person img{display:block;flex:0 0 48px;width:48px;height:48px;border-radius:50%;object-fit:cover;border:2px solid rgba(255,255,255,.65)}
+.founders__person:hover span{text-decoration:underline;text-underline-offset:3px}
+.founders__person:focus-visible{outline:2px solid #fff;outline-offset:5px;border-radius:24px}
