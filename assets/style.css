@@ -817,3 +817,16 @@ body:has(dialog.modal[open]){overflow:hidden}
 .founders__person img{display:block;flex:0 0 48px;width:48px;height:48px;border-radius:50%;object-fit:cover;border:2px solid rgba(255,255,255,.65)}
 .founders__person:hover span{text-decoration:underline;text-underline-offset:3px}
 .founders__person:focus-visible{outline:2px solid #fff;outline-offset:5px;border-radius:24px}
+
+/* Separate, explicit Telegram contacts for each founder. */
+.cta--founders{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:32px}
+.cta--founders .founders{position:relative;display:grid;grid-template-columns:1fr;gap:12px;margin:0;min-width:0}
+.cta--founders .founders__person{padding:16px 20px;border:1px solid rgba(255,255,255,.55);border-radius:16px;background:rgba(255,255,255,.08);gap:14px}
+.cta--founders .founders__info{display:flex;flex-direction:column;gap:5px;min-width:0}
+.cta--founders .founders__name{font-size:13px;font-weight:500;opacity:.85}
+.cta--founders .founders__action{font-size:16px;font-weight:700}
+.cta--founders .founders__person:hover{background:rgba(255,255,255,.16)}
+.cta--founders .founders__person:hover span{text-decoration:none}
+.cta--founders .founders__person:hover .founders__action{text-decoration:underline;text-underline-offset:3px}
+@media(max-width:1200px){.cta--founders{grid-template-columns:1fr}.cta--founders .cta__text{max-width:none}}
+@media(max-width:690px){.cta--founders .founders__person{padding:14px;gap:10px}}
