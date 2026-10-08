@@ -39,7 +39,7 @@
  if (!gallery || !previous) return;
  var anchor = document.createComment('Previous site image: original mobile position');
  previous.before(anchor);
- var desktop = window.matchMedia('(min-width:1139.25px)');
+ var desktop = window.matchMedia('(min-width:976.5px)');
  function arrange() {
   if (desktop.matches) gallery.appendChild(previous);
   else anchor.parentNode.insertBefore(previous, anchor.nextSibling);

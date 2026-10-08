@@ -1,3 +1,3 @@
-/* Requested default display scale, equivalent to 175% browser zoom. */
-html{zoom:1.75}
+/* Requested default display scale, equivalent to 150% browser zoom. */
+html{zoom:1.5}
 @media print{html{zoom:1}}
