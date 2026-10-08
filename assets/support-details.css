@@ -43,7 +43,7 @@
 .support-price__payment{display:flex;flex-direction:column;gap:6px;padding-top:16px;border-top:1px solid #e4e4e4;margin-top:auto;margin-bottom:18px}
 .support-price__payment span,.support-price__payment small{font-size:12px;line-height:1.4;color:#595959}
 .support-price__payment strong{font-size:28px;line-height:1.15;color:#083575;white-space:nowrap}
-#allrecords .support-price__button{display:block;text-align:center;background:#d92c04;color:#fff;text-decoration:none;border-radius:12px;padding:12px 10px;font-size:14px;line-height:1.5;font-weight:700}
-#allrecords .support-price__button:hover{background:#b32403}
+#allrecords .support-info a.support-price__button,#allrecords .support-info a.support-price__button:visited{display:block;text-align:center;background:#d92c04;color:#fff;text-decoration:none;border-radius:12px;padding:12px 10px;font-size:14px;line-height:1.5;font-weight:700}
+#allrecords .support-info a.support-price__button:hover{background:#b32403;color:#fff;text-decoration:none}
 @media(max-width:1200px){.support-prices__grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:690px){.support-prices__grid{grid-template-columns:1fr}.support-price .support-price__hours{min-height:0}.support-price{padding:20px}}
