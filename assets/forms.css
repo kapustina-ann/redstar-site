@@ -1,0 +1,28 @@
+/* Shared form appearance, based on the homepage. */
+:root{--form-font:'Gilroy','Montserrat','Helvetica Neue',Arial,sans-serif;--form-border:#e4e4e4;--form-bg:#f6f7f9;--form-focus:#0097ea}
+.field input,.field textarea,.field select,.t-form .t-input,.t-form .t-select,.t-form textarea{box-sizing:border-box!important;font-family:var(--form-font)!important;font-size:15px!important;font-weight:500!important;color:#1a1a1a!important;padding:14px 16px!important;border:1.5px solid var(--form-border)!important;border-radius:12px!important;background:var(--form-bg)!important;transition:border-color .16s ease,background .16s ease;width:100%}
+.t-form .t-input,.t-form .t-select{height:50px!important}
+.field input:focus,.field textarea:focus,.field select:focus,.t-form .t-input:focus,.t-form .t-select:focus,.t-form textarea:focus{outline:none!important;border-color:var(--form-focus)!important;background:#fff!important}
+.field label,.t-form .t-input-title,.t-form .unified-field-label{display:block;font-family:var(--form-font)!important;font-size:12px!important;font-weight:700!important;letter-spacing:.06em!important;text-transform:uppercase;color:#8c8c8c!important;line-height:1.4;margin-bottom:6px}
+.t-form .t-input-block{border-radius:12px!important}
+.t-form .t-input-phonemask__wrap{box-sizing:border-box!important;border:1.5px solid var(--form-border)!important;border-radius:12px!important;background:var(--form-bg)!important;height:50px!important}
+.t-form .t-input-phonemask__wrap:focus-within{border-color:var(--form-focus)!important;background:#fff!important}
+.t-form .t-input-phonemask__wrap .t-input{border:0!important;background:transparent!important;height:47px!important;border-radius:12px!important;padding-left:0!important}
+.t-form .t-input-phonemask__select{font-family:var(--form-font)!important;font-size:15px!important;color:#1a1a1a!important}
+.consent,.t-form .t-checkbox__control{font-family:var(--form-font)!important;font-size:12.5px!important;font-weight:500!important;line-height:1.45!important;color:#8c8c8c!important}
+.consent a,.t-form .t-checkbox__control a{color:#0097ea!important;text-decoration:none!important}
+.t-form .t-checkbox__indicator{width:16px!important;height:16px!important;flex:0 0 16px!important;margin-right:10px!important;border:1.5px solid #8c8c8c!important;border-radius:3px!important;opacity:1!important}
+.t-form .t-checkbox:checked+.t-checkbox__indicator{background:#0097ea!important;border-color:#0097ea!important}
+.t-form .t-checkbox__indicator:after{border-color:#fff!important}
+#allrecords .t-form .t-submit,.t-form .t-submit,.form button[type="submit"]{box-sizing:border-box!important;font-family:var(--form-font)!important;font-size:15px!important;font-weight:700!important;line-height:1.6!important;border-radius:12px!important;background:#d92c04!important;color:#fff!important;border:1.5px solid transparent!important;padding:15px 22px!important;height:auto!important;min-height:54px;box-shadow:none!important;cursor:pointer}
+#allrecords .t-form .t-submit:hover,.form button[type="submit"]:hover{background:#b32403!important}
+.t-form .t-btn_wrap-effects{display:none!important}
+.t-popup{background:rgba(8,53,117,.5)!important}
+.t-popup .t-popup__container{box-sizing:border-box;width:min(560px,calc(100vw - 32px))!important;max-width:560px!important;background:#fff!important;border:1px solid #e4e4e4!important;border-radius:26px!important;box-shadow:0 40px 100px rgba(8,53,117,.28)!important;overflow:hidden}
+.t-popup .t702__wrapper{padding:clamp(24px,3vw,38px)!important}
+.t-popup .t-title{font-family:var(--form-font)!important;font-size:clamp(26px,3.3vw,40px)!important;line-height:1.1!important;font-weight:700!important;letter-spacing:-.025em!important;color:#083575!important}
+.t-popup .t-descr{font-family:var(--form-font)!important;font-size:15px!important;line-height:1.6!important;color:#595959!important}
+.t-popup .t-input-group{margin-bottom:12px!important}
+.t-popup .t-form__submit{margin-top:12px!important}
+.t-popup .t-submit{width:100%!important}
+@media(max-width:480px){.t-form .t-input,.field input,.field textarea{font-size:16px!important}.t-popup .t702__wrapper{padding:24px!important}}
