@@ -227,18 +227,18 @@
 
 <!-- ФОРМА -->
 <section class="section wrap" id="zayavka">
-  <div class="form-card">
-    <div class="stack stack--s">
+  <div class="form-card form-card--contact">
+    <div class="stack stack--s form-card__intro">
       <h2>Свяжитесь с нами</h2>
-      <p class="lede">Познакомимся, вникнем в задачу и сделаем предложение. Обычно отвечаем в течение рабочего дня.</p>
+      <p class="lede">Познакомимся, вникнем в задачу и сделаем предложение.</p><p class="form-card__response">Обычно отвечаем в течение рабочего дня.</p>
     </div>
     <form class="form" data-demo>
       <div class="form__row">
-        <div class="field"><label for="h-name">Ваше имя</label><input id="h-name" name="name" type="text" placeholder="Как к вам обращаться" required></div>
-        <div class="field"><label for="h-phone">Телефон</label><input id="h-phone" name="phone" type="tel" placeholder="+7 000 000 00 00" required></div>
+        <div class="field"><label for="h-name">Ваше имя</label><input id="h-name" name="name" type="text" autocomplete="name" placeholder="Как к вам обращаться" required></div>
+        <div class="field"><label for="h-phone">Телефон</label><input id="h-phone" name="phone" type="tel" autocomplete="tel" placeholder="+7 000 000 00 00" required></div>
       </div>
-      <div class="field"><label for="h-task">Задача</label><textarea id="h-task" name="task" placeholder="Например: нужен сайт на Битриксе и реклама в Директе"></textarea></div>
-      <label class="consent"><input id="h-consent" type="checkbox" required> Нажимая кнопку, я принимаю <a href="kontakty.html">политику обработки персональных данных</a></label>
+      <div class="field"><label for="h-task">Задача</label><textarea id="h-task" name="task" rows="3" placeholder="Например: нужен сайт на Битриксе и реклама в Директе"></textarea></div>
+      <label class="consent"><input id="h-consent" type="checkbox" required><span>Я принимаю <a href="kontakty.html">политику обработки персональных данных</a></span></label>
       <button class="btn btn--primary" type="submit" style="align-self:flex-start">Отправить заявку<span class="btn__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></button>
       <p class="form__note" role="status"></p>
     </form>
@@ -364,5 +364,5 @@
 </footer>
 
 <script src="../assets/app.js"></script>
-<link rel="stylesheet" href="../assets/forms.css?v=scale150"></body>
+<link rel="stylesheet" href="../assets/forms.css?v=contact2"></body>
 </html>
