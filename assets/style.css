@@ -803,3 +803,10 @@ body:has(dialog.modal[open]){overflow:hidden}
 .home-case__link{display:flex;justify-content:space-between;align-items:center;font-weight:700;color:var(--navy);font-size:14px;margin-top:auto;padding-top:8px}
 .home-case__link span{display:grid;place-items:center;width:36px;height:36px;border-radius:50%;background:var(--navy);color:#fff;font-size:20px}
 @media(max-width:1330px){.home-case{grid-template-columns:1fr}.home-case__body{gap:16px}.home-case__stats strong{font-size:28px}}
+
+/* Review authors: original Yandex account avatars. */
+.review__author{display:flex;align-items:center;gap:12px;color:inherit;text-decoration:none;min-width:0}
+.review__avatar{display:block;width:48px;height:48px;flex:0 0 48px;border-radius:50%;object-fit:cover;background:var(--bg)}
+.review__author-info{display:flex;flex-direction:column;gap:3px;min-width:0;overflow-wrap:anywhere}
+.review__author:hover b{text-decoration:underline}
+.review__author:focus-visible{outline:2px solid var(--cyan);outline-offset:5px;border-radius:4px}
