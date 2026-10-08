@@ -1,5 +1,5 @@
 .support-page .hero .eyebrow{margin-bottom:20px}
-.support-page .hero h1{font-size:clamp(36px,5vw,72px);line-height:1.06;max-width:20ch;text-wrap:initial}
+.support-page .hero h1{font-size:clamp(36px,2.85714vw,72px);line-height:1.06;max-width:20ch;text-wrap:initial}
 .support-page .hero__sub{max-width:65ch}
 .support-metrics{grid-template-columns:repeat(3,minmax(0,1fr))}
 .support-page section[id]{scroll-margin-top:100px}
@@ -9,25 +9,25 @@
 .support-tasks details ul{margin-top:16px}
 .support-prompt{display:flex;align-items:center;justify-content:space-between;gap:24px;background:#edf2f8;border-radius:18px;padding:28px}
 .support-prompt p{font-size:14px;color:var(--gray-600);margin-top:10px}
-.support-stability,.support-contact{display:grid;grid-template-columns:1.15fr 1fr;gap:48px;background:var(--navy);color:#fff;padding:clamp(26px,4vw,50px);border-radius:26px;align-items:center}
+.support-stability,.support-contact{display:grid;grid-template-columns:1.15fr 1fr;gap:48px;background:var(--navy);color:#fff;padding:clamp(26px,2.28571vw,50px);border-radius:26px;align-items:center}
 .support-stability .eyebrow,.support-contact .eyebrow{margin-bottom:14px}
-.support-stability h2,.support-contact h2{font-size:clamp(28px,3.3vw,44px);line-height:1.12}
+.support-stability h2,.support-contact h2{font-size:clamp(28px,1.88571vw,44px);line-height:1.12}
 .support-stability p,.support-contact p{color:#d5e1f2}
 .support-prices{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
 .support-plan{gap:14px;min-width:0}
-.support-plan .support-price{font-size:clamp(26px,2.5vw,36px);font-weight:700;color:var(--navy);white-space:nowrap;letter-spacing:-.04em;line-height:1.25;margin-top:10px}
+.support-plan .support-price{font-size:clamp(26px,1.42857vw,36px);font-weight:700;color:var(--navy);white-space:nowrap;letter-spacing:-.04em;line-height:1.25;margin-top:10px}
 .support-plan .support-price small{display:block;font-size:12px;font-weight:500;letter-spacing:0;margin-top:6px}
 .support-plan.card--dark .support-price{color:#fff}
 .support-plan .btn{margin-top:auto;justify-content:center;padding-inline:12px;font-size:13px}
 .support-plan .support-rate{font-size:14px}
 .support-client .btn{align-self:flex-start;margin-top:auto}
-.support-check{display:flex;align-items:center;justify-content:space-between;gap:32px;padding:clamp(24px,4vw,48px);border:1px solid var(--line);border-radius:26px;background:white}
-.support-check h2{font-size:clamp(26px,3vw,40px);max-width:26ch;margin:16px 0}
+.support-check{display:flex;align-items:center;justify-content:space-between;gap:32px;padding:clamp(24px,2.28571vw,48px);border:1px solid var(--line);border-radius:26px;background:white}
+.support-check h2{font-size:clamp(26px,1.71429vw,40px);max-width:26ch;margin:16px 0}
 .support-about h3{font-size:23px}
 .support-contact a:not(.btn):hover{text-decoration:underline}
-.support-phone{font-size:clamp(23px,2.4vw,32px);font-weight:700;white-space:nowrap}
+.support-phone{font-size:clamp(23px,1.37143vw,32px);font-weight:700;white-space:nowrap}
 .support-contact .hero__cta{margin-top:16px}
-@media(max-width:1050px){.support-prices{grid-template-columns:repeat(2,minmax(0,1fr))}.support-tasks{grid-template-columns:1fr}.support-stability,.support-contact{grid-template-columns:1fr;gap:32px}}
-@media(max-width:650px){.support-prices{grid-template-columns:1fr}.support-page .g2,.support-page .g3,.support-page .g4{grid-template-columns:1fr}.support-prompt,.support-check{flex-direction:column;align-items:flex-start}.support-metrics{grid-template-columns:1fr}.support-metrics .hcred{padding-left:0;border-left:0;border-top:1px solid #ffffff30}.support-metrics .hcred:first-child{border-top:0}.support-page .btn{white-space:normal}.support-page .hero h1{font-size:36px}.support-phone{font-size:23px}}
+@media(max-width:1837.5px){.support-prices{grid-template-columns:repeat(2,minmax(0,1fr))}.support-tasks{grid-template-columns:1fr}.support-stability,.support-contact{grid-template-columns:1fr;gap:32px}}
+@media(max-width:1137.5px){.support-prices{grid-template-columns:1fr}.support-page .g2,.support-page .g3,.support-page .g4{grid-template-columns:1fr}.support-prompt,.support-check{flex-direction:column;align-items:flex-start}.support-metrics{grid-template-columns:1fr}.support-metrics .hcred{padding-left:0;border-left:0;border-top:1px solid #ffffff30}.support-metrics .hcred:first-child{border-top:0}.support-page .btn{white-space:normal}.support-page .hero h1{font-size:36px}.support-phone{font-size:23px}}
 
-.support-hundred{font-size:clamp(64px,8vw,112px);font-weight:700;line-height:1.1;margin-top:24px}.support-hundred small{font-size:22px;display:block}.support-prompt h2{font-size:clamp(26px,3vw,38px);max-width:30ch}.support-prompt .btn,.support-check .btn{flex-shrink:0}.support-logos{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}.support-logos>div{display:grid;place-items:center;border:1px solid var(--line);border-radius:16px;min-height:120px;padding:24px}.support-logos img{width:100%;height:75px;object-fit:contain}.support-page>section:first-child{padding-top:24px;padding-bottom:0}.support-page .hero__sub+.hero__sub{margin-top:12px}@media(max-width:650px){.support-logos{grid-template-columns:repeat(2,1fr)}.support-logos>div{padding:16px;min-height:100px}.support-logos img{height:60px}}
+.support-hundred{font-size:clamp(64px,4.57143vw,112px);font-weight:700;line-height:1.1;margin-top:24px}.support-hundred small{font-size:22px;display:block}.support-prompt h2{font-size:clamp(26px,1.71429vw,38px);max-width:30ch}.support-prompt .btn,.support-check .btn{flex-shrink:0}.support-logos{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}.support-logos>div{display:grid;place-items:center;border:1px solid var(--line);border-radius:16px;min-height:210px;padding:24px}.support-logos img{width:100%;height:75px;object-fit:contain}.support-page>section:first-child{padding-top:24px;padding-bottom:0}.support-page .hero__sub+.hero__sub{margin-top:12px}@media(max-width:1137.5px){.support-logos{grid-template-columns:repeat(2,1fr)}.support-logos>div{padding:16px;min-height:175px}.support-logos img{height:60px}}

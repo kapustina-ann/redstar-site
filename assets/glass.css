@@ -101,7 +101,7 @@ body::before{
 }
 
 /* подложка у footer прозрачная — фон страницы виден насквозь */
-.footer{margin-top:clamp(40px,6vw,80px)}
+.footer{margin-top:clamp(40px,3.42857vw,80px)}
 
 /* ---------- Шапка ---------- */
 .topbar{
