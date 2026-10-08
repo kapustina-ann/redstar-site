@@ -153,7 +153,9 @@ p{margin:0}
 /* зона наведения чуть выше и ниже пункта — курсор не срывается */
 .has-drop{position:relative;padding-block:10px;margin-block:-10px}
 .drop{
-  position:absolute;top:calc(100% + 10px);left:-10px;min-width:495px;
+  position:absolute;top:100%;left:-10px;width:600px;min-width:0;
+  grid-template-columns:repeat(2,minmax(0,1fr));gap:4px;
+  max-height:calc(66.6667dvh - 100px);overflow-y:auto;overscroll-behavior:contain;
   background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);
   box-shadow:0 24px 60px rgba(8,53,117,.13);padding:10px;display:none;
 }
@@ -161,8 +163,8 @@ p{margin:0}
 .drop::before{content:"";position:absolute;left:0;right:0;top:-14px;height:14px}
 .has-drop:hover .drop,
 .has-drop:focus-within .drop,
-.has-drop.is-open .drop{display:block}
-.drop a{display:flex;flex-direction:column;gap:2px;padding:11px 14px;border-radius:var(--r-sm);transition:background .15s ease}
+.has-drop.is-open .drop{display:grid}
+.drop a{display:flex;flex-direction:column;min-width:0;gap:4px;padding:10px 12px;border-radius:var(--r-sm);transition:background .15s ease}
 .drop a:hover{background:var(--bg)}
 .drop b{font-size:14.5px;font-weight:700;color:var(--navy)}
 .drop span{font-size:12.5px;color:var(--gray-600);line-height:1.4;font-weight:500}
@@ -171,7 +173,7 @@ p{margin:0}
 .burger span{display:block;width:18px;height:2px;background:var(--navy);box-shadow:0 -6px 0 var(--navy),0 6px 0 var(--navy)}
 
 .mobile-menu{display:none;background:#fff;border-top:1px solid var(--line);padding:12px 0 18px}
-.mobile-menu.is-open{display:block}
+.mobile-menu.is-open{display:block;max-height:calc(66.6667dvh - 82px);overflow-y:auto;overscroll-behavior:contain}
 .mobile-menu a{display:block;padding:12px 4px;border-radius:var(--r-sm);font-weight:600;color:var(--navy)}
 .mobile-menu .sub{padding-left:18px;font-size:14px;color:var(--gray-600);font-weight:500}
 
