@@ -69,3 +69,6 @@
 @media(max-width:1500px){.support-promo__panel{grid-template-columns:1fr}.support-promo__heading p{max-width:65ch}}
 @media(max-width:900px){.support-promo__footer{align-items:flex-start;flex-direction:column}}
 @media(max-width:690px){.support-promo__panel{padding:20px}.support-promo__offers{grid-template-columns:1fr}.support-info .support-promo__heading h2{font-size:26px}.support-promo__footer .support-info__button{width:100%;justify-content:center}}
+
+/* Case previews share one compact image area on desktop and mobile. */
+.support-case-preview{display:block;width:100%;height:clamp(140px,15vw,220px);object-fit:cover;object-position:top;border-radius:12px;margin-bottom:20px}
