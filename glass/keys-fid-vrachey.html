@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Как мы убрали чужих врачей из карточки клиники на Яндексе | Редстар</title>
+<meta name="description" content="Кейс техподдержки Редстар: настроили фид врачей с сайта на 1С-Битрикс для Яндекса. Управление специалистами и ценами из админки, автоматическое обновление раз в 3 месяца.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='11' fill='%23E4E4E4'/%3E%3Crect x='15' y='13' width='5.5' height='27' fill='%231A1A1A'/%3E%3Cpath d='M18 13h8.5a7.5 7.5 0 0 1 0 15H18v-5h8a2.5 2.5 0 0 0 0-5h-8z' fill='%231A1A1A'/%3E%3Ccircle cx='15' cy='14' r='6' fill='%23D92C04'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,600;0,700;0,800;1,500&display=swap">
+<link rel="stylesheet" href="../assets/style.css?v=compact-menu1">
+<link rel="stylesheet" href="../assets/glass.css?v=scale150">
+<link rel="stylesheet" href="../assets/site-scale.css?v=scale150"><link rel="stylesheet" href="../assets/headings.css?v=unified3">
+<link rel="stylesheet" href="../assets/case-doctor-feed.css?v=1">
+<link rel="canonical" href="https://kapustina-ann.github.io/redstar-site/keys-fid-vrachey.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Как мы убрали чужих врачей из карточки клиники на Яндексе", "description": "Кейс техподдержки Редстар: настроили фид врачей с сайта на 1С-Битрикс для Яндекса. Управление специалистами и ценами из админки, автоматическое обновление раз в 3 месяца.", "inLanguage": "ru", "datePublished": "2026-10-09", "mainEntityOfPage": "https://kapustina-ann.github.io/redstar-site/keys-fid-vrachey.html", "publisher": {"@type": "Organization", "name": "Редстар", "url": "https://kapustina-ann.github.io/redstar-site/"}, "image": ["https://kapustina-ann.github.io/redstar-site/assets/cases/doctor-feed/desktop.png", "https://kapustina-ann.github.io/redstar-site/assets/cases/doctor-feed/mobile.png"]}</script>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <nav class="nav" aria-label="Основная навигация">
+      <a class="brand" href="index.html"><span class="brand__dot"></span>Редстар</a>
+      <div class="nav__menu">
+        <div class="has-drop">
+          <a class="nav__link" href="uslugi.html">Услуги</a>
+          <div class="drop">
+            <a href="uslugi-razrabotka-bitrix.html"><b>Разработка на 1С-Битрикс</b><span>Корпоративные сайты, каталоги и интернет-магазины</span></a>
+<a href="uslugi-razrabotka-tilda.html"><b>Разработка на Тильде</b><span>Лендинги, промостраницы и сайты мероприятий</span></a>
+            <a href="uslugi-podderzhka.html"><b>Техническая поддержка</b><span>Ведём и развиваем сайты на 1С-Битрикс и Тильде</span></a>
+            <a href="uslugi-seo.html"><b>SEO-продвижение</b><span>Больше обращений из Яндекса и Google</span></a>
+<a href="uslugi-geo.html"><b>GEO-продвижение</b><span>Присутствие бренда в ответах нейросетей</span></a>
+            <a href="uslugi-kontekst.html"><b>Контекстная реклама</b><span>Яндекс Директ</span></a>
+          </div>
+        </div>
+        <a class="nav__link" href="zhurnal.html?rubrika=keysy">Кейсы</a>
+        <a class="nav__link" href="o-kompanii.html">О компании</a>
+        <a class="nav__link" href="zhurnal.html">Журнал</a>
+        <a class="nav__link" href="kontakty.html">Контакты</a>
+      </div>
+      <span class="nav__spacer"></span>
+      <a class="nav__phone" href="tel:+74852319404">8 (4852) 31-94-04</a>
+      <div class="nav__icons">
+        <a class="icon-btn" href="tel:+74852319404" aria-label="Позвонить"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></a>
+        <a class="icon-btn" href="https://t.me/" aria-label="Телеграм"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.9 4.3 18.9 19c-.2 1-.8 1.3-1.7.8l-4.6-3.4-2.2 2.1c-.3.3-.5.5-1 .5l.3-4.7 8.6-7.8c.4-.3-.1-.5-.6-.2L6.9 12.9l-4.5-1.4c-1-.3-1-1 .2-1.4l17.7-6.8c.8-.3 1.5.2 1.6 1z"/></svg></a>
+      </div>
+      <button class="burger" aria-label="Меню" aria-expanded="false"><span></span></button>
+    </nav>
+    <div class="mobile-menu">
+      <a href="uslugi.html">Услуги</a>
+      <a class="sub" href="uslugi-razrabotka-bitrix.html">Разработка на 1С-Битрикс</a>
+<a class="sub" href="uslugi-razrabotka-tilda.html">Разработка на Тильде</a>
+      <a class="sub" href="uslugi-podderzhka.html">Техническая поддержка</a>
+      <a class="sub" href="uslugi-seo.html">SEO-продвижение</a>
+<a class="sub" href="uslugi-geo.html">GEO-продвижение</a>
+      <a class="sub" href="uslugi-kontekst.html">Контекстная реклама</a>
+      <a href="zhurnal.html?rubrika=keysy">Кейсы</a>
+      <a href="o-kompanii.html">О компании</a>
+      <a href="zhurnal.html">Журнал</a>
+      <a href="kontakty.html">Контакты</a>
+      <a href="tel:+74852319404">8 (4852) 31-94-04</a>
+    </div>
+  </div>
+</header>
+
+<main class="doctor-case">
+<section class="wrap"><div class="hero hero--dark on-navy"><div class="hero__inner hero__inner--left">
+<nav class="crumbs" aria-label="Хлебные крошки"><a href="index.html">Главная</a><span>/</span><a href="zhurnal.html?rubrika=keysy">Кейсы</a><span>/</span>Фид врачей для Яндекса</nav>
+<div class="eyebrow">Техподдержка · Стоматология · 1С-Битрикс</div>
+<h1>Как мы убрали чужих врачей из карточки клиники на Яндексе</h1>
+<p class="hero__sub">В карточке организации показывались врачи, которые давно ушли или вообще не работали в клинике. Настроили передачу данных с сайта: теперь клиника управляет списком врачей и стоимостью приёма из админки Битрикса.</p>
+</div></div></section>
+<section class="section--tight wrap"><div class="grid g3 df-summary">
+<article class="card card--line"><span class="eyebrow">Проблема</span><h2 class="site-h2">Посторонние врачи</h2><p>Яндекс показывал старые и неверные данные. Источник найти не удавалось, обращения в поддержку не помогали.</p></article>
+<article class="card card--line"><span class="eyebrow">Решение</span><h2 class="site-h2">Фид с сайта</h2><p>Настроили фид врачей для Яндекс Вебмастера. В этом проекте сайт автоматически пересобирает его раз в 3 месяца.</p></article>
+<article class="card card--line"><span class="eyebrow">Результат</span><h2 class="site-h2">Управляемый список</h2><p>В карточке — нужные врачи и цены. Клиника выбирает, кого передавать в Яндекс, в привычной админке.</p></article>
+</div></section>
+<article class="wrap df-article">
+<section class="df-section" id="problem"><h2 class="site-h2">С чем пришёл клиент</h2><div class="df-copy"><p>Стоматологическая клиника заметила, что в её карточке на Яндексе появляются врачи, которых нет ни на сайте, ни в других справочниках. Часть из них уже не работала в клинике, часть не имела к ней отношения вообще.</p>
+<blockquote><p>«Яндекс тянет откуда-то в карточку старых врачей, хотя их нет на сайте и в иных справочниках. В ТП Яндекса уже дважды писала, пока нет толку. Как понять, может, где старые страницы всплывают и попадают в алгоритмы Яндекса, почистить бы.</p><p>Нужна помощь, я вообще не понимаю, откуда это тянется. Нигде уже нет информации, на официальном сайте, в других справочниках. А в карточке Яндекса выскакивает».</p><footer>Из обращения клиента в техподдержку</footer></blockquote></div></section>
+<section class="df-section" id="solution"><h2 class="site-h2">Что сделали</h2><div class="df-copy"><p>Вместо дальнейшего поиска источника устаревших данных настроили передачу информации с официального сайта клиники. Сайт формирует фид врачей в формате, который принимает Яндекс Вебмастер.</p></div>
+<ol class="df-flow"><li><span>01</span><h3>Сайт клиники</h3><p>Данные берутся из раздела врачей на сайте.</p></li><li><span>02</span><h3>Админка Битрикса</h3><p>Клиника задаёт цену приёма, специальность и выбирает врачей для передачи.</p></li><li><span>03</span><h3>Фид</h3><p>Сайт автоматически пересобирает данные раз в 3 месяца.</p></li><li><span>04</span><h3>Яндекс</h3><p>Вебмастер принимает фид, данные передаются в карточку организации.</p></li></ol>
+<div class="df-copy"><ul><li>Отдельный список врачей для Яндекса вести не нужно: данные берутся с сайта.</li><li>При очередной пересборке фид учитывает изменения состава врачей.</li><li>В админке можно изменить стоимость приёма, добавить или поменять дополнительную специальность и выбрать, кто попадёт в выгрузку.</li></ul></div></section>
+<section class="df-section" id="challenges"><h2 class="site-h2">Сложности по ходу работы</h2><div class="grid g2">
+<article class="card card--line"><h3>Разные названия специальностей</h3><p>В проекте столкнулись с тем, что специальности на сайте не совпадали со списком Яндекса. Например, должность «детский стоматолог» не подходила для передачи в фиде.</p><p><b>Решение:</b> добавили скрытое поле специально для выгрузки. На сайте сохранили привычную должность, а в Яндекс стали передавать специальность из его списка.</p></article>
+<article class="card card--line"><h3>Повторяющиеся ошибки проверки</h3><p>Автоматические проверки Вебмастера показывали ошибки, которых при проверке самого фида не находили.</p><p><b>Решение:</b> такие случаи разбирали с поддержкой Яндекса и просили дополнительно проверить фид на их стороне.</p></article>
+</div></section>
+<section class="df-section" id="results"><h2 class="site-h2">Было и стало</h2><div class="df-comparison">
+<div><h3>Было</h3><ul><li>В карточке — ушедшие и посторонние врачи.</li><li>Непонятно, откуда Яндекс получает данные.</li><li>Письма в поддержку не решали проблему.</li><li>Список врачей устаревал.</li></ul></div>
+<div><h3>Стало</h3><ul><li>В карточке — врачи, которых выбрала клиника.</li><li>Данные для фида поступают с сайта клиники.</li><li>Врачей и цены можно менять в админке Битрикса.</li><li>Фид автоматически обновляется раз в 3 месяца.</li></ul></div>
+</div></section>
+<section class="df-section" id="screens"><h2 class="site-h2">Как карточка выглядит после настройки</h2><p class="df-copy">Нужные врачи на месте, указана стоимость консультации. На скриншоте компьютерной версии — 46 врачей. Изображения показывают результат на момент подготовки кейса.</p>
+<div class="df-gallery"><figure><a href="../assets/cases/doctor-feed/desktop.png" target="_blank" rel="noopener" aria-label="Открыть скриншот на компьютере в полном размере"><img src="../assets/cases/doctor-feed/desktop.png" width="706" height="766" alt="Блок «Врачи» на Яндексе: 46 врачей, цены приёма и кнопки записи" loading="lazy"></a><figcaption>На компьютере: список врачей, стоимость приёма и запись.</figcaption></figure>
+<figure><a href="../assets/cases/doctor-feed/mobile.png" target="_blank" rel="noopener" aria-label="Открыть скриншот на телефоне в полном размере"><img src="../assets/cases/doctor-feed/mobile.png" width="589" height="1280" alt="Мобильная карточка врачей: специальности, стаж, отзывы и стоимость консультации" loading="lazy"></a><figcaption>На телефоне: специальности, стаж, отзывы и стоимость. Нажмите на изображение, чтобы рассмотреть детали.</figcaption></figure></div></section>
+<section class="df-section"><h2 class="site-h2">Кому может пригодиться решение</h2><p class="df-copy">Клиникам на 1С-Битрикс, у которых данные о врачах на Яндексе расходятся с информацией на сайте. Перед внедрением проверяем структуру сайта, данные специалистов и требования к фиду.</p></section>
+</article>
+<section class="section--tight wrap"><div class="cta on-navy"><div class="cta__text"><h2 class="site-h2">Нужна помощь с сайтом?</h2><p>Расскажите, что не работает или требует доработки. Разберём задачу и предложим решение.</p></div><a class="btn btn--white" href="index.html#zayavka">Обсудить задачу</a></div><div class="df-related"><a href="uslugi-podderzhka.html">Техническая поддержка сайтов →</a><a href="zhurnal.html?rubrika=keysy">Все кейсы →</a></div></section>
+</main>
+
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div class="footer__col">
+        <div class="footer__brand"><span class="brand__dot"></span>Редстар</div>
+        <p style="color:rgba(255,255,255,.62);font-size:14.5px;max-width:30ch">Агентство интернет-маркетинга. Ярославль, работаем с проектами по всей России.</p>
+      </div>
+      <div class="footer__col">
+        <h4>Услуги</h4>
+        <ul>
+          <li><a href="uslugi-razrabotka-bitrix.html">Разработка на 1С-Битрикс</a>
+<a href="uslugi-razrabotka-tilda.html">Разработка на Тильде</a></li>
+          <li><a href="uslugi-podderzhka.html">Техническая поддержка</a></li>
+          <li><a href="uslugi-seo.html">SEO-продвижение</a></li>
+<li><a href="uslugi-geo.html">GEO-продвижение</a></li>
+          <li><a href="uslugi-kontekst.html">Контекстная реклама</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Компания</h4>
+        <ul>
+          <li><a href="o-kompanii.html">О компании</a></li>
+          <li><a href="zhurnal.html?rubrika=keysy">Кейсы</a></li>
+          <li><a href="zhurnal.html">Журнал</a></li>
+          <li><a href="kontakty.html">Контакты</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Контакты</h4>
+        <ul>
+          <li><a href="tel:+74852319404">8 (4852) 31-94-04</a></li>
+          <li><a href="mailto:hello@redstaragency.ru">hello@redstaragency.ru</a></li>
+          <li>г. Ярославль, Октябрьский переулок, д. 3, офис 207</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__legal">
+      <span>© Редстар 2026. Все права защищены</span>
+      <span><a href="kontakty.html">Обработка персональных данных</a> · <a href="kontakty.html">Политика конфиденциальности</a> · <a href="kontakty.html">Реквизиты</a></span>
+    </div>
+  </div>
+  <div class="footer__word" aria-hidden="true">Редстар</div>
+</footer>
+
+<script src="../assets/app.js"></script>
+</body>
+</html>

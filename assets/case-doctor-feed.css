@@ -1,0 +1,32 @@
+.doctor-case .hero h1{max-width:23ch;font-size:clamp(32px,3vw,64px);line-height:1.06;text-wrap:initial}
+.doctor-case .hero__sub{max-width:76ch}
+.df-summary .card{gap:14px;min-width:0}
+.df-summary .eyebrow{margin-bottom:0}
+.df-article{padding-top:24px}
+.df-section{margin-bottom:52px;scroll-margin-top:110px}
+.df-section>h2{margin-bottom:24px}
+.df-copy{max-width:85ch;line-height:1.75;color:#3a3e46}
+.df-copy p+p{margin-top:16px}
+.df-copy ul{padding-left:22px;margin-top:22px}
+.df-copy li+li{margin-top:12px}
+.df-copy blockquote{margin:28px 0 0;padding:24px 28px;background:#eef3fa;border-left:3px solid #009fe3;border-radius:0 16px 16px 0;color:#083575}
+.df-copy blockquote footer{margin-top:18px;font-size:13px;color:#626873}
+.df-flow{list-style:none;padding:0;margin:28px 0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.df-flow li{border-top:2px solid #083575;padding:18px 0}
+.df-flow span{display:block;color:#009fe3;font-size:13px;font-weight:700;margin-bottom:16px}
+.df-flow h3{font-size:20px;color:#083575;margin-bottom:12px}
+.df-flow p{font-size:14px;line-height:1.6;color:#626873}
+.df-comparison{display:grid;grid-template-columns:1fr 1fr;border:1px solid #e4e4e4;border-radius:20px;overflow:hidden;background:#fff}
+.df-comparison>div{padding:28px}
+.df-comparison>div+div{background:#eef3fa}
+.df-comparison h3{color:#083575;margin-bottom:18px}
+.df-comparison ul{padding-left:20px;margin:0;line-height:1.7}
+.df-comparison li+li{margin-top:12px}
+.df-gallery{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:28px;max-width:1080px}
+.df-gallery figure{margin:0;min-width:0}
+.df-gallery a{display:flex;justify-content:center;align-items:flex-start;padding:20px;background:#fff;border:1px solid #e4e4e4;border-radius:18px}
+.df-gallery img{display:block;max-width:100%;width:auto;height:420px;object-fit:contain}
+.df-gallery figcaption{font-size:13px;line-height:1.6;color:#626873;margin-top:12px}
+.df-related{display:flex;flex-wrap:wrap;gap:18px 28px;margin-top:24px;font-size:14px;color:#083575}
+@media(max-width:1050px){.df-flow{grid-template-columns:1fr 1fr}.df-gallery img{height:320px}}
+@media(max-width:690px){.doctor-case .hero h1{font-size:30px}.df-flow,.df-comparison,.df-gallery{grid-template-columns:1fr}.df-gallery img{width:100%;height:auto}.df-gallery a{padding:12px}.df-copy blockquote{padding:20px}.df-comparison>div{padding:20px}.df-section{margin-bottom:36px}}
