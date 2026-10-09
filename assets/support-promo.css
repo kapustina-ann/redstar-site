@@ -22,3 +22,11 @@
 .support-promo__gifts li::before{display:none}.support-promo__gifts b{display:block;color:#42c0ff;font-size:12px;text-transform:uppercase;letter-spacing:.05em;margin-top:4px}
 @media(max-width:1050px){.support-promo__panel{grid-template-columns:1fr;gap:24px}.support-promo__footer{flex-direction:column;align-items:stretch}.support-promo__heading p{max-width:60ch}}
 @media(max-width:690px){.support-promo__panel{padding:20px}.support-promo__offer--intro{padding:20px}.support-promo .support-promo__gifts{grid-template-columns:1fr}.support-promo__headline strong{font-size:48px}}
+
+/* Hero announcement links directly to the full introductory offer. */
+body.support-page a.support-hero-promo{display:flex;align-items:center;gap:14px;width:fit-content;max-width:100%;margin:22px 0;padding:14px 18px;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.35);border-radius:12px;color:#fff!important;text-decoration:none;font-size:15px;line-height:1.4}
+.support-hero-promo__badge{flex:none;background:#d92c04;border-radius:6px;padding:5px 9px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.05em}
+.support-hero-promo>span:nth-child(2){min-width:0}.support-hero-promo b{display:block;font-size:17px;margin-bottom:3px}.support-hero-promo>span>span{display:block;font-size:13px;color:rgba(255,255,255,.85)}
+.support-hero-promo__arrow{font-size:22px;margin-left:auto}body.support-page a.support-hero-promo:hover{background:rgba(255,255,255,.16)}body.support-page a.support-hero-promo:focus-visible{outline:3px solid #0097ea;outline-offset:4px}
+#support-promo{scroll-margin-top:110px}
+@media(max-width:690px){body.support-page a.support-hero-promo{flex-wrap:wrap;padding:14px;gap:10px}.support-hero-promo>span:nth-child(2){flex-basis:100%}.support-hero-promo__arrow{display:none}}
