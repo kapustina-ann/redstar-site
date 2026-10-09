@@ -1,0 +1,16 @@
+/* Shared H2 typography across service, case, journal and contact pages. */
+html body h2.site-h2{font-family:'Gilroy','Montserrat','Helvetica Neue',Arial,sans-serif!important;font-size:clamp(22px,1.6vw,36px)!important;font-weight:700!important;line-height:1.15!important;letter-spacing:-.025em!important;color:#083575!important;text-align:left!important;text-transform:none!important;text-wrap:initial;max-width:100%;min-width:0}
+html body .home-page h2.site-h2{font-size:var(--home-heading-size,clamp(22px,1.6vw,36px))!important}
+html body.home-page main h2.site-h2{font-size:var(--home-heading-size,clamp(22px,1.6vw,36px))!important}
+html body :is(.cta,.meet,.card--dark,.card--red,.on-navy,.on-dark,.on-red,.vc-cta) h2.site-h2{color:#fff!important}
+html body h2.site-h2{margin-top:0}
+html body :is(.stack,.stack--s)>h2.site-h2{margin-bottom:0}
+html body .vc-section>h2.site-h2{margin-bottom:24px}
+html body :is(.cta__text,.vc-cta>div)>h2.site-h2{margin-bottom:16px}
+/* This heading sits outside the legacy artboard so its type is never scaled by Tilda. */
+#rec2036016981{position:relative}
+#rec2036016981>.support-legacy-heading{position:absolute;z-index:3;top:60px;left:clamp(20px,2.66667vw,52px);right:clamp(20px,2.66667vw,52px);margin:0}
+.support-extra-heading{box-sizing:border-box;width:100%;padding:28px clamp(20px,2.66667vw,52px) 0}
+.support-extra-heading>.support-section-title{margin:0 0 24px}
+@media(max-width:690px){html body h2.site-h2{font-size:20px!important}html body.home-page main h2.site-h2{font-size:var(--home-heading-size,20px)!important}.support-extra-heading{padding:24px 16px 0}#rec2036016981>.support-legacy-heading{left:16px;right:16px}}
+@media(max-width:480px){#rec2036016981>.support-legacy-heading{top:45px}}
