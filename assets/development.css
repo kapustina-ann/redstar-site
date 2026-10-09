@@ -30,3 +30,8 @@
 .dev-contact a{font-size:14px;font-weight:600}
 @media(max-width:1050px){.dev-matrix{min-width:760px}.dev-table-scroll th,.dev-table-scroll td{padding:14px}.dev-contact{padding:18px}}
 @media(max-width:690px){.dev-prices thead{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}.dev-prices,.dev-prices tbody{display:block}.dev-prices tr{display:block;padding:16px;border-bottom:1px solid #e4e4e4}.dev-prices tr:last-child{border-bottom:0}.dev-prices th,.dev-prices td{display:block;border:0;padding:4px 0}.dev-prices td::before{content:attr(data-label);display:block;color:#737982;font-size:11px;font-weight:500;margin-top:4px}.dev-prices tbody th{font-size:16px;margin-bottom:8px}.dev-faq summary{font-size:17px}.dev-contact{align-items:flex-start;gap:12px}.dev-contact img{width:48px;height:48px}.dev-note{font-size:13px}.dev-contact a{overflow-wrap:anywhere}}
+
+.dev-section{scroll-margin-top:90px}
+.dev-table-scroll caption{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);padding:0;border:0}
+.dev-matrix th,.dev-matrix td{padding:14px 16px}
+.dev-price-value{white-space:nowrap;font-size:13px}
