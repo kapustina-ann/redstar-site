@@ -1,0 +1,18 @@
+/* Branded task categories, scoped to the support service catalogue. */
+#rec2036005451{counter-reset:task-category}
+#rec2036005451>.support-task-row{counter-increment:task-category;grid-template-columns:minmax(180px,.65fr) minmax(0,1.7fr);gap:0;padding:0;margin:0 0 18px;border:1px solid #d9e4f2;border-radius:20px;background:#edf4fc;overflow:hidden}
+#rec2036005451>.support-task-row:nth-of-type(2){background:#eef8fc}
+#rec2036005451>.support-task-row:nth-of-type(3){background:#fff3ee;border-color:#f0ded7}
+#rec2036005451 .support-task-row h3{display:flex;flex-direction:column;gap:18px;align-self:stretch;padding:24px;background:#083575;color:#fff;font-size:clamp(20px,1.5vw,26px);line-height:1.2}
+#rec2036005451 .support-task-row h3::before{content:'0' counter(task-category);display:grid;place-items:center;width:42px;height:42px;background:#0097ea;border-radius:12px;font-size:18px;color:#fff;letter-spacing:0}
+#rec2036005451 .support-task-row:nth-of-type(3) h3::before{background:#d92c04}
+#rec2036005451 .support-task-row>div{padding:24px;min-width:0}
+#rec2036005451 .support-task-chips{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+#rec2036005451 .support-task-chips li{display:flex;align-items:flex-start;gap:10px;margin:0;padding:13px 16px;border:1px solid #dce6f0;border-radius:12px;color:#083575;box-shadow:0 2px 5px rgba(8,53,117,.03);font-size:14px;line-height:1.5}
+#rec2036005451 .support-task-chips li::before{content:'✓';flex:none;color:#0097ea;font-weight:700}
+#rec2036005451 .support-task-row:nth-of-type(3) li::before{color:#d92c04}
+#rec2036005451 summary{padding-top:16px;font-weight:700;font-size:14px}
+#rec2036005451 summary:hover{color:#007bc0}
+#rec2036005451 summary:focus-visible{outline:2px solid #0097ea;outline-offset:4px;border-radius:4px}
+@media(max-width:1140px){#rec2036005451>.support-task-row{grid-template-columns:1fr}#rec2036005451 .support-task-row h3{flex-direction:row;align-items:center;padding:18px 20px;gap:14px}#rec2036005451 .support-task-row h3::before{width:36px;height:36px;flex:none}#rec2036005451 .support-task-row>div{padding:20px}}
+@media(max-width:690px){#rec2036005451 .support-task-chips{grid-template-columns:1fr}#rec2036005451 .support-task-row>div{padding:16px}#rec2036005451 .support-task-row h3{font-size:20px}#rec2036005451 .support-task-chips li{padding:12px}}
