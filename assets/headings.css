@@ -15,3 +15,5 @@ html body :is(.cta__text,.vc-cta>div)>h2.site-h2{margin-bottom:16px}
 @media(max-width:480px){#rec2036016981>.support-legacy-heading{top:45px}}
 
 @media(max-width:1050px){html body.home-page main h2.site-h2{font-size:20px!important;white-space:normal;overflow-wrap:normal}}
+
+@media(max-width:1050px){.home-page .head-row{flex-direction:column;align-items:flex-start}.home-page .head-row>.stack{width:100%}}
