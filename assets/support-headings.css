@@ -4,4 +4,8 @@ body .support-section-title,#allrecords .support-section-title,#allrecords .tn-a
 .support-promo>.support-section-title{margin-bottom:24px}
 @media(max-width:690px){body .support-section-title,#allrecords .support-section-title,#allrecords .tn-atom.support-section-title{font-size:20px!important}}
 
-#rec2036005451.support-task-rows{padding-top:28px}
+/* Keep the task heading attached to its rows and aligned with adjacent sections. */
+#rec2036005451.support-task-rows{padding:28px clamp(20px,2.66667vw,52px);scroll-margin-top:120px}
+#rec2036005451>.support-task-row:first-of-type{padding-top:0}
+#rec2036005451 .support-task-row h3{font-size:clamp(18px,1.25vw,24px);line-height:1.3}
+@media(max-width:690px){#rec2036005451.support-task-rows{padding:24px 16px}}
