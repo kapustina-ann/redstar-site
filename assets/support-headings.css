@@ -1,0 +1,5 @@
+/* Section headings share one hierarchy; card headings remain H3. */
+body .support-section-title,#allrecords .support-section-title,#allrecords .tn-atom.support-section-title{font-family:'Gilroy','Montserrat',Arial,sans-serif!important;font-size:clamp(22px,1.6vw,36px)!important;font-weight:700!important;line-height:1.15!important;letter-spacing:-.025em!important;color:#083575!important;text-align:left!important;text-transform:none!important;margin:0 0 24px}
+#allrecords .tn-atom.support-section-title{margin:0}
+.support-promo>.support-section-title{margin-bottom:24px}
+@media(max-width:690px){body .support-section-title,#allrecords .support-section-title,#allrecords .tn-atom.support-section-title{font-size:20px!important}}

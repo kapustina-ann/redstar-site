@@ -4,3 +4,6 @@
 .home-page .head-row>.stack{flex:1;min-width:0}
 .home-page .meet__main,.home-page .form-card__intro{min-width:0}
 @media(max-width:690px){.home-page main .section-title{font-size:var(--home-heading-size,20px)}}
+
+.home-page main .section-title{color:#083575}
+.home-page main section>.section-title{margin:0 0 24px}
