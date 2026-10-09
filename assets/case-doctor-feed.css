@@ -33,3 +33,7 @@
 
 .df-summary{grid-template-columns:repeat(3,minmax(0,1fr))}
 @media(max-width:1050px){.df-summary{grid-template-columns:1fr}}
+
+.df-copy blockquote .df-quote-author{display:flex;align-items:center;gap:14px}
+.df-quote-author img{display:block;width:64px;height:64px;flex:0 0 64px;border-radius:50%;object-fit:cover;object-position:50% 25%}
+.df-quote-author>span{min-width:0}.df-quote-author b{display:block;color:#083575;font-size:15px;margin-bottom:4px}.df-quote-author>span>span{display:block;line-height:1.5}
