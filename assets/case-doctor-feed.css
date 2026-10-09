@@ -30,3 +30,6 @@
 .df-related{display:flex;flex-wrap:wrap;gap:18px 28px;margin-top:24px;font-size:14px;color:#083575}
 @media(max-width:1050px){.df-flow{grid-template-columns:1fr 1fr}.df-gallery img{height:320px}}
 @media(max-width:690px){.doctor-case .hero h1{font-size:30px}.df-flow,.df-comparison,.df-gallery{grid-template-columns:1fr}.df-gallery img{width:100%;height:auto}.df-gallery a{padding:12px}.df-copy blockquote{padding:20px}.df-comparison>div{padding:20px}.df-section{margin-bottom:36px}}
+
+.df-summary{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media(max-width:1050px){.df-summary{grid-template-columns:1fr}}
