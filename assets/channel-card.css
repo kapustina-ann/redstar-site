@@ -1,2 +1,4 @@
 .channel-card{display:flex;align-items:center;justify-content:space-between;gap:36px;padding:clamp(24px,2.66667vw,44px);background:#fff;border:1px solid #e4e4e4;border-radius:24px}.channel-card>.stack{min-width:0;max-width:74ch}.channel-card>.btn{flex-shrink:0}.channel-card .lede{max-width:68ch}@media(max-width:1200px){.channel-card{flex-direction:column;align-items:flex-start;gap:24px}}
 #telegram-channel{scroll-margin-top:100px}
+
+.channel-card__intro{display:flex;align-items:center;gap:24px;min-width:0}.channel-card__intro>.stack{min-width:0}.channel-card__avatar{display:block;width:96px;height:96px;flex:0 0 96px;object-fit:cover;border-radius:50%}@media(max-width:1050px){.channel-card__intro{align-items:flex-start;gap:18px}.channel-card__avatar{width:72px;height:72px;flex-basis:72px}}@media(max-width:690px){.channel-card__intro{flex-direction:column}}
