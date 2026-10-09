@@ -1,4 +1,5 @@
-.support-client-section{box-sizing:border-box;max-width:none;width:100%;margin:0 auto;padding:48px clamp(16px,2.66666vw,40px);font-family:'Gilroy','Montserrat','Helvetica Neue',Arial,sans-serif;color:#1a1a1a}
+.home-page{--maxw:100%}
+.support-client-section{box-sizing:border-box;max-width:none;width:100%;margin:0 auto;padding:48px var(--pad);font-family:'Gilroy','Montserrat','Helvetica Neue',Arial,sans-serif;color:#1a1a1a}
 .support-client-section h2{font-size:clamp(26px,2.19999vw,42px);font-weight:700;line-height:1.1;letter-spacing:-.025em;text-align:center;margin:0 0 30px}
 .support-client-row{box-sizing:border-box;display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);align-items:center;gap:32px;background:#fff;border-radius:18px;padding:28px;margin-bottom:20px}
 .support-client-row>div{min-width:0}.support-client-row h3{font-size:22px;line-height:1.2;letter-spacing:-.025em;font-weight:700;margin:0 0 8px;overflow-wrap:break-word}
@@ -14,9 +15,6 @@
 .support-client-row h3 a:hover{color:var(--cyan-deep)}
 @media(max-width:1350px){.home-client-logos{grid-template-columns:repeat(4,minmax(0,1fr))}}
 @media(max-width:900px){.home-client-logos{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.home-client-logos>div{padding:16px}.home-client-logos img{height:70px}}
-@media(min-width:2160px){.support-client-section{padding-inline:52px}}
-@media(min-width:2700px){.support-client-section{padding-inline:68px}}
-@media(min-width:3300px){.support-client-section{padding-inline:88px}}
 
 /* Lift the near-white background baked into supplied logos to card white. */
 .home-client-logos img.client-logo--light-bg{filter:brightness(1.04)}
