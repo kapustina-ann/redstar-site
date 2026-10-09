@@ -832,3 +832,8 @@ body:has(dialog.modal[open]){overflow:hidden}
 .cta--founders .founders__person:hover .founders__action{text-decoration:underline;text-underline-offset:3px}
 @media(max-width:1200px){.cta--founders{grid-template-columns:1fr}.cta--founders .cta__text{max-width:none}}
 @media(max-width:690px){.cta--founders .founders__person{padding:14px;gap:10px}}
+
+/* Keep the founder consultation heading on two lines within its own column. */
+.cta--founders .cta__text{container-type:inline-size;min-width:0;max-width:none}
+.cta--founders .founders-title{font-size:clamp(16px,8.5cqi,42px);line-height:1.12}
+.founders-title>span{display:block;white-space:nowrap}
