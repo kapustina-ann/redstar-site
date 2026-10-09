@@ -6,6 +6,7 @@
   function fit() {
     scheduled = false;
     root.style.removeProperty('--home-heading-size');
+    if (window.matchMedia('(max-width:1050px)').matches) return;
     const base = parseFloat(getComputedStyle(titles[0]).fontSize);
     let size = base;
     for (const title of titles) {

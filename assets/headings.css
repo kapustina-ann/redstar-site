@@ -1,6 +1,5 @@
 /* Shared H2 typography across service, case, journal and contact pages. */
 html body h2.site-h2{font-family:'Gilroy','Montserrat','Helvetica Neue',Arial,sans-serif!important;font-size:clamp(22px,1.6vw,36px)!important;font-weight:700!important;line-height:1.15!important;letter-spacing:-.025em!important;color:#083575!important;text-align:left!important;text-transform:none!important;text-wrap:initial;max-width:100%;min-width:0}
-html body .home-page h2.site-h2{font-size:var(--home-heading-size,clamp(22px,1.6vw,36px))!important}
 html body.home-page main h2.site-h2{font-size:var(--home-heading-size,clamp(22px,1.6vw,36px))!important}
 html body :is(.cta,.meet,.card--dark,.card--red,.on-navy,.on-dark,.on-red,.vc-cta) h2.site-h2{color:#fff!important}
 html body h2.site-h2{margin-top:0}
@@ -14,3 +13,5 @@ html body :is(.cta__text,.vc-cta>div)>h2.site-h2{margin-bottom:16px}
 .support-extra-heading>.support-section-title{margin:0 0 24px}
 @media(max-width:690px){html body h2.site-h2{font-size:20px!important}html body.home-page main h2.site-h2{font-size:var(--home-heading-size,20px)!important}.support-extra-heading{padding:24px 16px 0}#rec2036016981>.support-legacy-heading{left:16px;right:16px}}
 @media(max-width:480px){#rec2036016981>.support-legacy-heading{top:45px}}
+
+@media(max-width:1050px){html body.home-page main h2.site-h2{font-size:20px!important;white-space:normal;overflow-wrap:normal}}
