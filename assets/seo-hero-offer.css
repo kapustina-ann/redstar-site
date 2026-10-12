@@ -35,3 +35,5 @@
 
 @media(max-width:760px){.seo-page .seo-reasons__layout{grid-template-columns:minmax(0,1fr)}.seo-page .seo-reasons__tabs,.seo-page .seo-reasons__panels{min-width:0}.seo-page .seo-reasons__tab b{min-width:0;overflow-wrap:anywhere}}
 @media(max-width:360px){.seo-page .hero h1{font-size:18px}.seo-page .hero__cta .btn{font-size:13px;padding-inline:10px;gap:8px}.seo-page .hero__cta .btn__ico{display:none}}
+
+@media(max-width:480px){.seo-page main p,.seo-page main h3{overflow-wrap:anywhere}.seo-page .seo-reasons__visual{flex-wrap:wrap;gap:12px}.seo-page .seo-work__button{white-space:normal;text-align:center;padding-inline:12px;max-width:100%}.seo-page .seo-reasons__label{overflow-wrap:anywhere;max-width:100%}}
