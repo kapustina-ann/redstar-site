@@ -73,7 +73,7 @@
       <h1 style="margin-top:20px">Агентство<br>интернет-маркетинга</h1>
       <p class="hero__sub">Привлекаем клиентов из нейровыдачи, Яндекса и Google. Делаем сайты, которые продают, и поддерживаем их после запуска.</p>
       <div class="hero__cta">
-        <a class="btn btn--primary" href="uslugi-podderzhka.html#zayavka">Обсудить проект<span class="btn__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+        <a class="btn btn--primary" href="uslugi-podderzhka.html#zayavka" data-modal="consult" aria-haspopup="dialog">Обсудить проект<span class="btn__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
         <a class="btn btn--ghost-light btn--plain" href="zhurnal.html?rubrika=keysy">Посмотреть кейсы</a>
       </div>
     </div>
@@ -208,7 +208,7 @@
     <div class="meet__main">
 
       <p>Команда сидит в Ярославле, а проекты ведём по всей России. Выберите формат — под каждый у нас свой сценарий разговора.</p>
-      <a class="btn btn--primary" href="uslugi-podderzhka.html#zayavka">Назначить встречу<span class="btn__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+      <a class="btn btn--primary" href="uslugi-podderzhka.html#zayavka" data-modal="consult" aria-haspopup="dialog">Назначить встречу<span class="btn__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
       <span class="meet__addr">Отвечаем в течение рабочего дня, Пн–Пт с 9:00 до 18:00 по Москве</span>
     </div>
     <ul class="meet__ways">
@@ -283,16 +283,16 @@
     <button class="modal__close" type="button" data-modal-close aria-label="Закрыть">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
     </button>
-    <h2 id="consult-title" style="font-size:clamp(24px,1.73333vw,34px)" class="site-h2">Получить консультацию</h2>
+    <h2 id="consult-title" style="font-size:clamp(24px,1.73333vw,34px)" class="site-h2">Свяжитесь с нами</h2>
     <p class="lede">Разберём вашу задачу и вернёмся с предложением. Обычно отвечаем в течение рабочего дня.</p>
-    <form class="form" data-demo>
+    <form class="form" id="home-contact-form">
       <div class="form__row">
         <div class="field"><label for="m-name">Ваше имя</label><input id="m-name" name="name" type="text" placeholder="Как к вам обращаться" required></div>
         <div class="field"><label for="m-phone">Телефон</label><input id="m-phone" name="phone" type="tel" placeholder="+7 000 000 00 00" required></div>
       </div>
       <div class="field"><label for="m-task">Задача</label><textarea id="m-task" name="task" placeholder="Коротко о том, что нужно сделать"></textarea></div>
-      <label class="consent"><input id="m-consent" type="checkbox" required> Нажимая кнопку, я принимаю <a href="kontakty.html">политику обработки персональных данных</a></label>
-      <button class="btn btn--primary" type="submit" style="align-self:flex-start">Отправить заявку<span class="btn__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></button>
+      <label class="consent"><input id="m-consent" type="checkbox" required><span>Я принимаю <a href="kontakty.html">политику обработки персональных данных</a></span></label>
+      <button class="btn btn--primary" type="submit" style="align-self:flex-start">Отправить заявку</button>
       <p class="form__note" role="status"></p>
     </form>
   </div>
@@ -343,5 +343,5 @@
 </footer>
 
 <script src="assets/app.js"></script>
-<link rel="stylesheet" href="assets/forms.css?v=contact2"><script src="assets/home-headings.js?v=mobile2" defer></script></body>
+<link rel="stylesheet" href="assets/forms.css?v=contact2"><script src="assets/home-headings.js?v=mobile2" defer></script><script src="assets/home-contact.js?v=1"></script></body>
 </html>
