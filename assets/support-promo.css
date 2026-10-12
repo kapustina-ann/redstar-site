@@ -30,8 +30,18 @@ body.support-page a.support-hero-promo{display:flex;align-items:center;gap:14px;
 .support-hero-promo__arrow{font-size:22px;margin-left:auto}body.support-page a.support-hero-promo:hover{background:rgba(255,255,255,.16)}body.support-page a.support-hero-promo:focus-visible{outline:3px solid #0097ea;outline-offset:4px}
 #support-promo{scroll-margin-top:110px}
 @media(max-width:690px){body.support-page a.support-hero-promo{flex-wrap:wrap;padding:14px;gap:10px}.support-hero-promo>span:nth-child(2){flex-basis:100%}.support-hero-promo__arrow{display:none}}
-/* Compact promotion: price alongside the included gifts. */
-.support-promo__heading{grid-column:1/-1}.support-promo__heading .support-promo__badge{margin-bottom:0}
-.support-promo__footer{grid-column:auto;align-self:center;align-items:stretch;flex-direction:column;border-top:0;padding-top:0}
-.support-promo .support-promo__gifts{grid-template-columns:1fr;flex:auto}
-@media(max-width:1050px){.support-promo__footer{grid-column:1/-1}}
+/* Price and renewal terms above a compact pair of gift cards. */
+.support-promo__panel{grid-template-columns:minmax(0,1fr);gap:22px}
+.support-promo__heading .support-promo__badge{margin-bottom:0}
+.support-promo__offer--intro{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:28px;align-items:center}
+.promo-price-main{min-width:0}.support-promo__offer .support-info__button{width:auto}
+.support-promo__after{margin:0;padding:20px 0 20px 28px;border-top:0;border-left:1px solid #e4e4e4;font-size:14px}
+.support-promo__footer{grid-column:1/-1;display:block;padding-top:0;border:0}
+.support-promo__gift-title{display:block;font-size:17px;margin-bottom:14px}
+.support-promo .support-promo__gifts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.support-promo .support-promo__gifts li{display:flex;align-items:center;gap:16px;padding:18px 20px;background:#fff;border:0;border-radius:14px;color:#083575}
+.promo-gift-icon{display:grid;place-items:center;flex:0 0 48px;width:48px;height:48px;background:#fff0ea;border-radius:12px;color:#d92c04}
+.support-promo__gifts b{margin:0 0 4px;color:#083575;font-size:17px;line-height:1.3;text-transform:none;letter-spacing:0}
+.promo-gift-label{display:block;font-size:13px;line-height:1.4;color:#595959}
+@media(max-width:900px){.support-promo__offer--intro{grid-template-columns:1fr;gap:18px}.support-promo__after{border-left:0;border-top:1px solid #e4e4e4;padding:16px 0 0}.support-promo__offer .support-info__button{width:100%}}
+@media(max-width:690px){.support-promo .support-promo__gifts{grid-template-columns:1fr}.support-promo .support-promo__gifts li{padding:16px;gap:12px}.support-promo__gifts b{font-size:16px}}
