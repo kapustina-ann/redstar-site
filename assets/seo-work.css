@@ -1,0 +1,9 @@
+/* Four workstreams, matching Redstar heading and button styles. */
+.seo-work>h2{margin-bottom:18px}.seo-work__intro{font-size:18px;line-height:1.5;color:#595959;max-width:75ch;margin:0 0 26px}
+.seo-work__grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.seo-work__card{min-width:0;background:#083575;border-radius:20px;padding:30px;color:#fff}
+.seo-work__number{display:block;color:#00b5ff;font-size:42px;font-weight:800;line-height:1;margin-bottom:28px}
+.seo-work__card h3{font-size:22px;line-height:1.25;color:#fff;margin:0 0 16px}
+.seo-work__card p{font-size:16px;line-height:1.55;color:rgba(255,255,255,.85);margin:0}
+.seo-work__button{margin-top:24px}
+@media(max-width:760px){.seo-work__grid{grid-template-columns:1fr;gap:14px}.seo-work__card{padding:22px}.seo-work__number{font-size:34px;margin-bottom:20px}.seo-work__card h3{font-size:20px}.seo-work__intro{font-size:16px}.seo-work__button{width:100%}}
