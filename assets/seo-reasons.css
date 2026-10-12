@@ -13,3 +13,11 @@
 /* Place the category beside its number, without a duplicate index. */
 .seo-reasons__visual{justify-content:flex-start}
 .seo-reasons__visual>.seo-reasons__label{font-size:11px;font-weight:500;line-height:1.4;color:#083575;letter-spacing:.06em;margin:0}
+
+/* Match the tab list and active panel height in the two-column layout. */
+@media(min-width:761px){
+ .seo-reasons.is-enhanced .seo-reasons__layout{align-items:stretch}
+ .seo-reasons.is-enhanced .seo-reasons__tabs{grid-auto-rows:1fr}
+ .seo-reasons.is-enhanced .seo-reasons__panels{display:grid}
+ .seo-reasons.is-enhanced .seo-reasons__panel{align-self:stretch}
+}
