@@ -30,3 +30,8 @@ body.support-page a.support-hero-promo{display:flex;align-items:center;gap:14px;
 .support-hero-promo__arrow{font-size:22px;margin-left:auto}body.support-page a.support-hero-promo:hover{background:rgba(255,255,255,.16)}body.support-page a.support-hero-promo:focus-visible{outline:3px solid #0097ea;outline-offset:4px}
 #support-promo{scroll-margin-top:110px}
 @media(max-width:690px){body.support-page a.support-hero-promo{flex-wrap:wrap;padding:14px;gap:10px}.support-hero-promo>span:nth-child(2){flex-basis:100%}.support-hero-promo__arrow{display:none}}
+/* Compact promotion: price alongside the included gifts. */
+.support-promo__heading{grid-column:1/-1}.support-promo__heading .support-promo__badge{margin-bottom:0}
+.support-promo__footer{grid-column:auto;align-self:center;align-items:stretch;flex-direction:column;border-top:0;padding-top:0}
+.support-promo .support-promo__gifts{grid-template-columns:1fr;flex:auto}
+@media(max-width:1050px){.support-promo__footer{grid-column:1/-1}}
