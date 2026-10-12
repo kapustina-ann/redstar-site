@@ -32,3 +32,6 @@
  .seo-page .nav__icons>a:last-child{display:none}
  .seo-page .crumbs{font-size:10px;gap:5px;flex-wrap:wrap}
 }
+
+@media(max-width:760px){.seo-page .seo-reasons__layout{grid-template-columns:minmax(0,1fr)}.seo-page .seo-reasons__tabs,.seo-page .seo-reasons__panels{min-width:0}.seo-page .seo-reasons__tab b{min-width:0;overflow-wrap:anywhere}}
+@media(max-width:360px){.seo-page .hero h1{font-size:18px}.seo-page .hero__cta .btn{font-size:13px;padding-inline:10px;gap:8px}.seo-page .hero__cta .btn__ico{display:none}}
