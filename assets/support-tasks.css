@@ -1,18 +1,19 @@
-/* Branded task categories, scoped to the support service catalogue. */
-#rec2036005451{counter-reset:task-category}
-#rec2036005451>.support-task-row{counter-increment:task-category;grid-template-columns:minmax(180px,.65fr) minmax(0,1.7fr);gap:0;padding:0;margin:0 0 18px;border:1px solid #d9e4f2;border-radius:20px;background:#edf4fc;overflow:hidden}
-#rec2036005451>.support-task-row:nth-of-type(2){background:#eef8fc}
-#rec2036005451>.support-task-row:nth-of-type(3){background:#fff3ee;border-color:#f0ded7}
-#rec2036005451 .support-task-row h3{display:flex;flex-direction:column;gap:18px;align-self:stretch;padding:24px;background:#083575;color:#fff;font-size:clamp(20px,1.5vw,26px);line-height:1.2}
-#rec2036005451 .support-task-row h3::before{content:'0' counter(task-category);display:grid;place-items:center;width:42px;height:42px;background:#0097ea;border-radius:12px;font-size:18px;color:#fff;letter-spacing:0}
-#rec2036005451 .support-task-row:nth-of-type(3) h3::before{background:#d92c04}
-#rec2036005451 .support-task-row>div{padding:24px;min-width:0}
-#rec2036005451 .support-task-chips{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
-#rec2036005451 .support-task-chips li{display:flex;align-items:flex-start;gap:10px;margin:0;padding:13px 16px;border:1px solid #dce6f0;border-radius:12px;color:#083575;box-shadow:0 2px 5px rgba(8,53,117,.03);font-size:14px;line-height:1.5}
-#rec2036005451 .support-task-chips li::before{content:'✓';flex:none;color:#0097ea;font-weight:700}
-#rec2036005451 .support-task-row:nth-of-type(3) li::before{color:#d92c04}
-#rec2036005451 summary{padding-top:16px;font-weight:700;font-size:14px}
+/* Three compact service cards with open lists and expandable details. */
+#rec2036005451{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;align-items:start}
+#rec2036005451>h2{grid-column:1/-1;margin-bottom:4px}
+#rec2036005451>.support-task-row{display:block;min-width:0;margin:0;padding:26px;border:1px solid #e0e5ed;border-top:4px solid #0097ea;border-radius:18px;background:#fff}
+#rec2036005451>.support-task-row:first-of-type{padding-top:26px;border-top-color:#083575}
+#rec2036005451>.support-task-row:last-of-type{border-top-color:#d92c04}
+#rec2036005451 .support-task-row h3{display:flex;align-items:center;gap:12px;margin:0 0 22px;padding:0;color:#083575;font-size:clamp(19px,1.4vw,24px);line-height:1.25;min-height:48px}
+.support-task-icon-wrap{display:grid;place-items:center;width:48px;height:48px;flex:0 0 48px;border-radius:14px;background:#edf3fa;color:#083575}
+.support-task-row:nth-of-type(2) .support-task-icon-wrap{background:#eaf7ff;color:#007bc0}
+.support-task-row:nth-of-type(3) .support-task-icon-wrap{background:#fff0eb;color:#d92c04}
+#rec2036005451 .support-task-chips{display:block;padding:0;margin:0;list-style:none}
+#rec2036005451 .support-task-chips li{display:flex;align-items:flex-start;gap:10px;padding:12px 0;margin:0;border:0;border-bottom:1px solid #edf0f4;border-radius:0;background:none;font-size:15px;line-height:1.5;color:#3a3e46}
+#rec2036005451 .support-task-chips li::before{content:'';width:5px;height:5px;flex:0 0 5px;border-radius:50%;background:#0097ea;margin-top:9px}
+#rec2036005451 .support-task-row summary{padding:18px 0 0;font-size:14px;font-weight:700;color:#083575}
 #rec2036005451 summary:hover{color:#007bc0}
 #rec2036005451 summary:focus-visible{outline:2px solid #0097ea;outline-offset:4px;border-radius:4px}
-@media(max-width:1140px){#rec2036005451>.support-task-row{grid-template-columns:1fr}#rec2036005451 .support-task-row h3{flex-direction:row;align-items:center;padding:18px 20px;gap:14px}#rec2036005451 .support-task-row h3::before{width:36px;height:36px;flex:none}#rec2036005451 .support-task-row>div{padding:20px}}
-@media(max-width:690px){#rec2036005451 .support-task-chips{grid-template-columns:1fr}#rec2036005451 .support-task-row>div{padding:16px}#rec2036005451 .support-task-row h3{font-size:20px}#rec2036005451 .support-task-chips li{padding:12px}}
+#rec2036005451 details[open] .support-task-chips{margin-top:12px}
+@media(max-width:1050px){#rec2036005451{grid-template-columns:1fr}#rec2036005451>.support-task-row{padding:22px}#rec2036005451>.support-task-row:first-of-type{padding-top:22px}#rec2036005451 .support-task-chips{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:24px}}
+@media(max-width:690px){#rec2036005451 .support-task-chips{display:block}#rec2036005451>.support-task-row{padding:20px}#rec2036005451>.support-task-row:first-of-type{padding-top:20px}#rec2036005451 .support-task-row h3{font-size:20px}}
