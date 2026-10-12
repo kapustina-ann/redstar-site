@@ -2,3 +2,33 @@
 .seo-hero-offer .seo-hero-offer__title{font-family:var(--f-display);font-size:clamp(20px,1.6vw,28px);font-weight:700;line-height:1.2;color:#fff;margin:0 0 10px}
 .seo-hero-offer p{font-size:15px;line-height:1.5;color:rgba(255,255,255,.85);margin:0}
 @media(max-width:690px){.seo-hero-offer{padding:16px;margin-top:20px}.seo-hero-offer .seo-hero-offer__title{font-size:20px}}
+
+/* Keep the expanded offer readable without overflowing the first screen. */
+.seo-page main>section:first-child{padding-top:16px}
+.seo-page .hero{padding-block:32px}
+.seo-page .hero__inner{max-width:100%;min-width:0}
+.seo-page .hero h1{font-size:clamp(32px,3.2vw,72px);line-height:1.05;overflow-wrap:normal}
+.seo-page .hero__sub{max-width:65ch;margin-bottom:0}
+.seo-page .hero__cta{margin-top:20px}
+.seo-page .seo-hero-offer{max-width:100%;margin-top:22px}
+.seo-page #seo-reasons,.seo-page #seo-work{scroll-margin-top:110px}
+@media(max-width:1620px){.seo-page .nav__menu,.seo-page .nav__phone{display:none}.seo-page .burger{display:grid;flex-shrink:0}}
+@media(max-width:690px){
+ .seo-page .hero{padding:24px 18px;border-radius:20px}
+ .seo-page .hero h1{font-size:clamp(22px,5vw,32px)}
+ .seo-page .hero__sub{font-size:15px}
+ .seo-page .hero__cta .btn{width:100%;min-width:0;padding-inline:16px}
+ .seo-page .seo-hero-offer{padding:16px}
+ .seo-page .seo-hero-offer__title{overflow-wrap:anywhere}
+ .seo-page .card{min-width:0;overflow-wrap:anywhere}
+}
+@media(max-width:480px){
+ .seo-page .brand{font-size:19px;gap:8px;white-space:nowrap}
+ .seo-page .brand__dot{width:16px;height:16px}
+ .seo-page .nav{gap:6px}
+ .seo-page .nav__icons{gap:6px}
+ .seo-page .icon-btn,.seo-page .burger{width:30px;height:32px;flex-shrink:0;padding:4px}
+ .seo-page .icon-btn svg{width:18px;height:18px}
+ .seo-page .nav__icons>a:last-child{display:none}
+ .seo-page .crumbs{font-size:10px;gap:5px;flex-wrap:wrap}
+}
