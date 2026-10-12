@@ -1,0 +1,4 @@
+.seo-hero-offer{max-width:760px;margin-top:24px;padding:20px 24px;border:1px solid rgba(255,255,255,.25);border-radius:16px;background:rgba(255,255,255,.08)}
+.seo-hero-offer .seo-hero-offer__title{font-family:var(--f-display);font-size:clamp(20px,1.6vw,28px);font-weight:700;line-height:1.2;color:#fff;margin:0 0 10px}
+.seo-hero-offer p{font-size:15px;line-height:1.5;color:rgba(255,255,255,.85);margin:0}
+@media(max-width:690px){.seo-hero-offer{padding:16px;margin-top:20px}.seo-hero-offer .seo-hero-offer__title{font-size:20px}}
