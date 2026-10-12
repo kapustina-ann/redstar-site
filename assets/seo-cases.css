@@ -1,7 +1,12 @@
 .seo-cases{scroll-margin-top:110px}.seo-cases>h2{margin-bottom:24px}
 .seo-cases__grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
-.seo-cases .post-card{min-width:0}.seo-cases .post-card__media{aspect-ratio:2/1}.seo-cases .post-card__media img{object-position:top}
-.seo-cases .post-card h3{color:#083575;font-size:22px;line-height:1.25;overflow-wrap:anywhere}
-.seo-cases .tag{white-space:normal}.seo-cases__link{margin-top:auto;padding-top:14px;font-size:15px;font-weight:700;color:#083575}
-@media(max-width:900px){.seo-cases__grid{grid-template-columns:minmax(0,1fr)}.seo-cases .post-card h3{font-size:20px}}
-@media(max-width:480px){.seo-cases .post-card__body{padding:18px}.seo-cases .post-card__lead{overflow-wrap:anywhere}}
+.seo-cases .post-card{min-width:0;padding:26px;border-radius:20px}
+.seo-cases .post-card__media{aspect-ratio:auto;height:clamp(140px,15vw,220px);border-radius:12px;margin-bottom:20px}
+.seo-cases .post-card__media img{object-position:top}
+.seo-cases .post-card__body{padding:0;gap:12px}
+.seo-cases .post-card h3{color:#083575;font-size:21px;line-height:1.25;overflow-wrap:anywhere}
+.seo-cases .post-card__lead{font-size:15px;line-height:1.6}
+.seo-cases .tag{white-space:normal;font-size:12px;letter-spacing:.06em}
+.seo-cases__link{margin-top:auto;font-size:15px;font-weight:700;color:#083575;text-decoration:underline;text-underline-offset:3px}
+@media(max-width:1050px){.seo-cases__grid{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:690px){.seo-cases .post-card{padding:20px}.seo-cases .post-card h3{font-size:20px}.seo-cases .post-card__lead{overflow-wrap:anywhere}}
