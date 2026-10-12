@@ -1,0 +1,10 @@
+/* Equal section spacing: half of the previous 28px / 24px padding. */
+body.support-page .support-info,
+body.support-page #rec2036005451.support-task-rows{padding-block:14px}
+body.support-page .support-site-shell>.section--tight{padding-bottom:14px}
+body.support-page #support-workflow .support-info__steps{margin-bottom:0}
+@media(max-width:690px){
+  body.support-page .support-info,
+  body.support-page #rec2036005451.support-task-rows{padding-block:12px}
+  body.support-page .support-site-shell>.section--tight{padding-bottom:12px}
+}
