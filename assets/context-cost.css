@@ -21,3 +21,9 @@
 @media(max-width:760px){.context-cost__grid,.context-cost__terms{grid-template-columns:1fr}.context-cost__intro{font-size:16px}.context-cost__terms{gap:16px}.context-cost__amount{font-size:22px}}
 
 .context-cost__details{align-content:center}
+
+.context-cost__details .context-cost__terms{grid-template-columns:1fr;margin:0;gap:22px}
+.context-cost__details .context-cost__terms li:first-child{border-top:0;padding-top:0}
+.context-cost__budget{width:100%;border-top:1px solid rgba(255,255,255,.22);padding-top:20px}
+.context-cost__budget h3{font-size:20px;margin:0 0 10px}
+.context-cost__budget p{font-size:16px;line-height:1.6;color:rgba(255,255,255,.85);margin:0}
