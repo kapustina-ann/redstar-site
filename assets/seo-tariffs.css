@@ -10,3 +10,5 @@
 .seo-tariffs__terms{margin-top:22px;display:grid;gap:12px;color:var(--gray-600);font-size:16px;line-height:1.6}
 .seo-tariffs__terms a{color:var(--navy);text-decoration:underline;text-underline-offset:3px}
 @media(max-width:760px){.seo-tariffs__grid{grid-template-columns:1fr}.seo-tariffs__intro{min-height:0}.seo-tariffs__card h3{font-size:24px}}
+
+.seo-tariffs__highlight{color:#e62500;font-size:clamp(30px,2.3vw,42px);font-weight:800;line-height:1.15}
