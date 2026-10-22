@@ -19,3 +19,5 @@
 .context-cost__terms h3{font-size:17px;color:var(--navy);line-height:1.4;margin:0 0 6px}
 .context-cost__terms p{font-size:15px;line-height:1.5;color:var(--gray-600);margin:0}
 @media(max-width:760px){.context-cost__grid,.context-cost__terms{grid-template-columns:1fr}.context-cost__intro{font-size:16px}.context-cost__terms{gap:16px}.context-cost__amount{font-size:22px}}
+
+.context-cost__details{align-content:center}
