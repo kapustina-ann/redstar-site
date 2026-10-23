@@ -5,3 +5,6 @@
 @media(max-width:690px){.offroad-case .vc-split{grid-template-columns:minmax(0,1fr)}.offroad-case .vc-split>div{padding:20px}.or-palette{grid-template-columns:minmax(0,1fr)}.or-swatch{height:48px}}
 @media(max-width:600px){.offroad-page .nav{gap:6px}.offroad-page .brand{font-size:18px;gap:6px}.offroad-page .burger{width:32px;height:36px;flex:none}}
 @media(max-width:360px){.offroad-page .brand{font-size:16px;gap:5px}.offroad-page .nav,.offroad-page .nav__icons{gap:4px}.offroad-page .icon-btn{width:30px;height:36px}.offroad-page .nav__spacer{display:none}}
+
+/* Show only the homepage hero, excluding the empty category area. */
+.offroad-case .or-cover>a{display:block;aspect-ratio:1600/887;overflow:hidden;border-radius:18px}.offroad-case .or-cover img{display:block;width:100%;height:auto;border-radius:0}
