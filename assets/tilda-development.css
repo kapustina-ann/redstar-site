@@ -1,0 +1,6 @@
+/* Keep the shared navigation within narrow mobile screens on this service page. */
+@media(max-width:600px){.tilda-development-page .nav{gap:6px}.tilda-development-page .brand{font-size:18px;gap:6px}.tilda-development-page .burger{width:32px;height:36px;flex:none}}
+@media(max-width:360px){.tilda-development-page .brand{font-size:16px;gap:5px}.tilda-development-page .nav,.tilda-development-page .nav__icons{gap:4px}.tilda-development-page .icon-btn{width:30px;height:36px}.tilda-development-page .nav__spacer{display:none}}
+
+.tilda-development-page .grid>.card,.tilda-development-page .row>*{min-width:0;overflow-wrap:anywhere}
+@media(max-width:690px){.tilda-development-page .grid.g2{grid-template-columns:minmax(0,1fr)}.tilda-development-page .row{grid-template-columns:32px minmax(0,1fr)}}
