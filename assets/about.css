@@ -18,3 +18,7 @@
 /* Keep original photographs within their useful resolution. */
 .about-page .about-founder-photo{object-fit:contain;object-position:center bottom;max-width:384px;margin-inline:auto;background:#f5f6f8}
 .about-team-photo{max-width:667px;margin-inline:auto;width:100%}
+
+.about-people{display:grid;grid-template-columns:1fr 1fr 2.2fr;gap:24px;align-items:start}.about-people figure{margin:0;min-width:0}.about-people img{display:block;width:100%;height:240px;object-fit:contain;object-position:center bottom;border-radius:18px;background:#f5f6f8}.about-people figcaption{padding-top:14px;display:flex;flex-direction:column;gap:5px;line-height:1.4}.about-people figcaption b{font-size:19px;color:var(--navy)}.about-people figcaption span{font-size:14px;color:var(--gray-600)}.about-people__team img{max-width:667px;margin-inline:auto;object-position:center}.about-people__team figcaption{max-width:667px;margin-inline:auto}
+@media(max-width:900px){.about-people{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 16px}.about-people__team{grid-column:1/-1}.about-people__team img{height:auto}.about-people__founder img{height:210px}}
+@media(max-width:480px){.about-people__founder img{height:155px}.about-people figcaption b{font-size:16px}.about-people figcaption span{font-size:12px}}
