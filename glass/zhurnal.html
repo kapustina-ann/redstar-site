@@ -70,14 +70,14 @@
   <div class="hero hero--dark on-dark">
     <span class="hero__sphere hero__sphere--b" style="right:-4%;bottom:-30%;opacity:.7"></span>
     <div class="hero__inner hero__inner--left">
-      <nav class="crumbs" aria-label="Хлебные крошки"><a href="index.html">Главная</a><span>/</span>Журнал</nav>
-      <h1>Журнал</h1>
-      <p class="hero__sub">Кейсы клиентов и разборы из практики: платформы, реклама, аналитика и решения, которые работают в российских реалиях.</p>
+      <nav class="crumbs" aria-label="Хлебные крошки"><a href="index.html">Главная</a><span>/</span><span data-journal-crumb>Журнал</span></nav>
+      <h1 data-journal-heading>Журнал</h1>
+      <p class="hero__sub" data-journal-intro>Кейсы клиентов и разборы из практики: платформы, реклама, аналитика и решения, которые работают в российских реалиях.</p>
     </div>
   </div>
 </section>
 
-<section class="section--tight wrap">
+<section class="section--tight wrap" data-journal-filters>
   <div class="filters" role="group" aria-label="Рубрики">
     <button class="filter is-on" type="button" data-filter="all">Все</button>
     <button class="filter" type="button" data-filter="keysy">Кейсы</button>
@@ -224,5 +224,6 @@
 </footer>
 
 <script src="../assets/app.js"></script>
-<link rel="stylesheet" href="../assets/forms.css?v=scale150"></body>
+<link rel="stylesheet" href="../assets/forms.css?v=scale150"><script src="../assets/journal-view.js?v=1"></script>
+</body>
 </html>
