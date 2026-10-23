@@ -1,0 +1,7 @@
+.seo-geo-banner{display:flex;align-items:center;justify-content:space-between;gap:32px;padding:clamp(24px,2.5vw,44px);border-radius:24px;background:#df2700;color:#fff}
+.seo-geo-banner__text{max-width:66ch;min-width:0}.seo-geo-banner__label{display:block;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:14px;color:#fff}
+.seo-geo-banner h2{font-size:clamp(24px,2vw,34px);font-weight:700;line-height:1.18;letter-spacing:-.025em;color:#fff;margin:0 0 14px;text-align:left}
+.seo-geo-banner p{font-size:16px;line-height:1.5;color:rgba(255,255,255,.88);margin:0}
+.seo-geo-banner .btn{flex-shrink:0;background:#fff;color:#083575;white-space:normal;text-align:center}
+@media(max-width:900px){.seo-geo-banner{flex-direction:column;align-items:flex-start;gap:24px}.seo-geo-banner__text{max-width:100%}}
+@media(max-width:480px){.seo-geo-banner{padding:22px;border-radius:20px}.seo-geo-banner h2{font-size:23px}.seo-geo-banner .btn{width:100%}}
