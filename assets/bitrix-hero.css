@@ -1,0 +1,8 @@
+.hero.hero--bitrix-light{background:#e8f2fc;color:#083575;border:1px solid #afc9e4}
+.hero--bitrix-light h1{color:#083575}
+.hero--bitrix-light .hero__sub,.hero--bitrix-light .crumbs,.hero--bitrix-light .crumbs a,.hero--bitrix-light .crumbs span{color:#3e5874}
+.hero--bitrix-light .hero__sphere{display:none}
+.hero--bitrix-light .btn--white{background:#df2700;color:#fff;border-color:#df2700}
+.hero--bitrix-light .btn--white:hover{background:#bd2100;border-color:#bd2100}
+.hero--bitrix-light .btn--ghost-light{background:transparent;color:#083575;border-color:#afc9e4}
+.hero--bitrix-light .btn--ghost-light:hover{background:#d8e9f9;border-color:#083575}
