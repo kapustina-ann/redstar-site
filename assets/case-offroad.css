@@ -9,5 +9,6 @@
 /* Show only the homepage hero, excluding the empty category area. */
 .offroad-case .or-cover>a{display:block;aspect-ratio:1600/887;overflow:hidden;border-radius:18px}.offroad-case .or-cover img{display:block;width:100%;height:auto;border-radius:0}
 
-.or-device-pair{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,1fr);gap:24px;align-items:start;margin:28px 0}.or-device-pair>.vc-figure,.or-device-pair .or-mobile,.or-device-pair .or-mobile .vc-figure{margin:0;min-width:0}.or-device-pair .or-mobile{max-width:none}
+.or-device-pair{display:grid;grid-template-columns:minmax(0,3.29768fr) minmax(0,1fr);gap:24px;align-items:start;margin:28px 0}.or-device-pair>.vc-figure,.or-device-pair .or-mobile,.or-device-pair .or-mobile .vc-figure{margin:0;min-width:0}.or-device-pair .or-mobile{max-width:none}
 @media(max-width:975px){.or-device-pair{grid-template-columns:minmax(0,1fr)}.or-device-pair .or-mobile{max-width:280px;width:100%;margin-inline:auto}}
+.or-device-pair .vc-image-link{border:0}
