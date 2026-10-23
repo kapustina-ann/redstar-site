@@ -10,3 +10,7 @@
 .seo-cases__link{margin-top:auto;font-size:15px;font-weight:700;color:#083575;text-decoration:underline;text-underline-offset:3px}
 @media(max-width:1050px){.seo-cases__grid{grid-template-columns:minmax(0,1fr)}}
 @media(max-width:690px){.seo-cases .post-card{padding:20px}.seo-cases .post-card h3{font-size:20px}.seo-cases .post-card__lead{overflow-wrap:anywhere}}
+
+/* Keep the original screenshot within its native resolution at the site's 150% scale. */
+.seo-cases .seo-cases__media--doctors{display:flex;justify-content:center;align-items:flex-start;background:#edf3fa;padding:14px 18px 0;overflow:hidden}
+.seo-cases .seo-cases__media--doctors img{display:block;flex:none;width:min(100%,470px);max-width:100%;height:auto;object-fit:contain;object-position:top;border:1px solid #dce4ee;border-radius:10px 10px 0 0;box-shadow:0 6px 20px #08357512}
