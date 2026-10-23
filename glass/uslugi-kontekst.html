@@ -16,6 +16,7 @@
 <link rel="stylesheet" href="../assets/context-cost.css?v=4">
 <link rel="stylesheet" href="../assets/home-spacing.css?v=shared4">
 <link rel="stylesheet" href="../assets/site-spacing.css?v=1">
+<link rel="stylesheet" href="../assets/forms.css?v=scale150">
 </head>
 <body class="context-page">
 
@@ -75,7 +76,7 @@
       <h1>Контекстная<br>реклама</h1>
       <p class="hero__sub">Яндекс Директ. Ведём кампании по стоимости заявки: если канал не окупается, честно говорим об этом, а не осваиваем бюджет дальше.</p>
       <div class="hero__cta">
-        <a class="btn btn--white" href="kontakty.html">Рассчитать бюджет<span class="btn__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+        <a class="btn btn--white" href="#zayavka">Рассчитать бюджет<span class="btn__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
       </div>
     </div>
   </div>
@@ -119,7 +120,7 @@
       <p class="context-cost__price">от 40 000 ₽ <span>в месяц</span></p>
       <p>Стоимость зависит от количества рекламных кампаний и направлений бизнеса.</p>
       <div class="context-cost__budget"><h3>Рекламный бюджет</h3><p><strong>Оплачивается отдельно.</strong> Бюджет перечисляете напрямую Яндексу. Сумму определяем под вашу нишу, регион и задачи.</p></div>
-      <a class="btn btn--primary" href="kontakty.html">Обсудить рекламу</a>
+      <a class="btn btn--primary" href="#zayavka">Обсудить рекламу</a>
     </article>
     <div class="context-cost__details">
       <h3>Всё под вашим контролем</h3>
@@ -164,10 +165,28 @@
       <h2 class="site-h2">Аудит<br>рекламных кампаний</h2>
       <p>Посмотрим ваш Директ и покажем, где сгорает бюджет. Бесплатно, в формате созвона на 40 минут.</p>
     </div>
-    <a class="btn btn--white" href="kontakty.html">Записаться на аудит<span class="btn__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+    <a class="btn btn--white" href="#zayavka">Записаться на аудит<span class="btn__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
   </div>
 </section>
 
+<section class="section wrap context-contact" id="zayavka" style="scroll-margin-top:110px">
+  <div class="form-card form-card--contact">
+    <div class="stack stack--s form-card__intro">
+      <h2 class="section-title site-h2">Свяжитесь с нами</h2>
+      <p class="lede">Познакомимся, вникнем в задачу и сделаем предложение.</p><p class="form-card__response">Обычно отвечаем в течение рабочего дня.</p>
+    </div>
+    <form class="form" id="support-contact-form">
+      <div class="form__row">
+        <div class="field"><label for="support-name">Ваше имя</label><input id="support-name" name="name" type="text" autocomplete="name" placeholder="Как к вам обращаться" required></div>
+        <div class="field"><label for="support-phone">Телефон</label><input id="support-phone" name="phone" type="tel" autocomplete="tel" placeholder="+7 000 000 00 00" required></div>
+      </div>
+      <div class="field"><label for="support-task">Задача</label><textarea id="support-task" name="task" rows="3" placeholder="Адрес сайта и ваши задачи по рекламе"></textarea></div>
+      <label class="consent"><input id="support-consent" type="checkbox" required><span>Я принимаю <a href="kontakty.html">политику обработки персональных данных</a></span></label>
+      <button class="btn btn--primary" type="submit" style="align-self:flex-start">Отправить заявку</button>
+      <p class="form__note" role="status" hidden></p>
+    </form>
+  </div>
+</section>
 </main>
 
 <footer class="footer">
@@ -215,5 +234,6 @@
 </footer>
 
 <script src="../assets/app.js"></script>
+<script src="../assets/support-contact.js"></script>
 </body>
 </html>
