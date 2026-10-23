@@ -14,12 +14,3 @@
 .about-team-photo{margin:0}.about-team-photo img{display:block;width:100%;height:auto;border-radius:24px}
 
 .about-office{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}.about-office>div{min-width:0}.about-office__map{min-height:360px;border:1px solid var(--line);border-radius:24px;overflow:hidden}.about-office__map iframe{display:block;width:100%;height:100%;min-height:360px;border:0}.about-office .site-h2{color:white}@media(max-width:900px){.about-office{grid-template-columns:minmax(0,1fr)}.about-office__map,.about-office__map iframe{min-height:320px}}
-
-/* Keep original photographs within their useful resolution. */
-.about-page .about-founder-photo{object-fit:contain;object-position:center bottom;max-width:384px;margin-inline:auto;background:#f5f6f8}
-.about-team-photo{max-width:667px;margin-inline:auto;width:100%}
-
-/* Team photo with compact founder profiles. */
-.about-people{display:grid;grid-template-columns:minmax(0,1fr) minmax(260px,.65fr);grid-template-rows:1fr 1fr;gap:18px 28px;align-items:stretch;max-width:1040px;margin-inline:auto;width:100%}.about-people figure{margin:0;min-width:0}.about-people__team{grid-column:1;grid-row:1/3;align-self:center}.about-people__team img{display:block;width:100%;height:auto;border-radius:20px}.about-people__team figcaption{padding-top:14px;font-size:20px;color:var(--navy)}.about-people__founder{grid-column:2;display:grid;grid-template-columns:110px minmax(0,1fr);gap:20px;align-items:center;padding:18px;background:white;border:1px solid var(--line);border-radius:20px}.about-people__founder img{display:block;width:110px;height:134px;object-fit:contain;object-position:center bottom;background:#f5f6f8;border-radius:12px}.about-people__founder figcaption{display:flex;flex-direction:column;gap:8px;line-height:1.4}.about-people__founder figcaption b{font-size:20px;color:var(--navy)}.about-people__founder figcaption span{font-size:14px;color:var(--gray-600)}
-@media(max-width:1100px){.about-people{grid-template-columns:minmax(0,1fr);grid-template-rows:auto;max-width:667px}.about-people__team{grid-column:1;grid-row:1}.about-people__founder{grid-column:1;grid-template-columns:100px minmax(0,1fr);padding:16px}.about-people__founder img{width:100px;height:115px}}
-@media(max-width:480px){.about-people{gap:14px}.about-people__founder{grid-template-columns:80px minmax(0,1fr);gap:14px;padding:14px}.about-people__founder img{width:80px;height:100px}.about-people__founder figcaption b{font-size:18px}.about-people__founder figcaption span{font-size:13px}}
