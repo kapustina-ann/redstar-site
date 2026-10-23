@@ -1,0 +1,6 @@
+.about-founder-photo{width:100%;height:360px;object-fit:cover;object-position:center 30%;border-radius:var(--r-md);display:block}.about-page .grid>.card,.about-page .row>*,.about-page .stats>.card{min-width:0;overflow-wrap:anywhere}.about-page .row__d a{text-decoration:underline;text-underline-offset:3px}.about-page .btn{white-space:normal;max-width:100%}
+@media(max-width:690px){.about-page .grid.g2{grid-template-columns:minmax(0,1fr)}.about-page .row{grid-template-columns:32px minmax(0,1fr)}.about-founder-photo{height:300px}}
+@media(max-width:600px){.about-page .nav{gap:6px}.about-page .brand{font-size:18px;gap:6px}.about-page .burger{width:32px;height:36px;flex:none}}
+@media(max-width:360px){.about-page .brand{font-size:16px;gap:5px}.about-page .nav,.about-page .nav__icons{gap:4px}.about-page .icon-btn{width:30px;height:36px}.about-page .nav__spacer{display:none}}
+
+.about-page .grid>*{min-width:0}.about-page .badge{min-width:0;overflow-wrap:anywhere}.about-page .badges{min-width:0}
