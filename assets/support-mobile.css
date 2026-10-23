@@ -1,0 +1,15 @@
+/* Keep support navigation and the hero readable at the site's 150% scale. */
+@media(max-width:600px){
+ body.support-page .support-site-shell .nav{gap:6px}
+ body.support-page .support-site-shell .brand{font-size:18px;gap:6px}
+ body.support-page .support-site-shell .burger{width:32px;height:36px;flex:none}
+ body.support-page .support-site-shell .hero h1{font-size:clamp(24px,6.66667vw,30px);overflow-wrap:anywhere}
+ body.support-page .support-site-shell .hero__sphere{max-width:100%}
+}
+@media(max-width:360px){
+ body.support-page .support-site-shell .brand{font-size:16px;gap:5px}
+ body.support-page .support-site-shell .nav{gap:4px}
+ body.support-page .support-site-shell .nav__icons{gap:4px}
+ body.support-page .support-site-shell .icon-btn{width:30px;height:36px}
+ body.support-page .support-site-shell .nav__spacer{display:none}
+}
