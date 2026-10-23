@@ -8,8 +8,8 @@
 /* Paint-swatch fan belongs to Glosaniko; the theatre arch stays on theatre cases. */
 .glosaniko-case .case-hero::after{display:none}
 .glosaniko-case .case-hero{isolation:isolate}
-.glosaniko-case .gl-hero-palette{position:absolute;right:24px;top:30px;width:min(42%,420px);height:auto;opacity:.16;pointer-events:none;z-index:-1}
-@media(max-width:975px){.glosaniko-case .gl-hero-palette{width:min(70%,300px);right:16px;top:24px;opacity:.13}}
+.glosaniko-case .gl-hero-palette{position:absolute;right:0;top:30px;width:min(64%,640px);transform:translateX(50%);height:auto;opacity:.16;pointer-events:none;z-index:-1}
+@media(max-width:975px){.glosaniko-case .gl-hero-palette{width:min(100%,440px);right:0;top:24px;opacity:.13}}
 
 .gl-tech-highlight{margin:28px 0;padding:26px 28px;border-radius:18px;background:var(--red);color:#fff}
 .gl-tech-highlight__label{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#fff;opacity:.8}
