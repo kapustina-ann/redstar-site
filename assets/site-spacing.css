@@ -1,13 +1,22 @@
-/* Shared outer section rhythm, matching the compact homepage. */
+/* One shared section rhythm, using the homepage as the reference. */
 :root{--site-section-pad:clamp(24px,2.16667vw,50px);--site-section-gap:calc(var(--site-section-pad) * 2)}
-body:not(.support-page) main>section:not(.vc-cta){padding-block:var(--site-section-pad)}
-body:not(.support-page):not(.seo-page) main>section:first-child{padding-top:clamp(30px,2.66666vw,60px)}
-/* Case articles use margins between chapters instead of paired section padding. */
-body .df-article{padding-top:var(--site-section-pad)}
-body .df-section,body .vc-section{margin-bottom:var(--site-section-gap)}
+body main>section:not(.vc-cta),
+body.support-page .support-info,
+body.support-page #rec2036005451.support-task-rows,
+body.support-page .support-site-shell>.section--tight{padding-block:var(--site-section-pad);margin-block:0}
+body main>section:first-child,
+body.support-page .support-site-shell:first-of-type>.section--tight{padding-top:clamp(30px,2.66666vw,60px)}
+/* Chapters have no outer section wrapper, so use a single full gap. */
+body .df-article{padding-block:var(--site-section-pad)}
+body .df-section,body .vc-section{display:flow-root;margin-block:0 var(--site-section-gap)}
 body .df-section:last-child,body .vc-section:last-child{margin-bottom:0}
-body .df-article{padding-bottom:var(--site-section-pad)}
-body .vc-layout{padding-block:var(--site-section-gap)}
-body .vc-cta{margin-bottom:var(--site-section-gap)}
-/* Client rows already have an outer section; avoid an extra trailing margin. */
+body .df-section>:first-child,body .vc-section>:first-child{margin-top:0}
+body .df-section>:last-child,body .vc-section>:last-child{margin-bottom:0}
+body .vc-layout{padding-block:var(--site-section-pad)}
+body .vc-stats{padding-block:var(--site-section-pad)}
+body .vc-comparison{margin-top:var(--site-section-gap)}
+body .vc-cta{margin-block:var(--site-section-pad) var(--site-section-gap)}
+@media(max-width:976.49px){body .vc-comparison>.vc-cover{margin-top:var(--site-section-gap)}body .vc-comparison>.vc-figure{margin-block:var(--site-section-gap)}}
+/* Do not add child margins to the outer section gap. */
 .home-page .support-client-row:last-child{margin-bottom:0}
+body.support-page #support-workflow .support-info__steps{margin-bottom:0}
