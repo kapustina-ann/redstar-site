@@ -1,0 +1,9 @@
+.promotion-options>h2{margin-bottom:18px}
+.promotion-options__intro{font-size:18px;line-height:1.5;color:var(--gray-600);margin:0 0 24px;max-width:70ch}
+.promotion-options__grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.promotion-options__card{background:#083575;border-radius:22px;padding:clamp(24px,2vw,36px);display:flex;flex-direction:column;gap:18px;align-items:flex-start;min-width:0;color:#fff}
+.promotion-options__card--geo{background:#df2700}
+.promotion-options__card h3{font-size:clamp(22px,1.7vw,28px);line-height:1.25;color:#fff;margin:0}
+.promotion-options__card p{font-size:16px;line-height:1.6;color:rgba(255,255,255,.88);margin:0 0 6px}
+.promotion-options__card .btn{margin-top:auto;white-space:normal;text-align:center;max-width:100%;background:#fff;color:#083575}
+@media(max-width:760px){.promotion-options__grid{grid-template-columns:1fr}.promotion-options__intro{font-size:16px}}
