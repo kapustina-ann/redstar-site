@@ -1,8 +1,11 @@
-.hero.hero--bitrix-light{background:#e8f2fc;color:#083575;border:1px solid #afc9e4}
-.hero--bitrix-light h1{color:#083575}
-.hero--bitrix-light .hero__sub,.hero--bitrix-light .crumbs,.hero--bitrix-light .crumbs a,.hero--bitrix-light .crumbs span{color:#3e5874}
-.hero--bitrix-light .hero__sphere{display:none}
-.hero--bitrix-light .btn--white{background:#df2700;color:#fff;border-color:#df2700}
-.hero--bitrix-light .btn--white:hover{background:#bd2100;border-color:#bd2100}
-.hero--bitrix-light .btn--ghost-light{background:transparent;color:#083575;border-color:#afc9e4}
-.hero--bitrix-light .btn--ghost-light:hover{background:#d8e9f9;border-color:#083575}
+/* Light hero using the site's brand colors, shape and standard buttons. */
+.hero.hero--bitrix-light{background:#eaf3fc;color:var(--navy);border:0;border-radius:var(--r-xl)}
+.hero--bitrix-light h1{color:var(--navy)}
+.hero--bitrix-light .hero__sub{color:var(--gray-600)}
+.hero--bitrix-light .crumbs,.hero--bitrix-light .crumbs a{color:var(--navy)}
+.hero--bitrix-light .crumbs a:hover{color:var(--cyan-deep)}
+.hero--bitrix-light .hero__sphere{display:block;background:var(--cyan);opacity:.1;pointer-events:none}
+.hero--bitrix-light .hero__sphere--a{width:min(32vw,460px);right:-8%;top:-14%}
+.hero--bitrix-light .btn--ghost{border-color:var(--navy);background:transparent}
+.hero--bitrix-light .btn--ghost:hover{background:var(--paper)}
+@media(max-width:690px){.hero--bitrix-light h1{font-size:clamp(28px,6.7vw,38px);overflow-wrap:anywhere}.hero--bitrix-light .hero__cta>.btn{max-width:100%;white-space:normal}}
