@@ -4,3 +4,9 @@
 @media(max-width:600px){.glosaniko-page .nav{gap:6px}.glosaniko-page .brand{font-size:18px;gap:6px}.glosaniko-page .burger{width:32px;height:36px;flex:none}}
 @media(max-width:360px){.glosaniko-page .brand{font-size:16px;gap:5px}.glosaniko-page .nav,.glosaniko-page .nav__icons{gap:4px}.glosaniko-page .icon-btn{width:30px;height:36px}.glosaniko-page .nav__spacer{display:none}}
 .glosaniko-case .vc-split>div{min-width:0;overflow-wrap:anywhere}@media(max-width:690px){.glosaniko-case .vc-split{grid-template-columns:minmax(0,1fr)}.glosaniko-case .vc-split>div{padding:20px}}
+
+/* Paint-swatch fan belongs to Glosaniko; the theatre arch stays on theatre cases. */
+.glosaniko-case .case-hero::after{display:none}
+.glosaniko-case .case-hero{isolation:isolate}
+.glosaniko-case .gl-hero-palette{position:absolute;right:-100px;top:20px;width:420px;height:auto;opacity:.42;pointer-events:none;z-index:-1}
+@media(max-width:975px){.glosaniko-case .gl-hero-palette{width:300px;right:-120px;top:30px;opacity:.22}}
