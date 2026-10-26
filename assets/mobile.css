@@ -43,3 +43,19 @@
  html body .t-popup .unified-form{width:100%!important}
  html body .unified-form .consent input{width:20px!important;height:20px!important;flex-basis:20px!important}
 }
+
+/* Compact mobile homepage hero; desktop content stays unchanged. */
+.home-intro__mobile{display:none}
+@media(max-width:767px){
+ .home-intro__desktop,.home-intro .hero-creds,.home-intro__cases{display:none!important}
+ .home-intro__mobile{display:block}
+ body.home-page main>section.home-intro{padding-top:20px;padding-bottom:16px}
+ .home-intro .hero{padding:28px 22px}
+ .home-intro .hero h1{margin:0 0 18px!important;font-size:34px;line-height:1.08}
+ .home-intro .hero__sub{font-size:17px;line-height:1.5;margin-bottom:22px}
+ .home-intro__proof{margin:18px 0 0;font-size:14px;color:#bdd3ed}
+ .home-mobile-creds{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-bottom:24px}
+ .home-mobile-creds>div{padding:14px 12px;border:1px solid var(--line);border-radius:14px;background:#fff;min-width:0}
+ .home-mobile-creds b{display:block;font-size:15px;color:var(--navy);margin-bottom:5px}
+ .home-mobile-creds span{display:block;font-size:13px;line-height:1.4;color:var(--gray-600)}
+}
