@@ -145,7 +145,12 @@
     layoutBands();
     if (document.fonts && document.fonts.ready) document.fonts.ready.then(layoutBands);
     var bandsTimer;
+    var bandsWidth = document.documentElement.clientWidth;
     window.addEventListener('resize', function () {
+      var nextWidth = document.documentElement.clientWidth;
+      // Mobile browser chrome changes height while scrolling; keep the animation running.
+      if (nextWidth === bandsWidth) return;
+      bandsWidth = nextWidth;
       clearTimeout(bandsTimer);
       bandsTimer = setTimeout(layoutBands, 200);
     });

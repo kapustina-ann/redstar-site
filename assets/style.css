@@ -252,7 +252,7 @@ p{margin:0}
 }
 .band--dark{background:var(--navy);color:#fff}
 .band--red{background:var(--line);color:var(--navy)}
-.band__track{display:flex;align-items:center;gap:30px;padding-right:30px;animation:slide 34s linear infinite;flex:none}
+.band__track{display:flex;align-items:center;gap:30px;padding-right:30px;animation:slide 34s linear infinite;flex:none;will-change:transform}
 .band--red .band__track{animation-duration:28s;animation-direction:reverse}
 .band__track i{
   font-style:normal;font-family:var(--f-display);font-weight:700;
@@ -260,7 +260,7 @@ p{margin:0}
   display:flex;align-items:center;gap:30px;
 }
 .band__track i::after{content:"";width:7px;height:7px;border-radius:2px;background:var(--cyan);flex:none}
-@keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes slide{from{transform:translate3d(0,0,0)}to{transform:translate3d(-50%,0,0)}}
 @media (prefers-reduced-motion:reduce){.band__track{animation:none}}
 
 /* ---------- Сетки и панели ---------- */
