@@ -1,0 +1,45 @@
+/* Phone layout uses real CSS pixels; desktop retains its chosen scale. */
+@media(max-width:767px){
+ html{zoom:1!important;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+ body{min-width:0}
+ .wrap{--pad:16px}
+ .nav{gap:8px!important;min-width:0}
+ .brand{font-size:20px!important;gap:7px!important;flex-shrink:0}
+ .nav__icons{gap:6px}
+ .icon-btn,.burger{width:40px!important;height:44px!important;flex-shrink:0}
+ .nav__spacer{min-width:0}
+ .mobile-menu.is-open{max-height:calc(100dvh - 80px)}
+ .modal{width:calc(100vw - 24px);max-height:calc(100dvh - 32px);overflow-y:auto}
+ .t-popup .t-popup__container{width:calc(100vw - 24px)!important;max-width:560px!important}
+ .hero{padding:28px 20px}
+ .hero h1{font-size:clamp(30px,8.5vw,44px);line-height:1.08;overflow-wrap:break-word}
+ .hero__sub{font-size:17px;line-height:1.5}
+ .hero__cta{flex-wrap:wrap;gap:12px}
+ .hero__cta .btn{max-width:100%;white-space:normal}
+ .grid>*{min-width:0}
+ .card{min-width:0}
+ .footer__legal span{min-width:0;overflow-wrap:anywhere}
+ .footer__legal a{display:inline-block;max-width:100%}
+ .field input,.field textarea,.field select{font-size:16px!important}
+ .filter{min-height:44px}
+ .case-hero h1{font-size:clamp(28px,7.8vw,38px);overflow-wrap:break-word}
+ .case-author__person{min-width:0}
+}
+
+@media(max-width:767px){
+ .privacy-content .crumbs,.privacy-content .crumbs a{color:var(--navy)}
+ .case-author p{font-size:14px;line-height:1.5}
+ .case-meta dd{font-size:14px}
+ .crumbs{flex-wrap:wrap}
+ .prose{min-width:0;overflow-wrap:break-word}
+ .form-card--contact .consent,.unified-form .consent{font-size:14px!important}
+ .unified-form .consent input{width:20px;height:20px;flex-basis:20px}
+}
+
+@media(max-width:767px){
+ html body .t-popup .t-popup__container{width:calc(100vw - 24px)!important;max-width:560px!important;margin:60px auto 20px!important;left:auto!important;right:auto!important}
+ html body .t-popup .t702__wrapper{padding:24px!important}
+ html body .t-popup .t702__img{display:none!important}
+ html body .t-popup .unified-form{width:100%!important}
+ html body .unified-form .consent input{width:20px!important;height:20px!important;flex-basis:20px!important}
+}
