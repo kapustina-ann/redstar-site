@@ -65,7 +65,8 @@
         <div class="field"><label for="k-site">Сайт компании</label><input id="k-site" name="site" type="text" placeholder="example.ru"></div>
       </div>
       <div class="field"><label for="k-task">Задача</label><textarea id="k-task" name="task" placeholder="Коротко о том, что нужно сделать"></textarea></div>
-      <label class="consent"><input id="k-consent" type="checkbox" required> Нажимая кнопку, я подтверждаю, что принимаю политику обработки персональных данных</label>
+      <label class="consent"><input id="k-consent" type="checkbox" name="personal_data_consent" required><span><a href="obrabotka.html" target="_blank" rel="noopener">Даю согласие на обработку персональных данных</a></span></label>
+      <label class="consent"><input id="k-consent-privacy" type="checkbox" name="privacy_consent" required><span><a href="privacy.html" target="_blank" rel="noopener">Соглашаюсь с политикой конфиденциальности</a></span></label>
       <button class="btn btn--primary" type="submit" style="align-self:flex-start">Отправить заявку<span class="btn__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7l10 10M17 9v8H9"/></svg></span></button>
       <p class="form__note" role="status"></p>
     </form>
