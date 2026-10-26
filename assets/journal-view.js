@@ -7,11 +7,16 @@
   var originalIntro = intro.textContent;
   var filterRow = document.querySelector('.filters');
   var journalFilters = filterRow.innerHTML;
-  var sectionCases = false;
+  var sectionCases = heading.hasAttribute('data-cases-page');
+  if (!sectionCases && new URLSearchParams(location.search).get('section') === 'cases') {
+    var legacyDirection = new URLSearchParams(location.search).get('direction');
+    location.replace('keysy.html' + (legacyDirection ? '?direction=' + encodeURIComponent(legacyDirection) : ''));
+    return;
+  }
   var buttons = [];
   var cards = Array.from(document.querySelectorAll('.feed [data-tags]'));
   function apply(key, write) {
-    var casesOnly = sectionCases || key === 'keysy';
+    var casesOnly = sectionCases;
     var title = casesOnly ? 'Кейсы' : 'Журнал';
     heading.textContent = crumb.textContent = title;
     document.title = title + ' — Редстар';
@@ -28,18 +33,16 @@
     });
     document.querySelectorAll('.nav__link').forEach(function (link) {
       var href = link.getAttribute('href');
-      if (href === 'zhurnal.html' || href === 'zhurnal.html?section=cases') link.classList.toggle('is-active', href === (sectionCases ? 'zhurnal.html?section=cases' : 'zhurnal.html'));
+      if (href === 'zhurnal.html' || href === 'keysy.html') link.classList.toggle('is-active', href === (sectionCases ? 'keysy.html' : 'zhurnal.html'));
     });
     if (write) {
       var query = new URLSearchParams();
-      if (sectionCases) query.set('section', 'cases');
       if (key !== 'all') query.set(sectionCases ? 'direction' : 'rubrika', key);
       history.replaceState(null, '', location.pathname + (query.size ? '?' + query : ''));
     }
   }
   function restore() {
     var query = new URLSearchParams(location.search);
-    sectionCases = query.get('section') === 'cases';
     if (sectionCases) {
       var directions = [['all', 'Все'], ['razrabotka', 'Разработка'], ['seo', 'SEO'], ['podderzhka', 'Техническая поддержка'], ['kontekst', 'Реклама'], ['geo', 'GEO']];
       filterRow.innerHTML = '';
