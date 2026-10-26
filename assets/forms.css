@@ -54,3 +54,16 @@
 .form-card--contact .form__note:empty{display:none}
 @media(max-width:1350px){.form-card--contact{grid-template-columns:1fr;gap:24px}.form-card--contact .lede,.form-card--contact .form-card__response{max-width:60ch}}
 @media(max-width:780px){.form-card--contact{padding:20px;gap:24px}.form-card--contact .form__row{grid-template-columns:1fr}.form-card--contact .form button[type="submit"]{width:100%}}
+
+/* One field layout for inline and popup contact forms. */
+.unified-form{display:flex!important;flex-direction:column!important;gap:16px!important;min-width:0;text-align:left}
+.unified-form .form__row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.unified-form .field{min-width:0;display:flex;flex-direction:column;gap:6px;margin:0}
+.unified-form .field label{margin:0}
+.unified-form .field textarea{height:100px;min-height:100px;line-height:1.5;resize:vertical}
+.unified-form .consent{display:flex;align-items:flex-start;gap:10px;margin:0}
+.unified-form .consent input{width:16px;height:16px;margin:1px 0 0;flex:0 0 16px}
+.unified-form .consent span{min-width:0}
+.unified-form button[type=submit],#allrecords .unified-form button[type=submit]{min-height:52px;width:auto!important;align-self:flex-start}
+.unified-form .form__note:empty{display:none}
+@media(max-width:780px){.unified-form .form__row{grid-template-columns:1fr}.unified-form button[type=submit],#allrecords .unified-form button[type=submit]{width:100%!important}}
