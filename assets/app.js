@@ -70,7 +70,7 @@
 
   /* Рубрики: фильтр списка и адрес вида blog.html?rubrika=keysy */
   var filters = document.querySelectorAll('.filter');
-  if (filters.length) {
+  if (filters.length && !document.querySelector('[data-journal-heading]')) {
     var apply = function (key, pushUrl) {
       filters.forEach(function (b) { b.classList.toggle('is-on', b.dataset.filter === key); });
       document.querySelectorAll('[data-tags]').forEach(function (card) {
