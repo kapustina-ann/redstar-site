@@ -47,7 +47,7 @@
 /* Compact mobile homepage hero; desktop content stays unchanged. */
 .home-intro__mobile{display:none}
 @media(max-width:767px){
- .home-intro__desktop,.home-intro .hero-creds,.home-intro__cases{display:none!important}
+ .home-intro__desktop,.home-intro__cases{display:none!important}
  .home-intro__mobile{display:block}
  body.home-page main>section.home-intro{padding-top:20px;padding-bottom:16px}
  .home-intro .hero{padding:28px 22px}
@@ -58,4 +58,16 @@
  .home-mobile-creds>div{padding:14px 12px;border:1px solid var(--line);border-radius:14px;background:#fff;min-width:0}
  .home-mobile-creds b{display:block;font-size:15px;color:var(--navy);margin-bottom:5px}
  .home-mobile-creds span{display:block;font-size:13px;line-height:1.4;color:var(--gray-600)}
+}
+
+@media(max-width:767px){
+ .home-intro .hero-creds{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 16px;margin-top:24px}
+ .home-intro .hcred{min-width:0;padding:14px 0;gap:5px;border:0}
+ .home-intro .hcred:nth-child(3){order:0}
+ .home-intro .hcred:nth-child(4){order:1}
+ .home-intro .hcred:nth-child(1){order:2;border-top:1px solid #ffffff2e}
+ .home-intro .hcred:nth-child(2){order:3;border-top:1px solid #ffffff2e}
+ .home-intro .hcred__ico{display:none}
+ .home-intro .hcred__key{font-size:18px;line-height:1.2;margin:0}
+ .home-intro .hcred__note{font-size:12px;line-height:1.4}
 }
