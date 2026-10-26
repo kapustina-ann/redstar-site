@@ -8,3 +8,10 @@
 body.contacts-page main>section.contacts-visit{padding-top:0}
 .contacts-visit__title{margin:0 0 24px;color:var(--navy)}
 @media(max-width:690px){.contacts-visit__title{margin-bottom:20px}}
+
+/* Shared office block on the company and contacts pages. */
+.contacts-visit .grid.g2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.contacts-visit .grid>*{min-width:0;overflow-wrap:anywhere}
+.contacts-visit .card--dark .site-h2{color:white}
+.contacts-visit .card--dark>p{font-size:14px;line-height:1.6}
+@media(max-width:690px){.contacts-visit .grid.g2{grid-template-columns:minmax(0,1fr)}}
