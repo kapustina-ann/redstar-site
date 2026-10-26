@@ -1,5 +1,5 @@
-.about-founder-photo{width:100%;height:360px;object-fit:cover;object-position:center 30%;border-radius:var(--r-md);display:block}.about-page .grid>.card,.about-page .row>*,.about-page .stats>.card{min-width:0;overflow-wrap:anywhere}.about-page .row__d a{text-decoration:underline;text-underline-offset:3px}.about-page .btn{white-space:normal;max-width:100%}
-@media(max-width:690px){.about-page .grid.g2{grid-template-columns:minmax(0,1fr)}.about-page .row{grid-template-columns:32px minmax(0,1fr)}.about-founder-photo{height:300px}}
+.about-founder-photo{width:100%;height:auto;object-fit:contain;border-radius:var(--r-md);display:block}.about-page .grid>.card,.about-page .row>*,.about-page .stats>.card{min-width:0;overflow-wrap:anywhere}.about-page .row__d a{text-decoration:underline;text-underline-offset:3px}.about-page .btn{white-space:normal;max-width:100%}
+@media(max-width:690px){.about-page .grid.g2{grid-template-columns:minmax(0,1fr)}.about-page .row{grid-template-columns:32px minmax(0,1fr)}.about-founder-photo{height:auto}}
 @media(max-width:600px){.about-page .nav{gap:6px}.about-page .brand{font-size:18px;gap:6px}.about-page .burger{width:32px;height:36px;flex:none}}
 @media(max-width:360px){.about-page .brand{font-size:16px;gap:5px}.about-page .nav,.about-page .nav__icons{gap:4px}.about-page .icon-btn{width:30px;height:36px}.about-page .nav__spacer{display:none}}
 
@@ -14,3 +14,9 @@
 .about-team-photo{margin:0}.about-team-photo img{display:block;width:100%;height:auto;border-radius:24px}
 
 .about-office{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}.about-office>div{min-width:0}.about-office__map{min-height:360px;border:1px solid var(--line);border-radius:24px;overflow:hidden}.about-office__map iframe{display:block;width:100%;height:100%;min-height:360px;border:0}.about-office .site-h2{color:white}@media(max-width:900px){.about-office{grid-template-columns:minmax(0,1fr)}.about-office__map,.about-office__map iframe{min-height:320px}}
+
+/* Full portrait frames, kept narrower than the page content. */
+.about-founders{width:100%;max-width:720px;margin-inline:auto;align-items:start}
+.about-founders .person{padding:20px;gap:18px}
+.about-founders .person__name{color:var(--navy)}
+@media(max-width:690px){.about-founders{max-width:360px}.about-founders .person{padding:16px}}
