@@ -13,8 +13,9 @@
 <link rel="stylesheet" href="assets/style.css?v=compact-menu1">
 <link rel="stylesheet" href="assets/site-scale.css?v=scale150"><link rel="stylesheet" href="assets/headings.css?v=unified3">
 <link rel="stylesheet" href="assets/site-spacing.css?v=2">
+<link rel="stylesheet" href="assets/contacts.css?v=1">
 </head>
-<body>
+<body class="contacts-page">
 
 <header class="topbar">
   <div class="wrap">
@@ -93,45 +94,27 @@
       <span class="eyebrow">Как добраться</span>
       <h3>Центр Ярославля, офис 207</h3>
       <p>Октябрьский переулок, дом 3. Вход со стороны переулка, второй этаж. Парковка — вдоль улицы. Если едете издалека, предупредите заранее: встретим.</p>
-      <a class="btn btn--white" href="https://yandex.ru/maps/" style="align-self:flex-start;margin-top:auto">Открыть в Яндекс Картах<span class="btn__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+      <a class="btn btn--white" href="https://yandex.ru/maps/org/50676462088/" style="align-self:flex-start;margin-top:auto">Открыть в Яндекс Картах<span class="btn__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
     </div>
-    <!-- На боевом сайте здесь встраивается виджет Яндекс Карт -->
-    <div class="visual visual--light visual--tall visual--grid" style="border-radius:var(--r-card);margin:0">
-      <span class="visual__tag">Здесь — карта Яндекса с меткой офиса</span>
-    </div>
+    <div class="contacts-map"><iframe src="https://yandex.ru/map-widget/v1/?z=12&amp;ol=biz&amp;oid=50676462088" width="560" height="400" title="Офис Редстар на Яндекс Картах" loading="lazy" allowfullscreen></iframe></div>
   </div>
 </section>
 
-<section class="section wrap" id="zayavka">
-  <div class="form-card">
-    <div class="stack stack--s">
-      <h2 class="site-h2">Оставьте контакты</h2>
-      <p class="lede">Познакомимся, вникнем в задачу и сделаем предложение. Если поймём, что задача не наша, — скажем сразу и подскажем, к кому обратиться.</p>
-      <div class="badges" style="grid-template-columns:1fr;margin-top:10px">
-        <div class="badge"><span class="badge__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>Отвечаем в течение рабочего дня</div>
-      </div>
+<section class="section wrap" id="zayavka" style="scroll-margin-top:110px">
+  <div class="form-card form-card--contact">
+    <div class="stack stack--s form-card__intro">
+      <h2 class="section-title site-h2">Свяжитесь с нами</h2>
+      <p class="lede">Познакомимся, вникнем в задачу и сделаем предложение.</p><p class="form-card__response">Обычно отвечаем в течение рабочего дня.</p>
     </div>
-    <form class="form" data-demo>
+    <form class="form" id="support-contact-form">
       <div class="form__row">
-        <div class="field"><label for="k-name">Ваше имя</label><input id="k-name" name="name" type="text" placeholder="Как к вам обращаться" required></div>
-        <div class="field"><label for="k-phone">Телефон</label><input id="k-phone" name="phone" type="tel" placeholder="+7 000 000 00 00" required></div>
+        <div class="field"><label for="support-name">Ваше имя</label><input id="support-name" name="name" type="text" autocomplete="name" placeholder="Как к вам обращаться" required></div>
+        <div class="field"><label for="support-phone">Телефон</label><input id="support-phone" name="phone" type="tel" autocomplete="tel" placeholder="+7 000 000 00 00" required></div>
       </div>
-      <div class="form__row">
-        <div class="field"><label for="k-service">Что интересует</label>
-          <select id="k-service" name="service">
-            <option>Разработка сайта</option>
-            <option>Техническая поддержка</option>
-            <option>SEO-продвижение</option>
-            <option>Контекстная реклама</option>
-            <option>Пока не определились</option>
-          </select>
-        </div>
-        <div class="field"><label for="k-site">Сайт компании</label><input id="k-site" name="site" type="text" placeholder="example.ru"></div>
-      </div>
-      <div class="field"><label for="k-task">Задача</label><textarea id="k-task" name="task" placeholder="Коротко о том, что нужно сделать"></textarea></div>
-      <label class="consent"><input id="k-consent" type="checkbox" required> Нажимая кнопку, я подтверждаю, что принимаю политику обработки персональных данных</label>
-      <button class="btn btn--primary" type="submit" style="align-self:flex-start">Отправить заявку<span class="btn__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></button>
-      <p class="form__note" role="status"></p>
+      <div class="field"><label for="support-task">Задача</label><textarea id="support-task" name="task" rows="3" placeholder="Коротко о вашем проекте и задаче"></textarea></div>
+      <label class="consent"><input id="support-consent" type="checkbox" required><span>Я принимаю <a href="kontakty.html">политику обработки персональных данных</a></span></label>
+      <button class="btn btn--primary" type="submit" style="align-self:flex-start">Отправить заявку</button>
+      <p class="form__note" role="status" hidden></p>
     </form>
   </div>
 </section>
@@ -198,5 +181,5 @@
 </footer>
 
 <script src="assets/app.js"></script>
-<link rel="stylesheet" href="assets/forms.css?v=scale150"></body>
+<link rel="stylesheet" href="assets/forms.css?v=scale150"><script src="assets/support-contact.js"></script></body>
 </html>
