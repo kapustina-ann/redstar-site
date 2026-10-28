@@ -19,7 +19,7 @@
     var casesOnly = sectionCases;
     var title = casesOnly ? 'Кейсы' : 'Журнал';
     heading.textContent = crumb.textContent = title;
-    document.title = title + ' — Редстар';
+    // Keep the SEO title declared in HTML when changing filters.
     intro.textContent = casesOnly ? 'Проекты клиентов: задачи, решения и результаты нашей работы.' : originalIntro;
     cards.forEach(function (card) {
       var tags = card.dataset.tags.split(/\s+/);
