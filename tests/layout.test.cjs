@@ -9,7 +9,7 @@ const files = ['', 'glass/'].flatMap(dir => fs.readdirSync(path.join(root, dir))
   let checked = 0;
   for (const [name, engine, options] of [['WebKit', webkit, {}], ['Chrome', chromium, {channel: 'chrome'}]]) {
     const browser = await engine.launch(options);
-    const jobs = files.flatMap(file => [390, 768, 1440].map(width => ({file, width})));
+    const jobs = files.flatMap(file => [320, 390, 768, 1381, 1440].map(width => ({file, width})));
     async function worker() {
       const page = await browser.newPage();
       // Inspect local build only; maps and other external services are outside this test.
@@ -17,13 +17,15 @@ const files = ['', 'glass/'].flatMap(dir => fs.readdirSync(path.join(root, dir))
         const url = new URL(route.request().url());
         const file = path.join(root, decodeURIComponent(url.pathname));
         return url.hostname === 'audit.local' && fs.existsSync(file) && fs.statSync(file).isFile()
-          ? route.fulfill({path: file}) : route.abort();
+          ? route.fulfill({path: file}) : /fonts\.(googleapis|gstatic)\.com/.test(url.hostname) ? route.continue() : route.abort();
       });
       while (jobs.length) {
         const {file, width} = jobs.shift();
         await page.setViewportSize({width, height: 844});
         await page.goto('https://audit.local/' + file, {waitUntil: 'domcontentloaded'});
         if (file.endsWith('blog.html')) await page.waitForURL('**/zhurnal.html');
+        if (file.endsWith('keys-podmoskovie.html')) await page.waitForURL('**/keys-fid-vrachey.html');
+        if (file.endsWith('keys-psm.html')) await page.waitForURL('**/keysy.html');
         await page.evaluate(async () => {
           await document.fonts.ready;
           await Promise.all(Array.from(document.images).map(img => {
@@ -50,7 +52,7 @@ const files = ['', 'glass/'].flatMap(dir => fs.readdirSync(path.join(root, dir))
     }
     await Promise.all([worker(), worker(), worker()]);
     await browser.close();
-    console.log(`PASS ${name}: ${files.length} pages at 390, 768 and 1440px`);
+    console.log(`PASS ${name}: ${files.length} pages at 320, 390, 768, 1381 and 1440px`);
   }
   console.log(`PASS ${checked} layout checks`);
 })().catch(error => { console.error(error); process.exit(1); });

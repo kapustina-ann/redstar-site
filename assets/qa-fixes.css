@@ -1,0 +1,29 @@
+/* Shared fixes from the three October 2026 QA reports. */
+:root{--gray-400:#6b6b6b}
+.nav__link{white-space:nowrap}
+@media(max-width:1620px){.nav__menu,.nav__phone{display:none}.burger{display:grid}}
+.grid>*{min-width:0}.g2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.journal-article .card .btn{white-space:normal;max-width:100%;text-align:center;min-width:0}
+@media(max-width:1050px){.journal-article .grid.g2{grid-template-columns:minmax(0,1fr)}}
+.privacy-content .crumbs,.privacy-content .crumbs a,.privacy-content .crumbs a:hover{color:var(--navy)}
+.privacy-content .crumbs span{opacity:1}
+.hcred__note{overflow-wrap:anywhere;hyphens:auto}
+.df-flow li,.df-flow h3,.or-system,.or-system b,.or-system span,.or-pipeline li{min-width:0;overflow-wrap:anywhere;hyphens:auto}
+.vc-small-stats{grid-template-columns:repeat(3,minmax(0,1fr))}.vc-small-stats>*{min-width:0}
+@media(max-width:400px){.vc-small-stats{grid-template-columns:1fr;gap:20px}}
+/* The site uses zoom:1.5 above 767px, so constrain the pre-zoom dialog height. */
+.vc-lightbox{max-height:calc(66.6667dvh - 32px);overscroll-behavior:contain}
+.vc-lightbox__bar{flex-shrink:0}.vc-lightbox__bar p{min-width:0;overflow-wrap:anywhere}
+.vc-lightbox>img{display:block}
+@media(max-width:767px){.vc-lightbox{width:calc(100vw - 24px);max-width:calc(100vw - 24px);max-height:calc(100dvh - 32px)}
+ .footer h4,.tag,.case-author__label,.case-meta dt,.vc-meta dt,.vc-hero .crumbs,.case-hero .crumbs,.vc-toc span,.vc-toc a,.vc-small-stats span{font-size:12px!important}}
+.field label,.unified-form .field label,.form-card--contact .form-card__response,.form-card--contact .form-card__intro .form-card__response,.consent{color:#686868!important}
+.consent a,.t-form .t-checkbox__control a{color:#006da5!important}
+.unified-form input::placeholder,.unified-form textarea::placeholder{color:#686868!important}
+.row__n,.df-flow>li>span{color:#006da5}
+#allrecords .tag{color:#006da5!important}
+:focus-visible{outline:3px solid #0077b8;outline-offset:4px}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+@media(max-width:690px){.g2{grid-template-columns:minmax(0,1fr)}}
+
+.card:not(.card--dark):not(.card--red) .tag{color:#006da5}

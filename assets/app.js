@@ -6,10 +6,24 @@
   var burger = document.querySelector('.burger');
   var mobile = document.querySelector('.mobile-menu');
   if (burger && mobile) {
-    burger.addEventListener('click', function () {
-      var open = mobile.classList.toggle('is-open');
-      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    function setMenu(open, restoreFocus) {
+      mobile.classList.toggle('is-open', open);
+      burger.setAttribute('aria-expanded', String(open));
+      if (open || restoreFocus) burger.focus();
+    }
+    burger.addEventListener('click', function () { setMenu(!mobile.classList.contains('is-open'), false); });
+    document.addEventListener('keydown', function (event) {
+      if (!mobile.classList.contains('is-open')) return;
+      if (event.key === 'Escape') { event.preventDefault(); setMenu(false, true); return; }
+      if (event.key !== 'Tab') return;
+      var items = [burger].concat(Array.from(mobile.querySelectorAll('a[href],button:not([disabled])')).filter(function (el) { return el.getClientRects().length; }));
+      var i = items.indexOf(document.activeElement);
+      event.preventDefault();
+      var next = i < 0 ? 0 : (i + (event.shiftKey ? -1 : 1) + items.length) % items.length;
+      items[next].focus();
     });
+    mobile.addEventListener('click', function (event) { if (event.target.closest('a[href]')) setMenu(false, false); });
+    window.addEventListener('resize', function () { if (!burger.getClientRects().length) setMenu(false, false); });
   }
 
   /* Выпадающее меню: держим список открытым ещё мгновение после ухода курсора,

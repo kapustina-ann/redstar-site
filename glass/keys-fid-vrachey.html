@@ -20,6 +20,7 @@
 <link rel="stylesheet" href="../assets/case-hero.css?v=2">
 <link rel="stylesheet" href="../assets/site-spacing.css?v=2">
 <link rel="stylesheet" href="../assets/mobile.css?v=1">
+<link rel="stylesheet" href="../assets/case-volkov.css"><link rel="stylesheet" href="../assets/qa-fixes.css?v=20261028">
 </head>
 <body>
 
@@ -80,7 +81,7 @@
 <section class="df-section" id="problem"><h2 class="site-h2">С чем пришёл клиент</h2><div class="df-copy"><p>Ирина Тецкая, руководитель отдела маркетинга и рекламы стоматологии «Подмосковье», обратилась к нам с проблемой: в карточке клиники на Яндексе появляются врачи, которых нет ни на сайте, ни в других справочниках. Часть из них уже не работала в клинике, часть не имела к ней отношения вообще.</p>
 <blockquote><p>«Яндекс тянет откуда-то в карточку старых врачей, хотя их нет на сайте и в иных справочниках. В ТП Яндекса уже дважды писала, пока нет толку. Как понять, может, где старые страницы всплывают и попадают в алгоритмы Яндекса, почистить бы.</p><p>Нужна помощь, я вообще не понимаю, откуда это тянется. Нигде уже нет информации, на официальном сайте, в других справочниках. А в карточке Яндекса выскакивает».</p><footer class="df-quote-author"><img src="../assets/cases/doctor-feed/irina-tetskaya.jpg" alt="Ирина Тецкая" width="64" height="64" loading="lazy"><span><b>Ирина Тецкая</b><span>Руководитель отдела маркетинга и рекламы, стоматология «Подмосковье»</span></span></footer></blockquote></div></section>
 <section class="df-section" id="solution"><h2 class="site-h2">Что сделали</h2><div class="df-copy"><p>Вместо дальнейшего поиска источника устаревших данных настроили передачу информации с официального сайта клиники. Сайт формирует фид врачей в формате, который принимает Яндекс Вебмастер.</p></div>
-<ol class="df-flow"><li><span>01</span><h3>Сайт клиники</h3><p>Данные берутся из раздела врачей на сайте.</p></li><li><span>02</span><h3>Административная панель Битрикса</h3><p>Клиника задаёт цену приёма, специальность и выбирает врачей для передачи.</p></li><li><span>03</span><h3>Фид</h3><p>Сайт автоматически пересобирает данные раз в 3 месяца.</p></li><li><span>04</span><h3>Яндекс</h3><p>Вебмастер принимает фид, данные передаются в карточку организации.</p></li></ol>
+<ol class="df-flow"><li><span>01</span><h3>Сайт клиники</h3><p>Данные берутся из раздела врачей на сайте.</p></li><li><span>02</span><h3>Админи&shy;стративная панель Битрикса</h3><p>Клиника задаёт цену приёма, специальность и выбирает врачей для передачи.</p></li><li><span>03</span><h3>Фид</h3><p>Сайт автоматически пересобирает данные раз в 3 месяца.</p></li><li><span>04</span><h3>Яндекс</h3><p>Вебмастер принимает фид, данные передаются в карточку организации.</p></li></ol>
 <div class="df-copy"><ul><li>Отдельный список врачей для Яндекса вести не нужно: данные берутся с сайта.</li><li>При очередной пересборке фид учитывает изменения состава врачей.</li><li>В административной панели можно изменить стоимость приёма, добавить или поменять дополнительную специальность и выбрать, кто попадёт в выгрузку.</li></ul></div></section>
 <section class="df-section" id="challenges"><h2 class="site-h2">Сложности по ходу работы</h2><div class="grid g2">
 <article class="card card--line"><h3>Разные названия специальностей</h3><p>В проекте столкнулись с тем, что специальности на сайте не совпадали со списком Яндекса. Например, должность «детский стоматолог» не подходила для передачи в фиде.</p><p><b>Решение:</b> добавили скрытое поле специально для выгрузки. На сайте сохранили привычную должность, а в Яндекс стали передавать специальность из его списка.</p></article>
@@ -91,12 +92,12 @@
 <div><h3>Стало</h3><ul><li>В карточке — врачи, которых выбрала клиника.</li><li>Данные для фида поступают с сайта клиники.</li><li>Врачей и цены можно менять в административной панели Битрикса.</li><li>Фид автоматически обновляется раз в 3 месяца.</li></ul></div>
 </div></section>
 <section class="df-section" id="screens"><h2 class="site-h2">Как карточка выглядит после настройки</h2><p class="df-copy">Нужные врачи на месте, указана стоимость консультации. На скриншоте компьютерной версии — 46 врачей. Изображения показывают результат на момент подготовки кейса.</p>
-<div class="df-gallery"><figure><a href="../assets/cases/doctor-feed/desktop.png" target="_blank" rel="noopener" aria-label="Открыть скриншот на компьютере в полном размере"><img src="../assets/cases/doctor-feed/desktop.png" width="706" height="766" alt="Блок «Врачи» на Яндексе: 46 врачей, цены приёма и кнопки записи" loading="lazy"></a><figcaption>На компьютере: список врачей, стоимость приёма и запись.</figcaption></figure>
-<figure><a href="../assets/cases/doctor-feed/mobile.png" target="_blank" rel="noopener" aria-label="Открыть скриншот на телефоне в полном размере"><img src="../assets/cases/doctor-feed/mobile.png" width="589" height="1280" alt="Мобильная карточка врачей: специальности, стаж, отзывы и стоимость консультации" loading="lazy"></a><figcaption>На телефоне: специальности, стаж, отзывы и стоимость. Нажмите на изображение, чтобы рассмотреть детали.</figcaption></figure></div></section>
+<div class="df-gallery"><figure><a href="../assets/cases/doctor-feed/desktop.png" data-case-image aria-label="Открыть скриншот на компьютере в полном размере"><img src="../assets/cases/doctor-feed/desktop.png" width="706" height="766" alt="Блок «Врачи» на Яндексе: 46 врачей, цены приёма и кнопки записи" loading="lazy"></a><figcaption>На компьютере: список врачей, стоимость приёма и запись.</figcaption></figure>
+<figure><a href="../assets/cases/doctor-feed/mobile.png" data-case-image aria-label="Открыть скриншот на телефоне в полном размере"><img src="../assets/cases/doctor-feed/mobile.png" width="589" height="1280" alt="Мобильная карточка врачей: специальности, стаж, отзывы и стоимость консультации" loading="lazy"></a><figcaption>На телефоне: специальности, стаж, отзывы и стоимость. Нажмите на изображение, чтобы рассмотреть детали.</figcaption></figure></div></section>
 <section class="df-section"><h2 class="site-h2">Кому может пригодиться решение</h2><p class="df-copy">Клиникам на 1С-Битрикс, у которых данные о врачах на Яндексе расходятся с информацией на сайте. Перед внедрением проверяем структуру сайта, данные специалистов и требования к фиду.</p></section>
 </article>
 <section class="section--tight wrap"><div class="cta on-navy"><div class="cta__text"><h2 class="site-h2">Нужна помощь с сайтом?</h2><p>Расскажите, что не работает или требует доработки. Разберём задачу и предложим решение.</p></div><a class="btn btn--white" href="uslugi-podderzhka.html#zayavka">Обсудить задачу</a></div><div class="df-related"><a href="uslugi-podderzhka.html">Техническая поддержка сайтов →</a><a href="keysy.html">Все кейсы →</a></div></section>
-</main>
+<dialog class="vc-lightbox" aria-labelledby="vc-lightbox-title"><div class="vc-lightbox__bar"><p id="vc-lightbox-title">Изображение проекта</p><button type="button" autofocus>Закрыть ×</button></div><img alt=""></dialog></main>
 
 
 <footer class="footer">
@@ -145,5 +146,5 @@
 
 <script src="../assets/app.js"></script>
 <script src="../assets/leads-config.js?v=1"></script><script src="../assets/leads.js?v=1"></script>
-</body>
+<script src="../assets/case-volkov.js"></script></body>
 </html>
