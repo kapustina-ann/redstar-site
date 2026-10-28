@@ -828,3 +828,6 @@ body:has(dialog.modal[open]){overflow:hidden}
 .footer>.wrap{position:relative;z-index:1}
 .footer__legal{z-index:2}
 .footer__word,.footer::before,.footer::after{pointer-events:none}
+
+/* Match the main site's footer font; legacy support fonts include Gilroy. */
+.support-site-shell .footer{font-family:Montserrat,'Helvetica Neue',Arial,sans-serif}
