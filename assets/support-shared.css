@@ -822,3 +822,9 @@ body:has(dialog.modal[open]){overflow:hidden}
 }
 
 @scope (.support-site-shell){:scope{--maxw:100%}.wrap{max-width:none;width:100%}}
+
+/* Keep footer navigation above decoration; decorative layers must never intercept taps. */
+.footer{isolation:isolate}
+.footer>.wrap{position:relative;z-index:1}
+.footer__legal{z-index:2}
+.footer__word,.footer::before,.footer::after{pointer-events:none}

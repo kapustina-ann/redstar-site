@@ -838,3 +838,9 @@ body:has(dialog.modal[open]){overflow:hidden}
 .cta--founders .cta__text{container-type:inline-size;min-width:0;max-width:none}
 .cta--founders .founders-title{font-size:clamp(16px,8.5cqi,42px);line-height:1.12}
 .founders-title>span{display:block;white-space:nowrap}
+
+/* Keep footer navigation above decoration; decorative layers must never intercept taps. */
+.footer{isolation:isolate}
+.footer>.wrap{position:relative;z-index:1}
+.footer__legal{z-index:2}
+.footer__word,.footer::before,.footer::after{pointer-events:none}
