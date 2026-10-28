@@ -52,19 +52,20 @@ async function browserTests() {
  await fill(form); await form.locator('[type="submit"]').click();
  await form.locator('.form__note').filter({hasText:'Заявка получена'}).waitFor();
  assert.equal(requests.at(-1).source_block,'Главный баннер');
- // Tilda submit buttons must use only the shared transport, even with legacy listeners.
+ // Support offers now open the inline form and retain the selected offer as source.
  await p.goto(base+'uslugi-podderzhka.html');
- const popup = p.locator('form.t-form').first();
- await p.evaluate(()=>{const f=document.querySelector('form.t-form');f.closest('.t-popup').style.cssText='display:block!important;visibility:visible!important;opacity:1!important;position:relative!important';});
- await popup.evaluate(f => {
-  f.querySelector('[name="Name"]').value='Тест';
-  var phone=f.querySelector('[name="Phone"]');phone.value='+7 (999) 123-45-67';phone.dispatchEvent(new Event('input',{bubbles:true}));
-  f.querySelectorAll('input[type="checkbox"]').forEach(el=>{el.checked=true});
- }); const before = requests.length;
- await popup.locator('[type="submit"]').evaluate(el=>el.click());
- await popup.locator('.form__note').filter({hasText:'Заявка получена'}).waitFor({state:'attached'});
- assert.equal(requests.length,before+1);
- await b.close(); console.log('PASS frontend: cross-page source, same-page source, direct form, error/retry ID, Tilda transport');
+ assert.equal(await p.locator('form').count(),1);
+ assert.equal(await p.locator('[data-tooltip-hook]').count(),0);
+ for (const [selector, source] of [['.promo-strip__action a','Акция: 3 часа поддержки'],['.support-price__button','Старт']]) {
+  await p.locator(selector).first().click();
+  assert.equal(new URL(p.url()).hash,'#zayavka');
+  await fill(form); const before=requests.length;
+  await form.locator('[type="submit"]').click();
+  await form.locator('.form__note').filter({hasText:'Заявка получена'}).waitFor();
+  assert.equal(requests.length,before+1);
+  assert.equal(requests.at(-1).source_block,source);
+ }
+ await b.close(); console.log('PASS frontend: cross-page source, same-page source, direct form, error/retry ID, support offers');
 }
 function backendTests() {
  let rows=[], deliveries=0, failTelegram=true;
