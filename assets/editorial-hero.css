@@ -1,0 +1,4 @@
+.hero--editorial{background:#083575}
+.hero--editorial::before,.hero--editorial::after{content:"";position:absolute;z-index:-1;pointer-events:none;border:1px solid rgba(83,182,244,.25);border-radius:50%;width:58%;aspect-ratio:1.6;right:-17%;top:-55%;transform:rotate(22deg)}
+.hero--editorial::after{width:64%;right:-23%;top:20%;transform:rotate(-25deg);border-color:rgba(83,182,244,.18)}
+@media(max-width:780px){.hero--editorial::before{width:90%;right:-60%;top:-10%}.hero--editorial::after{width:100%;right:-70%;top:40%}}
