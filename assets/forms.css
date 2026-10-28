@@ -1,4 +1,4 @@
-/* Shared form appearance, based on the homepage. */
+/* Shared form appearance, based on the contacts page. */
 :root{--form-font:'Gilroy','Montserrat','Helvetica Neue',Arial,sans-serif;--form-border:#e4e4e4;--form-bg:#f6f7f9;--form-focus:#0097ea}
 .field input,.field textarea,.field select,.t-form .t-input,.t-form .t-select,.t-form textarea{box-sizing:border-box!important;font-family:var(--form-font)!important;font-size:15px!important;font-weight:500!important;color:#1a1a1a!important;padding:14px 16px!important;border:1.5px solid var(--form-border)!important;border-radius:12px!important;background:var(--form-bg)!important;transition:border-color .16s ease,background .16s ease;width:100%}
 .t-form .t-input,.t-form .t-select{height:50px!important}
@@ -38,7 +38,7 @@
 #rec2036016981 .t-form .t-input-title,#rec2036016981 .t-form .unified-field-label{color:#fff!important}
 
 /* Compact homepage contact block; sizes are logical pixels at the site scale. */
-.form-card--contact{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);align-items:start;gap:36px;padding:32px}
+.form-card.form-card--contact{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);align-items:start;gap:36px;padding:32px}
 .form-card--contact .form-card__intro{gap:16px;min-width:0}
 .form-card--contact .lede{max-width:32ch}
 .form-card--contact .form-card__response{font-size:14px;line-height:1.5;color:var(--gray-400);max-width:32ch}
@@ -52,8 +52,8 @@
 .form-card--contact .consent span{min-width:0}
 .form-card--contact .form button[type="submit"]{min-height:52px;align-self:flex-start}
 .form-card--contact .form__note:empty{display:none}
-@media(max-width:1350px){.form-card--contact{grid-template-columns:1fr;gap:24px}.form-card--contact .lede,.form-card--contact .form-card__response{max-width:60ch}}
-@media(max-width:780px){.form-card--contact{padding:20px;gap:24px}.form-card--contact .form__row{grid-template-columns:1fr}.form-card--contact .form button[type="submit"]{width:100%}}
+@media(max-width:1350px){.form-card.form-card--contact{grid-template-columns:1fr;gap:24px}.form-card--contact .lede,.form-card--contact .form-card__response{max-width:60ch}}
+@media(max-width:780px){.form-card.form-card--contact{padding:20px;gap:24px}.form-card--contact .form__row{grid-template-columns:1fr}.form-card--contact .form button[type="submit"]{width:100%}}
 
 /* One field layout for inline and popup contact forms. */
 .unified-form{display:flex!important;flex-direction:column!important;gap:16px!important;min-width:0;text-align:left}
@@ -67,3 +67,23 @@
 .unified-form button[type=submit],#allrecords .unified-form button[type=submit]{min-height:52px;width:auto!important;align-self:flex-start}
 .unified-form .form__note:empty{display:none}
 @media(max-width:780px){.unified-form .form__row{grid-template-columns:1fr}.unified-form button[type=submit],#allrecords .unified-form button[type=submit]{width:100%!important}}
+
+/* Keep the contacts component identical inside the legacy support style scope. */
+.form-card.form-card--contact{font-family:var(--form-font)}
+.form-card--contact .form-card__intro.stack{display:flex;flex-direction:column;gap:16px;align-self:start}
+.form-card--contact .form-card__intro .lede{font-size:18px;line-height:1.5;margin:0}
+.form-card--contact .form-card__intro .form-card__response{font-size:14px;line-height:1.5;margin:0;color:#8c8c8c}
+.form-card--contact .form-card__intro .section-title{margin:0}
+.form-card--contact .unified-form .field,.form-card--contact .unified-form .consent{margin:0!important}
+.form-card--contact .unified-form input::placeholder,.form-card--contact .unified-form textarea::placeholder{color:#8c8c8c!important;opacity:1!important}
+/* Popups use the same component in one column. */
+.form-card--popup{font-family:var(--form-font);text-align:left}
+.form-card--popup .form-card__intro{margin-bottom:24px}
+.form-card--popup .form-card__intro .lede,.form-card--popup .form-card__response{max-width:none}
+.form-card--popup .section-title{font-family:var(--form-font);font-size:24px;line-height:1.2;color:#083575;font-weight:700}
+.t-popup .t702__img{display:none!important}
+.t-popup .t702__wrapper.form-card--popup{padding:32px!important}
+@media(max-width:780px){.t-popup .t702__wrapper.form-card--popup{padding:20px!important}.form-card--contact .form-card__intro .lede{font-size:16px}}
+
+.modal__body.form-card--popup{padding:32px;gap:0}
+@media(max-width:780px){.modal__body.form-card--popup{padding:20px}}

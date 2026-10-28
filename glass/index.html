@@ -282,12 +282,11 @@
 <!-- ФУТЕР -->
 <!-- ФОРМА В МОДАЛЬНОМ ОКНЕ -->
 <dialog class="modal" id="consult" aria-labelledby="consult-title">
-  <div class="modal__body">
+  <div class="modal__body form-card--contact form-card--popup">
     <button class="modal__close" type="button" data-modal-close aria-label="Закрыть">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
     </button>
-    <h2 id="consult-title" style="font-size:clamp(24px,1.73333vw,34px)" class="site-h2">Свяжитесь с нами</h2>
-    <p class="lede">Разберём вашу задачу и вернёмся с предложением. Обычно отвечаем в течение рабочего дня.</p>
+    <div class="stack stack--s form-card__intro"><h2 id="consult-title" class="section-title site-h2">Свяжитесь с нами</h2><p class="lede">Познакомимся, вникнем в задачу и сделаем предложение.</p><p class="form-card__response">Обычно отвечаем в течение рабочего дня.</p></div>
     <form class="form unified-form" id="home-contact-form">
       <div class="form__row">
         <div class="field"><label for="home-contact-form-name">Ваше имя</label><input id="home-contact-form-name" name="name" type="text" autocomplete="name" placeholder="Как к вам обращаться" required></div>
