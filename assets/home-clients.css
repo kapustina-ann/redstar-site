@@ -18,3 +18,6 @@
 
 /* Lift the near-white background baked into supplied logos to card white. */
 .home-client-logos img.client-logo--light-bg{filter:brightness(1.04)}
+
+/* Source color assets include hover frames; clip those without changing the logos. */
+.home-client-logos img.client-logo--color-source{height:auto;aspect-ratio:587/264;clip-path:inset(10% 6%);filter:brightness(1.04)}
