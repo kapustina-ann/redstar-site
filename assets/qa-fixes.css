@@ -1,7 +1,11 @@
 /* Shared fixes from the three October 2026 QA reports. */
 :root{--gray-400:#6b6b6b}
 .nav__link{white-space:nowrap}
-@media(max-width:1620px){.nav__menu,.nav__phone{display:none}.burger{display:grid}}
+/* Keep laptop navigation visible; compact spacing accommodates the site scale. */
+@media(max-width:1023px){.topbar .nav .nav__menu,.topbar .nav .nav__phone{display:none}.topbar .nav .burger{display:grid}}
+@media(min-width:1024px){.topbar .nav .nav__menu{display:flex}.topbar .nav .burger{display:none}}
+@media(min-width:1024px) and (max-width:1620px){.topbar .nav .nav__phone{display:none}}
+@media(min-width:1024px) and (max-width:1380px){.topbar .nav{gap:6px}.topbar .nav__menu{margin-left:12px;gap:2px}.topbar .nav__link{font-size:13px;padding-inline:6px}.topbar .drop{width:min(600px,calc(66.6667vw - 190px))}}
 .grid>*{min-width:0}.g2{grid-template-columns:repeat(2,minmax(0,1fr))}
 .journal-article .card .btn{white-space:normal;max-width:100%;text-align:center;min-width:0}
 @media(max-width:1050px){.journal-article .grid.g2{grid-template-columns:minmax(0,1fr)}}
