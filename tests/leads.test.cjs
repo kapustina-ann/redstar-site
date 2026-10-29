@@ -68,33 +68,30 @@ async function browserTests() {
  await b.close(); console.log('PASS frontend: cross-page source, same-page source, direct form, error/retry ID, support offers');
 }
 function backendTests() {
- let rows=[], deliveries=0, failTelegram=true;
+ let rows=[];
  const cache=new Map();
  const sheet={getLastRow:()=>rows.length,appendRow:r=>rows.push(r),getRange:(r,c,n=1,m=1)=>({
   getValues:()=>rows.slice(r-1,r-1+n).map(row=>row.slice(c-1,c-1+m)),
   setValues:values=>values.forEach((row,i)=>row.forEach((v,j)=>{rows[r-1+i][c-1+j]=v})),
   createTextFinder:id=>({matchEntireCell:()=>({findNext:()=>rows.slice(1).some(row=>row[0]===id)?{}:null})})
  })};
- const env={console,PropertiesService:{getScriptProperties:()=>({getProperty:k=>({TELEGRAM_BOT_TOKEN:'fake',TELEGRAM_CHAT_ID:'-123'}[k])})},
+ const env={console,
   SpreadsheetApp:{openById:()=>({getSheetByName:()=>sheet}),flush:()=>{}},
   LockService:{getScriptLock:()=>({tryLock:()=>true,hasLock:()=>true,releaseLock:()=>{}})},
   CacheService:{getScriptCache:()=>({get:k=>cache.get(k),put:(k,v)=>cache.set(k,v)})},
   Utilities:{formatDate:()=> '2026-10-26 12:00:00'},
-  ContentService:{MimeType:{JSON:'json'},createTextOutput:t=>({setMimeType:()=>JSON.parse(t)})},
-  UrlFetchApp:{fetch:()=>{deliveries++;return {getResponseCode:()=>failTelegram?503:200,getContentText:()=>JSON.stringify({ok:!failTelegram,result:{message_id:1}})}}}
+  ContentService:{MimeType:{JSON:'json'},createTextOutput:t=>({setMimeType:()=>JSON.parse(t)})}
  };
  vm.createContext(env);vm.runInContext(fs.readFileSync(path.join(root,'integrations/google-apps-script/Code.gs'),'utf8'),env);
  rows.push(Array.from(vm.runInContext('HEADERS',env)));
  const data={request_id:'12345678-1234-1234-1234-123456789012',name:'=IMPORTXML("x")',phone:'+7 (999) 123-45-67',task:'Тест',page_url:'https://redstaragency.ru/kontakty.html',personal_data_consent:true,privacy_consent:true};
  const post=d=>env.doPost({postData:{contents:JSON.stringify(d)}});
- assert.equal(post(data).ok,true);assert.equal(rows.length,2);assert.equal(rows[1][13],'Повторить отправку');
- assert.equal(rows[1][2][0],"'"); assert.equal(post(data).ok,true); assert.equal(rows.length,2);assert.equal(deliveries,1);
- failTelegram=false;env.retryTelegram();assert.equal(rows[1][13],'Отправлено');assert.equal(deliveries,2);
- env.retryTelegram();assert.equal(deliveries,2);
+ assert.equal(post(data).ok,true);assert.equal(rows.length,2);assert.equal(rows[1].length,16);assert.equal(rows[1][5],data.page_url);
+ assert.equal(rows[1][2][0],"'"); assert.equal(post(data).ok,true); assert.equal(rows.length,2);
  assert.equal(post({...data,personal_data_consent:false}).ok,false);
  assert.equal(post({...data,phone:'123'}).ok,false);
  assert.equal(post({...data,website:'spam'}).ok,false);
  assert.equal(post({...data,page_url:'https://evil.example/'}).ok,false);
- console.log('PASS backend: durable save, duplicate ID, queued Telegram retry, formula escaping, validation');
+ console.log('PASS backend: durable save, duplicate ID, Sheets only without credentials, formula escaping, validation');
 }
 backendTests();browserTests().catch(e=>{console.error(e);process.exit(1)});
