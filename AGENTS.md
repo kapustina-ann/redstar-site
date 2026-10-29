@@ -12,3 +12,28 @@
 Перед завершением публикации проверить наличие карточки и переход на страницу кейса в обоих списках.
 
 В журнале (`zhurnal.html`, его копии в `glass/` и `_fragments/blog.html`) располагать карточки по дате публикации: от новых к старым. При добавлении материала сохранять этот порядок.
+
+## Выкладка на сервер
+
+Сайт живёт на облачном сервере 83.217.192.146 (Таймвеб). Сервер общий: на нём olegrodin.com,
+архив BOOST, Telegram-бот и демо-поддомены. Вход — `ssh kapustina@83.217.192.146`, права через `sudo`.
+
+- **Выложить:** закоммитить и запустить из корня репозитория `bash deploy/deploy.sh` (на Windows — в Git Bash).
+  Уезжает только закоммиченное. В конце скрипт печатает ответы сервера: страницы — `200 text/html`,
+  старые адреса Тильды — `301`. Код 200 без правильного типа — не успех.
+- **Откат:** `sudo rm -rf /var/www/redstaragency && sudo mv /var/www/redstaragency.old /var/www/redstaragency`.
+- **Новая страница** — добавить её в `sitemap.xml`. Переадресацию делать не meta refresh, а `return 301`
+  в конфиге nginx.
+- **Конфиг nginx.** Главная копия — на сервере, `/etc/nginx/sites-available/redstaragency.ru` (в ней строки
+  certbot); `deploy/nginx/redstaragency.ru.conf` — её копия. Правка: бэкап в `/root/nginx-backups/`
+  (не в `sites-enabled/` — nginx подхватит его как второй сайт), правка, `sudo nginx -t`, только потом
+  `sudo systemctl reload nginx`, затем та же правка в копию в репозитории. Ошибка в любом конфиге при
+  reload кладёт все сайты сервера.
+- **Чужое не трогать:** конфиги других сайтов, `/var/www/*` кроме своих папок, бот `olegrodin-bot`,
+  сертификаты других доменов.
+- **Демо-поддомены** выкатывать закрытыми от индексации: в `server` после `index index.html;` —
+  `add_header X-Robots-Tag "noindex, nofollow, noarchive, noimageindex" always;` и
+  `location = /robots.txt { default_type text/plain; add_header X-Robots-Tag "noindex, nofollow, noarchive, noimageindex" always; return 200 "User-agent: *\nDisallow:\n"; }`.
+  Сначала конфиг с noindex, потом `certbot`: имя поддомена попадает в открытые логи сертификатов, и поисковики
+  находят его за часы. `add_header` внутри `location` отменяет заголовки уровня `server` — дублировать.
+  Сам redstaragency.ru открыт для поиска, noindex на нём не ставить.

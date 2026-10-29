@@ -116,6 +116,7 @@
       var result = await response.json();
       if (result.ok !== true || result.request_id !== payload.request_id) throw new Error('delivery');
       note(form, 'Заявка получена. Свяжемся с вами в течение рабочего дня.');
+      if (window.ym) window.ym(35628860, 'reachGoal', 'lead');
       form.reset(); attempts.delete(form); contexts.delete(form); remove(pendingKey);
     } catch (_) {
       note(form, 'Не удалось подтвердить отправку. Попробуйте ещё раз или позвоните: 8 (4852) 31-94-04.');
