@@ -2,6 +2,22 @@
 (function () {
   'use strict';
 
+  /* Keep the tariff heading below the sticky header; bypass legacy Tilda scrolling. */
+  document.addEventListener('click', function (event) {
+    var link = event.target.closest('a[href="#price"]');
+    if (!link || event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+    var heading = document.querySelector('.support-prices h2');
+    if (!heading) return;
+    event.preventDefault();
+    event.stopImmediatePropagation();
+    var header = document.querySelector('.topbar');
+    var offset = (header ? header.getBoundingClientRect().height : 0) + 16;
+    if (location.hash !== '#price') history.pushState(null, '', '#price');
+    window.scrollTo({
+      top: window.scrollY + heading.getBoundingClientRect().top - offset,
+      behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth'
+    });
+  }, true);
   /* Мобильное меню */
   var burger = document.querySelector('.burger');
   var mobile = document.querySelector('.mobile-menu');
