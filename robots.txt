@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://redstaragency.ru/sitemap.xml
+Sitemap: https://redstar.agency/sitemap.xml

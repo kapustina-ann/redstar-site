@@ -1,16 +1,16 @@
 #!/usr/bin/env bash
-# Выкладка redstaragency.ru на облачный сервер. Запуск из корня репозитория:
+# Выкладка redstar.agency на облачный сервер. Запуск из корня репозитория:
 #   bash deploy/deploy.sh
 # На Windows — из Git Bash. Нужен вход kapustina@83.217.192.146 по ключу и sudo на сервере.
 #
 # Уезжает только закоммиченное (git archive HEAD): страницы, robots.txt, sitemap.xml, assets/.
 # glass/, _fragments/, integrations/, tests/ и служебные файлы на сервер не попадают.
-# Предыдущая версия остаётся рядом, в /var/www/redstaragency.old, — для отката.
+# Предыдущая версия остаётся рядом, в /var/www/redstar-agency.old, — для отката.
 set -euo pipefail
 
 HOST="${DEPLOY_HOST:-kapustina@83.217.192.146}"
-DEST=/var/www/redstaragency
-DOMAIN=redstaragency.ru
+DEST=/var/www/redstar-agency
+DOMAIN=redstar.agency
 
 cd "$(dirname "$0")/.."
 
@@ -20,7 +20,7 @@ if [ -n "$(git status --porcelain)" ]; then
 fi
 
 rev=$(git rev-parse --short HEAD)
-archive="redstaragency-$rev.tar.gz"
+archive="redstar-agency-$rev.tar.gz"
 tmp=$(mktemp -d)
 trap 'rm -rf "$tmp"' EXIT
 
@@ -44,7 +44,7 @@ find "$new" -type f -exec chmod 644 {} +
 rm -rf "$dest.old"
 if [ -d "$dest" ]; then mv "$dest" "$dest.old"; fi
 mv "$new" "$dest"
-echo "$(date '+%F %T') | $rev | ${SUDO_USER:-root}" >> /root/redstaragency-deploy-version
+echo "$(date '+%F %T') | $rev | ${SUDO_USER:-root}" >> /root/redstar-agency-deploy-version
 REMOTE
 
 # Проверяем именно этот сервер, а не то, куда сейчас смотрит DNS.

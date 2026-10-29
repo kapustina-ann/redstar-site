@@ -18,14 +18,17 @@
 Сайт живёт на облачном сервере 83.217.192.146 (Таймвеб). Сервер общий: на нём olegrodin.com,
 архив BOOST, Telegram-бот и демо-поддомены. Вход — `ssh kapustina@83.217.192.146`, права через `sudo`.
 
+- **Домены.** Основной — redstar.agency. Прежний redstaragency.ru целиком уводится 301 на redstar.agency
+  (второй `server` в том же конфиге). Поддомены обоих доменов живут на других серверах — их DNS-записи
+  не трогать. Почта `@redstaragency.ru` — на Яндексе: MX и TXT домена не трогать.
 - **Выложить:** закоммитить и запустить из корня репозитория `bash deploy/deploy.sh` (на Windows — в Git Bash).
   Уезжает только закоммиченное. В конце скрипт печатает ответы сервера: страницы — `200 text/html`,
   старые адреса Тильды — `301`. Код 200 без правильного типа — не успех.
-- **Откат:** `sudo rm -rf /var/www/redstaragency && sudo mv /var/www/redstaragency.old /var/www/redstaragency`.
+- **Откат:** `sudo rm -rf /var/www/redstar-agency && sudo mv /var/www/redstar-agency.old /var/www/redstar-agency`.
 - **Новая страница** — добавить её в `sitemap.xml`. Переадресацию делать не meta refresh, а `return 301`
   в конфиге nginx.
-- **Конфиг nginx.** Главная копия — на сервере, `/etc/nginx/sites-available/redstaragency.ru` (в ней строки
-  certbot); `deploy/nginx/redstaragency.ru.conf` — её копия. Правка: бэкап в `/root/nginx-backups/`
+- **Конфиг nginx.** Главная копия — на сервере, `/etc/nginx/sites-available/redstar.agency` (в ней строки
+  certbot); `deploy/nginx/redstar.agency.conf` — её копия. Правка: бэкап в `/root/nginx-backups/`
   (не в `sites-enabled/` — nginx подхватит его как второй сайт), правка, `sudo nginx -t`, только потом
   `sudo systemctl reload nginx`, затем та же правка в копию в репозитории. Ошибка в любом конфиге при
   reload кладёт все сайты сервера.
@@ -36,4 +39,4 @@
   `location = /robots.txt { default_type text/plain; add_header X-Robots-Tag "noindex, nofollow, noarchive, noimageindex" always; return 200 "User-agent: *\nDisallow:\n"; }`.
   Сначала конфиг с noindex, потом `certbot`: имя поддомена попадает в открытые логи сертификатов, и поисковики
   находят его за часы. `add_header` внутри `location` отменяет заголовки уровня `server` — дублировать.
-  Сам redstaragency.ru открыт для поиска, noindex на нём не ставить.
+  Сам redstar.agency открыт для поиска, noindex на нём не ставить.
