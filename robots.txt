@@ -1,4 +1,4 @@
-# Черновик редизайна. Индексация закрыта намеренно:
-# на страницах есть демонстрационные данные.
 User-agent: *
-Disallow: /
+Disallow:
+
+Sitemap: https://redstaragency.ru/sitemap.xml
