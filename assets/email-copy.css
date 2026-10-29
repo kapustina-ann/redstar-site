@@ -1,0 +1,9 @@
+.email-copy-wrap{display:inline-flex;align-items:center;gap:6px;max-width:100%;vertical-align:middle;flex-wrap:wrap}
+.email-copy-wrap>a{min-width:0;overflow-wrap:anywhere}
+.email-copy-wrap--button{flex-wrap:nowrap}
+.email-copy-wrap--button>a.btn{white-space:normal;text-align:center}
+.email-copy-wrap .email-copy{display:inline-grid;place-items:center;flex:0 0 32px;width:32px;height:32px;padding:6px;border:1px solid currentColor;border-radius:8px;background:transparent;color:inherit;cursor:pointer;vertical-align:middle}
+.email-copy-wrap .email-copy svg{display:block;width:18px;height:18px;pointer-events:none}
+.email-copy-wrap .email-copy:hover{background:rgba(128,128,128,.15)}
+.email-copy-wrap .email-copy:focus-visible{outline:2px solid currentColor;outline-offset:3px}
+.email-copy-status{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
