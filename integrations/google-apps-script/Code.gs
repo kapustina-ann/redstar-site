@@ -64,7 +64,7 @@ function valid_(d) {
   if (!/^[a-zA-Z0-9-]{16,80}$/.test(d.request_id || '') || !(d.name || '').trim()) return false;
   if (!/^7\d{10}$/.test((d.phone || '').replace(/\D/g, ''))) return false;
   // Origin data is client-supplied attribution, not authentication.
-  return /^https:\/\/(?:redstaragency\.ru|www\.redstaragency\.ru|kapustina-ann\.github\.io)(?:\/|$)/.test(d.page_url || '');
+  return /^https:\/\/(?:redstar\.agency|www\.redstar\.agency|redstaragency\.ru|www\.redstaragency\.ru|kapustina-ann\.github\.io)(?:\/|$)/.test(d.page_url || '');
 }
 function safeCell_(v) { return typeof v === 'string' && /^[\s]*[=+\-@]/.test(v) ? "'" + v : v; }
 function stamp_() { return Utilities.formatDate(new Date(), 'Europe/Moscow', 'yyyy-MM-dd HH:mm:ss'); }
