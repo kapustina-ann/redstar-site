@@ -8,6 +8,9 @@
   var forms = Array.from(document.querySelectorAll('.unified-form'));
   function text(node, limit) { return node ? node.textContent.replace(/\s+/g, ' ').trim().slice(0, limit || 180) : ''; }
   function pageUrl() { return (location.origin + location.pathname).slice(0, 500); }
+  // ВРЕМЕННО: развёрнутая версия Apps Script пропускает только адреса redstaragency.ru. Пути на доменах
+  // одинаковые, redstaragency.ru уводит 301 на redstar.agency. Убрать после новой версии развёртывания.
+  function sheetPageUrl() { return pageUrl().replace(/^https:\/\/(?:www\.)?redstar\.agency(?=\/)/, 'https://redstaragency.ru'); }
   function read(key) { try { return JSON.parse(sessionStorage.getItem(key)); } catch (_) { return null; } }
   function store(key, value) { try { sessionStorage.setItem(key, JSON.stringify(value)); } catch (_) {} }
   function remove(key) { try { sessionStorage.removeItem(key); } catch (_) {} }
@@ -94,7 +97,7 @@
       name: field(form, 'name') || field(form, 'Name'), phone: field(form, 'phone') || field(form, 'Phone'),
       task: field(form, 'task'), website: field(form, 'website'),
       personal_data_consent: (checked(form, 'personal_data_consent') || checked(form, 'Checkbox')), privacy_consent: (checked(form, 'privacy_consent') || checked(form, 'Checkbox_2')),
-      page_url: pageUrl(), page_title: document.title.slice(0, 180), form_id: (form.id || 'contact-form').slice(0, 100)
+      page_url: sheetPageUrl(), page_title: document.title.slice(0, 180), form_id: (form.id || 'contact-form').slice(0, 100)
     }, context, campaign);
     var signature = JSON.stringify(payload);
     var attempt = attempts.get(form);
