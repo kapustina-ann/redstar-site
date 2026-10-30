@@ -31,3 +31,6 @@
 @media(max-width:690px){.g2{grid-template-columns:minmax(0,1fr)}}
 
 .card:not(.card--dark):not(.card--red) .tag{color:#006da5}
+
+/* Keep header phone digits readable when external scripts wrap them. */
+.topbar .nav__phone,.topbar .nav__phone *{opacity:1!important}
