@@ -24,7 +24,11 @@ archive="redstar-agency-$rev.tar.gz"
 tmp=$(mktemp -d)
 trap 'rm -rf "$tmp"' EXIT
 
-git archive --format=tar.gz -o "$tmp/$archive" HEAD -- ./*.html robots.txt sitemap.xml assets
+mkdir "$tmp/site"
+git archive HEAD -- ./*.html robots.txt sitemap.xml assets | tar -xf - -C "$tmp/site"
+if command -v python3 >/dev/null && python3 -V >/dev/null 2>&1; then py=python3; else py=python; fi
+"$py" deploy/public_links.py "$tmp/site"
+tar -czf "$tmp/$archive" -C "$tmp/site" .
 echo "Заливаю $rev ($(du -h "$tmp/$archive" | cut -f1)) на $HOST…"
 scp -q "$tmp/$archive" "$HOST:/tmp/$archive"
 
@@ -52,7 +56,7 @@ ip="${HOST#*@}"
 scheme=https
 curl -sS -o /dev/null --resolve "$DOMAIN:443:$ip" "https://$DOMAIN/" 2>/dev/null || scheme=http
 echo "Проверка ($scheme, сервер $ip):"
-for path in / /uslugi-podderzhka.html /assets/style.css /sitemap.xml /support; do
+for path in / /uslugi-podderzhka /assets/style.css /sitemap.xml /support; do
   printf '  %-24s ' "$path"
   curl -sS -o /dev/null -w '%{http_code} %{content_type} %{redirect_url}\n' \
     --resolve "$DOMAIN:80:$ip" --resolve "$DOMAIN:443:$ip" "$scheme://$DOMAIN$path" || echo "нет ответа"

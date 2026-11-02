@@ -64,7 +64,7 @@
         if (offer) context.source_block = (context.source_block + ' / ' + offer.value).slice(0, 180);
         contexts.set(form, context);
       }
-    } else if (/\/kontakty\.html$/.test(url.pathname) && url.hash === '#zayavka') {
+    } else if (/\/kontakty(?:\.html)?$/.test(url.pathname) && url.hash === '#zayavka') {
       // One navigation only; consumed at the destination, never reused for unrelated forms.
       store(pendingKey, {path: url.pathname, hash: url.hash, time: Date.now(), context: context});
     }

@@ -10,7 +10,8 @@
   var sectionCases = heading.hasAttribute('data-cases-page');
   if (!sectionCases && new URLSearchParams(location.search).get('section') === 'cases') {
     var legacyDirection = new URLSearchParams(location.search).get('direction');
-    location.replace('keysy.html' + (legacyDirection ? '?direction=' + encodeURIComponent(legacyDirection) : ''));
+    var casesLink = document.querySelector('a[href="/keysy"], a[href="keysy.html"]');
+    location.replace((casesLink ? casesLink.getAttribute('href') : 'keysy.html') + (legacyDirection ? '?direction=' + encodeURIComponent(legacyDirection) : ''));
     return;
   }
   var buttons = [];
@@ -32,8 +33,8 @@
       button.setAttribute('aria-pressed', String(filter === key));
     });
     document.querySelectorAll('.nav__link').forEach(function (link) {
-      var href = link.getAttribute('href');
-      if (href === 'zhurnal.html' || href === 'keysy.html') link.classList.toggle('is-active', href === (sectionCases ? 'keysy.html' : 'zhurnal.html'));
+      var href = link.getAttribute('href').replace(/^\//, '').replace(/\.html$/, '');
+      if (href === 'zhurnal' || href === 'keysy') link.classList.toggle('is-active', href === (sectionCases ? 'keysy' : 'zhurnal'));
     });
     if (write) {
       var query = new URLSearchParams();
