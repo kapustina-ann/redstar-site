@@ -1,0 +1,13 @@
+/* Custom 404, scoped to avoid changing other pages. */
+.error-page{padding-block:40px 60px}
+.error-panel{background:var(--navy,#0d3674);border-radius:28px;padding:44px 28px;text-align:center;color:#fff;overflow:hidden}
+.error-code{position:relative;display:inline-block;font-size:clamp(100px,16vw,190px);line-height:1;font-weight:800;letter-spacing:-.07em;color:#fff;margin-bottom:24px}
+.error-code span{position:absolute;right:-18px;top:8px;width:22px;height:22px;background:var(--red,#df2800);border-radius:50%}
+.error-label{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#a8dcff;margin:0 0 14px}
+.error-panel h1{font-size:clamp(26px,3.5vw,44px);line-height:1.15;letter-spacing:-.025em;margin:0 auto 20px;max-width:24ch;color:#fff}
+.error-description{font-size:16px;line-height:1.65;max-width:60ch;margin:0 auto;color:#dce8f7}
+.error-actions{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;margin-top:30px}
+.error-actions .btn{max-width:100%;white-space:normal;text-align:center}
+.error-help{margin:28px 0 0;font-size:14px;line-height:1.6;color:#dce8f7}
+.error-help a{color:#fff;text-decoration:underline;text-underline-offset:4px}
+@media(max-width:767px){.error-page{padding-block:20px 32px}.error-panel{padding:32px 20px;border-radius:22px}.error-description{font-size:15px}.error-actions{flex-direction:column}.error-actions .btn{width:100%;justify-content:center}.error-help{font-size:13px}}
