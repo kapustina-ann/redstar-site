@@ -46,6 +46,37 @@
     });
   });
 
+  /* Second level of the support menu; the service title remains a link. */
+  document.querySelectorAll('.support-subnav').forEach(function (item) {
+    var toggle = item.querySelector('.support-subnav__toggle');
+    var panel = item.querySelector('.support-subnav__panel');
+    function setOpen(open) {
+      toggle.setAttribute('aria-expanded', String(open));
+      panel.hidden = !open;
+    }
+    toggle.addEventListener('click', function () {
+      setOpen(toggle.getAttribute('aria-expanded') !== 'true');
+    });
+    item.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape' && !panel.hidden) {
+        event.stopPropagation();
+        setOpen(false);
+        toggle.focus();
+      }
+    });
+    if (item.classList.contains('support-subnav--desktop')) {
+      item.addEventListener('mouseenter', function () {
+        if (window.matchMedia('(hover:hover)').matches) setOpen(true);
+      });
+      item.addEventListener('mouseleave', function () {
+        if (!item.contains(document.activeElement)) setOpen(false);
+      });
+      item.addEventListener('focusout', function (event) {
+        if (!item.contains(event.relatedTarget)) setOpen(false);
+      });
+    }
+  });
+
   /* Модальное окно с формой. Без JS кнопка просто ведёт к форме на странице. */
   document.querySelectorAll('[data-modal]').forEach(function (trigger) {
     var dlg = document.getElementById(trigger.dataset.modal);
