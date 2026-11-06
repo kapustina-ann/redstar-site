@@ -1,6 +1,9 @@
 .support-subnav{min-width:0;align-self:start}
 .support-subnav__row{display:flex;align-items:flex-start;gap:2px}
-.support-subnav__row>a{flex:1;min-width:0}
+.support-subnav__row>a{flex:0 1 auto;min-width:0}
+.drop .support-subnav__row>a{padding-right:0;padding-bottom:4px}
+.drop .support-subnav__description{display:block;padding:0 12px 10px}
+.mobile-menu .support-subnav__row>a{padding-right:0}
 .support-subnav__toggle{flex:0 0 32px;width:32px;height:36px;margin-top:4px;padding:7px;border:0;border-radius:8px;background:transparent;color:var(--navy);cursor:pointer}
 .support-subnav__toggle:hover{background:#eaf3fb}
 .support-subnav__toggle svg{width:18px;height:18px;transition:transform .15s}
