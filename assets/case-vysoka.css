@@ -4,3 +4,5 @@
 .vysoka-case .btn{max-width:100%;white-space:normal;text-align:center}.vysoka-case .vc-cta .btn{min-width:0}
 
 .vysoka-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin:32px 0}.vysoka-pair .vc-figure{margin:0;min-width:0}.vysoka-case .vysoka-detail{max-width:388px}.vysoka-case .vysoka-form-shot{max-width:620px}.vysoka-case .vc-figure img{display:block;width:100%;height:auto}@media(max-width:767px){.vysoka-pair{grid-template-columns:1fr;gap:20px}}
+
+.vysoka-case .vc-image-link::after{display:none}
