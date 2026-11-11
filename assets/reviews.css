@@ -4,3 +4,8 @@
   .reviews--collapsed > .review:nth-child(n+7) { display: none; }
   .reviews__actions:not([hidden]) { display: flex; justify-content: center; }
 }
+
+.review .review__footer { flex-direction: row; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px 24px; }
+.review__case-link { color: var(--navy); font-weight: 600; white-space: nowrap; text-underline-offset: 4px; }
+.review__case-link:hover { color: var(--cyan); }
+.review__case-link:focus-visible { outline: 2px solid var(--cyan); outline-offset: 4px; border-radius: 2px; }
