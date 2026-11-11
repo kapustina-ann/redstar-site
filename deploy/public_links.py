@@ -8,7 +8,7 @@ def prepare(folder):
     aliases = {'index': '', 'blog': 'zhurnal', 'keys-psm': 'keysy', 'keys-podmoskovie': 'keys-fid-vrachey'}
     names = '|'.join(map(re.escape, sorted(pages, key=len, reverse=True)))
     # Match only this site's absolute URLs or standalone relative URL values.
-    pattern = re.compile(r'(?P<base>https://redstar\.agency/|(?<=["\'=])/?)(?P<name>'+names+r')\.html(?=[?#"\'<>\s]|$)')
+    pattern = re.compile(r'(?P<base>https://(?:redstar\.agency|redstaragency\.ru)/|(?<=["\'=])/?)(?P<name>'+names+r')\.html(?=[?#"\'<>\s]|$)')
     def clean(match):
         name = aliases.get(match['name'], match['name'])
         return (match['base'] or '/') + name

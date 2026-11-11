@@ -10,7 +10,7 @@ set -euo pipefail
 
 HOST="${DEPLOY_HOST:-kapustina@83.217.192.146}"
 DEST=/var/www/redstar-agency
-DOMAIN=redstar.agency
+DOMAIN=redstaragency.ru
 
 cd "$(dirname "$0")/.."
 
