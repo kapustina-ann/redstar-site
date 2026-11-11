@@ -1,0 +1,6 @@
+/* Show all reviews without JavaScript and on mobile. */
+.reviews__actions { display: none; }
+@media (min-width: 1081px) {
+  .reviews--collapsed > .review:nth-child(n+7) { display: none; }
+  .reviews__actions:not([hidden]) { display: flex; justify-content: center; }
+}
