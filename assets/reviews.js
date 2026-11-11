@@ -10,5 +10,6 @@
     reviews.classList.toggle('reviews--collapsed', !expanded);
     button.setAttribute('aria-expanded', String(expanded));
     button.textContent = expanded ? 'Скрыть отзывы' : 'Посмотреть все отзывы';
+    if (!expanded) button.scrollIntoView({ block: 'nearest' });
   });
 })();
