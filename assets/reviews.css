@@ -11,3 +11,8 @@
 .review__case-link:focus-visible { outline: 2px solid var(--cyan); outline-offset: 4px; border-radius: 2px; }
 .review__footer .review__author { flex: 1 1 210px; }
 @media (min-width: 1081px) { .review .review__footer { flex-wrap: nowrap; } .review__footer .review__author { flex: 1 1 0; } }
+
+.rating__link { color: inherit; text-decoration: underline; text-underline-offset: 4px; }
+.rating__link:hover { color: var(--navy); }
+.rating__link:focus-visible { outline: 2px solid var(--cyan); outline-offset: 4px; }
+.rating__link > span { white-space: nowrap; }
