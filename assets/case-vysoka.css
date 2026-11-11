@@ -2,3 +2,5 @@
 
 .case-hero--vysoka{background-image:var(--case-art);background-repeat:no-repeat;background-position:right -35px center;background-size:350px auto}.vysoka-mobile{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;max-width:1100px;margin:32px auto}.vysoka-mobile .vc-figure{margin:0}.vysoka-mobile img{width:100%;height:auto}.vysoka-mobile .vc-image-link{border:0;border-radius:16px}.vysoka-cover .vc-image-link{border:0}.vysoka-case .vc-cover__caption{font-size:13px}@media(max-width:600px){.case-hero--vysoka{background-size:150px auto;background-position:right -30px top 15px}.vysoka-mobile{grid-template-columns:1fr;max-width:340px;gap:28px}}
 .vysoka-case .btn{max-width:100%;white-space:normal;text-align:center}.vysoka-case .vc-cta .btn{min-width:0}
+
+.vysoka-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin:32px 0}.vysoka-pair .vc-figure{margin:0;min-width:0}.vysoka-case .vysoka-detail{max-width:388px}.vysoka-case .vysoka-form-shot{max-width:620px}.vysoka-case .vc-figure img{display:block;width:100%;height:auto}@media(max-width:767px){.vysoka-pair{grid-template-columns:1fr;gap:20px}}
