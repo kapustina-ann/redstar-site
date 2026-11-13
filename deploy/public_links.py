@@ -18,6 +18,9 @@ def prepare(folder):
         name = aliases.get(match['name'], match['name'])
         return (match['base'] or '/') + name
     for path in folder.glob('*.html'):
+        # Verification files must remain byte-for-byte unchanged.
+        if re.fullmatch(r'google[0-9a-f]+\.html', path.name):
+            continue
         source = path.read_text(encoding='utf-8')
         # Remove only the preview-specific directive; preserve intentional noindex.
         source = re.sub(r'<meta\b[^>]*data-preview-only="true"[^>]*>\s*', '', source, flags=re.I)
