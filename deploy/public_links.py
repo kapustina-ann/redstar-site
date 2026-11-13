@@ -5,7 +5,7 @@ from pathlib import Path
 
 def prepare(folder):
     # These services remain preview-only until their content is approved.
-    for name in ('uslugi-proverka-rkn.html', 'uslugi-obnovlenie-bitrix.html'):
+    for name in ('uslugi-proverka-rkn.html', 'uslugi-obnovlenie-bitrix.html', 'uslugi-razrabotka.html'):
         draft = folder / name
         if draft.exists():
             draft.unlink()
