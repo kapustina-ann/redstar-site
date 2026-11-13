@@ -18,9 +18,12 @@ def prepare(folder):
         name = aliases.get(match['name'], match['name'])
         return (match['base'] or '/') + name
     for path in folder.glob('*.html'):
-        if path.stem not in pages:
-            continue
         source = path.read_text(encoding='utf-8')
+        # Remove only the preview-specific directive; preserve intentional noindex.
+        source = re.sub(r'<meta\b[^>]*data-preview-only="true"[^>]*>\s*', '', source, flags=re.I)
+        if path.stem not in pages:
+            path.write_text(source, encoding='utf-8')
+            continue
         def support_link(match):
             block = match.group(0)
             link = re.search(r'<a\b[^>]*>.*?</a>', block, re.S).group(0)

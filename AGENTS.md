@@ -45,3 +45,7 @@
 
 Сначала публиковать изменения только на GitHub Pages (ветка main). Не запускать deploy/deploy.sh и не менять боевой сервер без отдельного указания пользователя «публикуй на боевой».
 Страницы uslugi-proverka-rkn.html и uslugi-obnovlenie-bitrix.html пока являются пустыми черновиками: noindex, nofollow, без включения в sitemap.xml. Добавить в sitemap и снять noindex только после наполнения и согласования публикации.
+
+## Индексация тестовой версии
+
+Во всех новых HTML-страницах добавлять в head `<meta name="robots" content="noindex, nofollow" data-preview-only="true">`. GitHub Pages публикует исходники, поэтому этот тег обязателен. Перед любой боевой публикацией (в том числе частичной) запускать `deploy/public_links.py` для файлов релиза: он удаляет только тег с `data-preview-only`, сохраняя остальные запреты. Не закрывать robots.txt от обхода: робот должен прочитать noindex.
