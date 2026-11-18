@@ -25,7 +25,7 @@ tmp=$(mktemp -d)
 trap 'rm -rf "$tmp"' EXIT
 
 mkdir "$tmp/site"
-git archive HEAD -- ./*.html robots.txt sitemap.xml assets | tar -xf - -C "$tmp/site"
+git archive HEAD -- ./*.html robots.txt indexnow-key.txt sitemap.xml assets | tar -xf - -C "$tmp/site"
 if command -v python3 >/dev/null && python3 -V >/dev/null 2>&1; then py=python3; else py=python; fi
 "$py" deploy/public_links.py "$tmp/site"
 tar -czf "$tmp/$archive" -C "$tmp/site" .
