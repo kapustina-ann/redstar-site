@@ -1,0 +1,22 @@
+/* Article presentation uses the shared case typography and banner. */
+.journal-case-style main{background:#fff}
+.journal-case-style .case-hero{background-color:#0d3674;background-image:radial-gradient(circle at 94% 25%,#0097ea38 0 11%,transparent 11.2%),radial-gradient(circle at 88% 90%,#ffffff0d 0 18%,transparent 18.2%)}
+.journal-case-style .case-hero h1{max-width:23ch}
+.journal-case-style .case-hero__lead{max-width:65ch}
+.journal-case-style .case-meta{grid-template-columns:repeat(3,minmax(0,1fr))}
+.journal-layout{display:grid;grid-template-columns:minmax(0,1fr) 290px;gap:48px;padding-top:48px;padding-bottom:32px;align-items:start}
+.journal-sidebar{display:grid;gap:20px;align-self:start}
+.journal-sidebar .card{padding:26px;border-radius:18px}
+.journal-sidebar .card--dark{background:#0d3674;color:white}
+.journal-sidebar .card h3{font-size:23px;line-height:1.2}
+.journal-sidebar .card p{font-size:14px;line-height:1.65}
+.journal-sidebar .btn{font-size:13px;white-space:normal}
+.journal-case-style .vc-text ul{padding-left:22px;margin:20px 0}
+.journal-case-style .vc-text li{margin:8px 0}
+.journal-case-style .vc-section{margin-bottom:44px}
+.journal-case-style .vc-section:first-child{padding-bottom:28px;border-bottom:1px solid #dce4ee}
+@media(max-width:800px){.journal-layout{grid-template-columns:1fr;gap:24px;padding-top:30px}.journal-sidebar{grid-template-columns:repeat(2,minmax(0,1fr));padding-bottom:25px}.journal-case-style .case-meta{grid-template-columns:1fr;gap:16px}}
+@media(max-width:500px){.journal-sidebar{grid-template-columns:1fr}.journal-sidebar .card{padding:22px}}
+
+.journal-case-style .case-meta--article{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media(max-width:800px){.journal-case-style .case-meta--article{grid-template-columns:1fr}}
