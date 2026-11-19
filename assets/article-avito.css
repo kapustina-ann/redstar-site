@@ -1,0 +1,19 @@
+/* Article presentation uses the shared case typography and banner. */
+.avito-article main{background:#fff}
+.avito-article .case-hero{background-color:#0d3674;background-image:radial-gradient(circle at 94% 25%,#0097ea38 0 11%,transparent 11.2%),radial-gradient(circle at 88% 90%,#ffffff0d 0 18%,transparent 18.2%)}
+.avito-article .case-hero h1{max-width:23ch}
+.avito-article .case-hero__lead{max-width:65ch}
+.avito-article .case-meta{grid-template-columns:repeat(3,minmax(0,1fr))}
+.avito-layout{display:grid;grid-template-columns:minmax(0,1fr) 290px;gap:48px;padding-top:48px;padding-bottom:32px;align-items:start}
+.avito-sidebar{display:grid;gap:20px;align-self:start}
+.avito-sidebar .card{padding:26px;border-radius:18px}
+.avito-sidebar .card--dark{background:#0d3674;color:white}
+.avito-sidebar .card h3{font-size:23px;line-height:1.2}
+.avito-sidebar .card p{font-size:14px;line-height:1.65}
+.avito-sidebar .btn{font-size:13px;white-space:normal}
+.avito-article .vc-text ul{padding-left:22px;margin:20px 0}
+.avito-article .vc-text li{margin:8px 0}
+.avito-article .vc-section{margin-bottom:44px}
+.avito-article .vc-section:first-child{padding-bottom:28px;border-bottom:1px solid #dce4ee}
+@media(max-width:800px){.avito-layout{grid-template-columns:1fr;gap:24px;padding-top:30px}.avito-sidebar{grid-template-columns:repeat(2,minmax(0,1fr));padding-bottom:25px}.avito-article .case-meta{grid-template-columns:1fr;gap:16px}}
+@media(max-width:500px){.avito-sidebar{grid-template-columns:1fr}.avito-sidebar .card{padding:22px}}
